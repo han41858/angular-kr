@@ -1,0 +1,5 @@
+{
+  "id": "resources",
+  "title": "Angular 개발에 도움이 되는 자료를 찾아보세요.",
+  "contents": "\n\n\n\n<div class=\"content\">\n<header class=\"marketing-banner\">\n  <!--\n  <h1 class=\"banner-headline no-toc no-anchor\">Explore Angular Resources</h1>\n  -->\n  <h1 class=\"banner-headline no-toc no-anchor\" id=\"angular-개발에-도움이-되는-자료를-찾아보세요\">Angular 개발에 도움이 되는 자료를 찾아보세요.</h1>\n</header>\n<article>\n  <aio-resource-list></aio-resource-list>\n</article>\n\n</div>\n\n<!-- links to this doc:\n-->\n<!-- links from this doc:\n-->"
+}
