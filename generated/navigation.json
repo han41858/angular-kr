@@ -971,12 +971,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.8ec6a821a",
+    "build": "sha.b40e42eae",
     "version": "7.0.1-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "7.0.1-local+sha.8ec6a821a",
+    "full": "7.0.1-local+sha.b40e42eae",
     "branch": "master",
-    "commitSHA": "8ec6a821af8a4fe5b0f418e18b98cdd25735a453"
+    "commitSHA": "b40e42eae2c974253f4b1e7202d56c0618737847"
   }
 }
