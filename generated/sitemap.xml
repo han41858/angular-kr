@@ -55,6 +55,9 @@
     <loc>https://angular.io/guide/component-styles</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/creating-libraries</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/dependency-injection-in-action</loc>
   </url>
   <url>
@@ -122,6 +125,9 @@
   </url>
   <url>
     <loc>https://angular.io/guide/lazy-loading-ngmodules</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/libraries</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/lifecycle-hooks</loc>
@@ -244,7 +250,13 @@
     <loc>https://angular.io/guide/user-input</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/using-libraries</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/visual-studio-2015</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/workspace-config</loc>
   </url>
   <url>
     <loc>https://angular.io/tutorial</loc>
@@ -1081,16 +1093,19 @@
     <loc>https://angular.io/api/core/Version</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/InjectableType</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/InjectorType</loc>
+    <loc>https://angular.io/api/core/InjectFlags</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/defineInjectable</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/defineInjector</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/InjectableType</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/InjectorType</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/forwardRef</loc>
@@ -1108,16 +1123,13 @@
     <loc>https://angular.io/api/core/InjectableProvider</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/inject</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/InjectFlags</loc>
-  </url>
-  <url>
     <loc>https://angular.io/api/core/INJECTOR</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/Injector</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/inject</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/ReflectiveInjector</loc>
@@ -1462,7 +1474,13 @@
     <loc>https://angular.io/api/forms/NgModelGroup</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/forms/NumberValueAccessor</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/forms/RadioControlValueAccessor</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/forms/RangeValueAccessor</loc>
   </url>
   <url>
     <loc>https://angular.io/api/forms/FormControlDirective</loc>
@@ -1819,6 +1837,9 @@
     <loc>https://angular.io/api/platform-webworker</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/platform-webworker/bootstrapWorkerUi</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/platform-webworker/ClientMessageBroker</loc>
   </url>
   <url>
@@ -1865,9 +1886,6 @@
   </url>
   <url>
     <loc>https://angular.io/api/platform-webworker/platformWorkerUi</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/bootstrapWorkerUi</loc>
   </url>
   <url>
     <loc>https://angular.io/api/platform-webworker-dynamic</loc>
@@ -1993,6 +2011,9 @@
     <loc>https://angular.io/api/router/RouteReuseStrategy</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/router/Navigation</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/router/NavigationExtras</loc>
   </url>
   <url>
@@ -2080,10 +2101,10 @@
     <loc>https://angular.io/api/router/testing</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/router/testing/SpyNgModuleFactoryLoader</loc>
+    <loc>https://angular.io/api/router/testing/setupTestingRouter</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/router/testing/setupTestingRouter</loc>
+    <loc>https://angular.io/api/router/testing/SpyNgModuleFactoryLoader</loc>
   </url>
   <url>
     <loc>https://angular.io/api/router/testing/RouterTestingModule</loc>
@@ -2092,13 +2113,13 @@
     <loc>https://angular.io/api/router/upgrade</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/router/upgrade/RouterUpgradeInitializer</loc>
-  </url>
-  <url>
     <loc>https://angular.io/api/router/upgrade/locationSyncBootstrapListener</loc>
   </url>
   <url>
     <loc>https://angular.io/api/router/upgrade/setUpLocationSync</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/router/upgrade/RouterUpgradeInitializer</loc>
   </url>
   <url>
     <loc>https://angular.io/api/service-worker</loc>

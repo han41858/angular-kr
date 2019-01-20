@@ -1585,7 +1585,7 @@
         "name": "debugelement",
         "title": "DebugElement",
         "path": "api/core/DebugElement",
-        "docType": "class",
+        "docType": "interface",
         "stability": "stable",
         "securityRisk": false
       },
@@ -1593,7 +1593,7 @@
         "name": "debugnode",
         "title": "DebugNode",
         "path": "api/core/DebugNode",
-        "docType": "class",
+        "docType": "interface",
         "stability": "stable",
         "securityRisk": false
       },
@@ -1729,7 +1729,7 @@
         "name": "getdebugnode",
         "title": "getDebugNode",
         "path": "api/core/getDebugNode",
-        "docType": "function",
+        "docType": "const",
         "stability": "stable",
         "securityRisk": false
       },
@@ -1737,7 +1737,7 @@
         "name": "getmodulefactory",
         "title": "getModuleFactory",
         "path": "api/core/getModuleFactory",
-        "docType": "function",
+        "docType": "const",
         "stability": "stable",
         "securityRisk": false
       },
@@ -1839,17 +1839,17 @@
       },
       {
         "name": "injector",
-        "title": "INJECTOR",
-        "path": "api/core/INJECTOR",
-        "docType": "const",
+        "title": "Injector",
+        "path": "api/core/Injector",
+        "docType": "class",
         "stability": "stable",
         "securityRisk": false
       },
       {
         "name": "injector",
-        "title": "Injector",
-        "path": "api/core/Injector",
-        "docType": "class",
+        "title": "INJECTOR",
+        "path": "api/core/INJECTOR",
+        "docType": "const",
         "stability": "stable",
         "securityRisk": false
       },
@@ -3075,6 +3075,14 @@
         "securityRisk": false
       },
       {
+        "name": "numbervalueaccessor",
+        "title": "NumberValueAccessor",
+        "path": "api/forms/NumberValueAccessor",
+        "docType": "directive",
+        "stability": "stable",
+        "securityRisk": false
+      },
+      {
         "name": "patternvalidator",
         "title": "PatternValidator",
         "path": "api/forms/PatternValidator",
@@ -3086,6 +3094,14 @@
         "name": "radiocontrolvalueaccessor",
         "title": "RadioControlValueAccessor",
         "path": "api/forms/RadioControlValueAccessor",
+        "docType": "directive",
+        "stability": "stable",
+        "securityRisk": false
+      },
+      {
+        "name": "rangevalueaccessor",
+        "title": "RangeValueAccessor",
+        "path": "api/forms/RangeValueAccessor",
         "docType": "directive",
         "stability": "stable",
         "securityRisk": false
@@ -4170,6 +4186,14 @@
         "name": "loadchildrencallback",
         "title": "LoadChildrenCallback",
         "path": "api/router/LoadChildrenCallback",
+        "docType": "type-alias",
+        "stability": "stable",
+        "securityRisk": false
+      },
+      {
+        "name": "navigation",
+        "title": "Navigation",
+        "path": "api/router/Navigation",
         "docType": "type-alias",
         "stability": "stable",
         "securityRisk": false

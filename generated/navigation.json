@@ -348,7 +348,7 @@
             {
               "url": "guide/comparing-observables",
               "title!": "Compare to Other Techniques",
-              "title": "옵저버블 활용 테크닉",
+              "title": "다른 방식과 비교",
               "tooltip": ""
             }
           ]
@@ -644,6 +644,27 @@
               "tooltip": "AngularJS에서 사용하는 컨셉과 테크닉을 Angular에 어떻게 적용할 수 있는지 확인해 보세요."
             }
           ]
+        },
+        {
+          "title": "Angular Libraries",
+          "tooltip": "Extending Angular with shared libraries.",
+          "children": [
+            {
+              "url": "guide/libraries",
+              "title": "Libraries Overview",
+              "tooltip": "Understand how and when to use or create libraries."
+            },
+            {
+              "url": "guide/using-libraries",
+              "title": "Using Published Libraries",
+              "tooltip": "Integrate published libraries into an app."
+            },
+            {
+              "url": "guide/creating-libraries",
+              "title": "Creating Libraries",
+              "tooltip": "Extend Angular by creating, publishing, and using your own libraries."
+            }
+          ]
         }
       ]
     },
@@ -663,14 +684,19 @@
           "url": "guide/file-structure",
           "!title": "Project File Structure",
           "title": "프로젝트 파일 구성",
-          "!tooltip": "How your Angular workspace looks in your filesystem.",
+          "!tooltip": "How your Angular workspace looks on your filesystem.",
           "tooltip": "Angular 프로젝트가 어떻게 구성되는지 확인해 보세요."
         },
         {
+          "url": "guide/workspace-config",
+          "title": "Workspace Configuration",
+          "tooltip": "The \"angular.json\" file contains workspace and project configuration defaults for Angular CLI commands."
+        },
+        {
           "url": "guide/npm-packages",
-          "!title": "Packages",
+          "!title": "npm Dependencies",
           "title": "npm 패키지",
-          "!tooltip": "Explanation of npm packages installed into a project by default.",
+          "!tooltip": "Description of npm packages required at development time and at runtime.",
           "tooltip": "기본 프로젝트에 설치되는 npm 패키지에 대해 안내합니다."
         },
         {
@@ -937,6 +963,10 @@
         {
           "title": "日本語版",
           "url": "https://angular.jp/"
+        },
+        {
+          "title": "한국어",
+          "url": "https://angular.kr/"
         }
       ]
     }
@@ -957,26 +987,22 @@
     {
       "title": "v2",
       "url": "https://v2.angular.io"
-    },
-    {
-      "title": "AngularDart",
-      "url": "https://webdev.dartlang.org/angular"
     }
   ],
   "__versionInfo": {
-    "raw": "7.0.0",
+    "raw": "7.2.0",
     "major": 7,
-    "minor": 0,
+    "minor": 2,
     "patch": 1,
     "prerelease": [
       "local"
     ],
-    "build": "sha.b40e42eae",
-    "version": "7.0.1-local",
+    "build": "sha.fdbec583d",
+    "version": "7.2.1-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "7.0.1-local+sha.b40e42eae",
+    "full": "7.2.1-local+sha.fdbec583d",
     "branch": "master",
-    "commitSHA": "b40e42eae2c974253f4b1e7202d56c0618737847"
+    "commitSHA": "fdbec583da535943d511c411aff3899b5f5330b9"
   }
 }
