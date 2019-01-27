@@ -689,8 +689,10 @@
         },
         {
           "url": "guide/workspace-config",
-          "title": "Workspace Configuration",
-          "tooltip": "The \"angular.json\" file contains workspace and project configuration defaults for Angular CLI commands."
+          "!title": "Workspace Configuration",
+          "title": "워크스페이스 설정",
+          "!tooltip": "The \"angular.json\" file contains workspace and project configuration defaults for Angular CLI commands.",
+          "tooltip": "워크스페이스와 프로젝트에서 Angular CLI 명령을 실행할 때 적용되는 기본 설정은 \"angular.json\" 파일에 지정합니다."
         },
         {
           "url": "guide/npm-packages",
@@ -997,12 +999,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.9bdc2edf2",
+    "build": "sha.6fd54a3e6",
     "version": "7.2.1-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "7.2.1-local+sha.9bdc2edf2",
+    "full": "7.2.1-local+sha.6fd54a3e6",
     "branch": "master",
-    "commitSHA": "9bdc2edf2c09fa14f3e41f87b0cc266086f4ee3e"
+    "commitSHA": "6fd54a3e64b716ac053c69ff5c67bad55825b4fa"
   }
 }
