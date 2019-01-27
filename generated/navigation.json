@@ -711,7 +711,7 @@
         {
           "url": "guide/aot-compiler",
           "!title": "Ahead-of-Time Compilation",
-          "title": "AOT 컴파일",
+          "title": "AOT 컴파일러",
           "!tooltip": "Learn why and how to use the Ahead-of-Time (AOT) compiler.",
           "tooltip": "AOT 컴파일러를 사용하는 이유와 활용 방법에 대해 안내합니다."
         },
@@ -999,12 +999,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.6fd54a3e6",
+    "build": "sha.a9fd18fba",
     "version": "7.2.1-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "7.2.1-local+sha.6fd54a3e6",
+    "full": "7.2.1-local+sha.a9fd18fba",
     "branch": "master",
-    "commitSHA": "6fd54a3e64b716ac053c69ff5c67bad55825b4fa"
+    "commitSHA": "a9fd18fba2dc68a46fabe0fbce947d0fd748564f"
   }
 }
