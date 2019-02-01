@@ -718,7 +718,7 @@
         {
           "url": "guide/build",
           "!title": "Building & Serving",
-          "title": "프로젝트 빌드 & 개발용 서버",
+          "title": "프로젝트 빌드/실행 설정",
           "!tooltip": "Building and serving Angular apps.",
           "tooltip": "Angular 앱을 개발용, 운영용으로 빌드해 보세요."
         },
@@ -999,12 +999,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.12760ee1f",
+    "build": "sha.ef21de59e",
     "version": "7.2.1-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "7.2.1-local+sha.12760ee1f",
+    "full": "7.2.1-local+sha.ef21de59e",
     "branch": "master",
-    "commitSHA": "12760ee1fdbdea4cd73ad66dbcd7b2746508f0ff"
+    "commitSHA": "ef21de59e8ec3f3519a095e7ad573b263f0e74ec"
   }
 }
