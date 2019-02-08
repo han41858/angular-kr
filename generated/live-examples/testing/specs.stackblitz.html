@@ -1097,20 +1097,20 @@ describe('BannerComponent (AutoChangeDetect)', () => {
   });
 
   it('should display original title', () => {
-    // Hooray! No `fixture.detectChanges()` needed
+    // 만세! `fixture.detectChanges()`는 더이상 필요 없습니다.
     expect(h1.textContent).toContain(comp.title);
   });
 
   it('should still see original title after comp.title change', () => {
     const oldTitle = comp.title;
     comp.title = 'Test Title';
-    // Displayed title is old because Angular didn't hear the change :(
+    // 화면에 표시되는 문자열은 갱신되지 않습니다. 이 경우에는 변화감지 로직이 실행되지 않았습니다 :(
     expect(h1.textContent).toContain(oldTitle);
   });
 
   it('should display updated title after detectChanges', () => {
     comp.title = 'Test Title';
-    fixture.detectChanges(); // detect changes explicitly
+    fixture.detectChanges(); // 명시적으로 변화감지 로직을 실행합니다.
     expect(h1.textContent).toContain(comp.title);
   });
 });
@@ -1135,7 +1135,7 @@ describe('BannerComponent (inline template)', () => {
       declarations: [ BannerComponent ],
     });
     fixture = TestBed.createComponent(BannerComponent);
-    component = fixture.componentInstance; // BannerComponent test instance
+    component = fixture.componentInstance; // BannerComponent 인스턴스
     h1 = fixture.nativeElement.querySelector('h1');
   });
 
@@ -1788,7 +1788,7 @@ export class FakeValueService extends ValueService {
 ////////////////////////
 describe('demo (no TestBed):', () => {
 
-  // Straight Jasmine testing without Angular's testing support
+  // Angular가 제공하는 테스트 유틸리티를 사용하지 않고 Jasmine을 그대로 사용합니다.
   describe('ValueService', () => {
     let service: ValueService;
     beforeEach(() => { service = new ValueService(); });
@@ -1835,11 +1835,11 @@ describe('demo (no TestBed):', () => {
     });
 
     it('#getValue should return stubbed value from a spy', () => {
-      // create `getValue` spy on an object representing the ValueService
+      // `getValue` 메소드가 정의된 스파이 객체를 정의합니다.
       const valueServiceSpy =
         jasmine.createSpyObj('ValueService', ['getValue']);
 
-      // set the value to return when the `getValue` spy is called.
+      // `getValue` 스파이 메소드가 반환할 값을 정의합니다.
       const stubValue = 'stub value';
       valueServiceSpy.getValue.and.returnValue(stubValue);
 
@@ -2009,13 +2009,13 @@ describe('demo (with TestBed):', () => {
       const spy = jasmine.createSpyObj('ValueService', ['getValue']);
 
       TestBed.configureTestingModule({
-        // Provide both the service-to-test and its (spy) dependency
+        // 테스트할 서비스와 의존성으로 사용될 목 객체를 등록합니다.
         providers: [
           MasterService,
           { provide: ValueService, useValue: spy }
         ]
       });
-      // Inject both the service-to-test and its (spy) dependency
+      // 서비스의 인스턴스와 목 객체의 인스턴스를 가져옵니다.
       masterService = TestBed.get(MasterService);
       valueServiceSpy = TestBed.get(ValueService);
     });
@@ -3305,18 +3305,18 @@ function heroModuleSetup() {
     }));
 
     it('should convert hero name to Title Case', () => {
-      // get the name's input and display elements from the DOM
+      // 이름에 해당하는 input 엘리먼트와 이 이름을 화면에 표시하는 span 엘리먼트를 DOM에서 참조합니다.
       const hostElement = fixture.nativeElement;
       const nameInput: HTMLInputElement = hostElement.querySelector('input');
       const nameDisplay: HTMLElement = hostElement.querySelector('span');
 
-      // simulate user entering a new name into the input box
+      // 사용자가 입력한 것처럼 입력 필드의 내용을 변경합니다.
       nameInput.value = 'quick BROWN  fOx';
 
-      // dispatch a DOM event so that Angular learns of input value change.
+      // 엘리먼트의 값이 변경되었다는 것을 Angular에게 알리기 위해 DOM 이벤트를 생성합니다.
       nameInput.dispatchEvent(newEvent('input'));
 
-      // Tell Angular to update the display binding through the title pipe
+      // Angular가 화면을 갱신하도록 detectChanges() 함수를 실행합니다.
       fixture.detectChanges();
 
       expect(nameDisplay.textContent).toBe('Quick Brown  Fox');
@@ -3839,7 +3839,7 @@ describe ('HeroesService (with spies)', () => {
   let heroService: HeroService;
 
   beforeEach(() => {
-    // TODO: spy on other methods too
+    // TODO: 다른 스파이 메소드 추가하기
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
     heroService = new HeroService(<any> httpClientSpy);
   });
@@ -5037,9 +5037,9 @@ describe('TwainComponent', () => {
   beforeEach(() => {
     testQuote = 'Test Quote';
 
-    // Create a fake TwainService object with a `getQuote()` spy
+    // `getQuote()` 스파이 메소드가 선언된 가짜 TwainService 객체를 정의합니다.
     const twainService = jasmine.createSpyObj('TwainService', ['getQuote']);
-    // Make the spy return a synchronous Observable with the test data
+    // `getQuote()` 메소드는 테스트 데이터를 Observable 형태로 즉시 반환합니다.
     getQuoteSpy = twainService.getQuote.and.returnValue( of(testQuote) );
 
     TestBed.configureTestingModule({
@@ -5065,7 +5065,7 @@ describe('TwainComponent', () => {
     it('should show quote after component initialized', () => {
       fixture.detectChanges(); // onInit()
 
-      // sync spy result shows testQuote immediately after init
+      // 스파이 메소드가 반환한 결과는 컴포넌트가 초기화된 이후에 바로 표시됩니다.
       expect(quoteEl.textContent).toBe(testQuote);
       expect(getQuoteSpy.calls.any()).toBe(true, 'getQuote called');
     });
@@ -5074,16 +5074,16 @@ describe('TwainComponent', () => {
     // The error would not be immediately available if the service were truly async.
     // Use `fakeAsync` because the component error calls `setTimeout`
     it('should display error when TwainService fails', fakeAsync(() => {
-      // tell spy to return an error observable
+      // 스파이 메소드가 에러를 Observable 타입으로 반환합니다.
       getQuoteSpy.and.returnValue(
         throwError('TwainService test failure'));
 
       fixture.detectChanges(); // onInit()
-      // sync spy errors immediately after init
+      // 스파이가 보내는 에러는 init이 실행된 직후에 받습니다.
 
-      tick(); // flush the component's setTimeout()
+      tick(); // 컴포넌트가 실행한 setTimeout()을 끝냅니다.
 
-      fixture.detectChanges(); // update errorMessage within setTimeout()
+      fixture.detectChanges(); // setTimeout() 안에서 변경한 errorMessage를 반영합니다.
 
       expect(errorMessage()).toMatch(/test failure/, 'should display error');
       expect(quoteEl.textContent).toBe('...', 'should show placeholder');
@@ -5209,9 +5209,9 @@ export class TwainComponent implements OnInit {
     this.quote = this.twainService.getQuote().pipe(
       startWith('...'),
       catchError( (err: any) => {
-        // Wait a turn because errorMessage already set once this turn
+        // 이번 싸이클에서 errorMessage가 한 번 할당되었기 때문에 한 싸이클 기다립니다.
         setTimeout(() => this.errorMessage = err.message || err.toString());
-        return of('...'); // reset message to placeholder
+        return of('...'); // quote 프로퍼티의 값을 '...'로 재설정합니다.
       })
     );
   }
@@ -5311,13 +5311,13 @@ describe('WelcomeComponent (class only)', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      // provide the component-under-test and dependent service
+      // 테스트할 컴포넌트와 의존성으로 주입될 서비스를 프로바이더에 등록합니다.
       providers: [
         WelcomeComponent,
         { provide: UserService, useClass: MockUserService }
       ]
     });
-    // inject both the component and the dependent service.
+    // TestBed를 사용해서 컴포넌트 인스턴스와 서비스 인스턴스를 참조합니다.
     comp = TestBed.get(WelcomeComponent);
     userService = TestBed.get(UserService);
   });
@@ -5350,7 +5350,7 @@ describe('WelcomeComponent', () => {
     let userServiceStub: Partial<UserService>;
 
   beforeEach(() => {
-    // stub UserService for test purposes
+    // 테스트하기 위해 만든 목 UserService
     userServiceStub = {
       isLoggedIn: true,
       user: { name: 'Test User'}
@@ -5358,21 +5358,21 @@ describe('WelcomeComponent', () => {
 
     TestBed.configureTestingModule({
        declarations: [ WelcomeComponent ],
-    // providers:    [ UserService ]  // NO! Don't provide the real service!
-                                      // Provide a test-double instead
+    // providers:    [ UserService ]  // NO! 프로바이더에 실제 서비스 클래스를 등록하면 안됩니다!
+                                      // 목 서비스를 등록하세요.
        providers:    [ {provide: UserService, useValue: userServiceStub } ]
     });
 
     fixture = TestBed.createComponent(WelcomeComponent);
     comp    = fixture.componentInstance;
 
-    // UserService actually injected into the component
+    // 컴포넌트에 주입된 UserService를 가져옵니다.
     userService = fixture.debugElement.injector.get(UserService);
     componentUserService = userService;
-    // UserService from the root injector
+    // 최상위 인젝터에서 UserService를 가져옵니다.
     userService = TestBed.get(UserService);
 
-    //  get the &quot;welcome&quot; element by CSS selector (e.g., by class name)
+    // 클래스 이름으로 CSS 셀렉터를 사용해서 &quot;welcome&quot; 엘리먼트를 가져옵니다.
     el = fixture.nativeElement.querySelector('.welcome');
   });
 
@@ -5384,13 +5384,13 @@ describe('WelcomeComponent', () => {
   });
 
   it('should welcome &quot;Bubba&quot;', () => {
-    userService.user.name = 'Bubba'; // welcome message hasn't been shown yet
+    userService.user.name = 'Bubba'; // 환영 메시지는 아직 표시되지 않습니다.
     fixture.detectChanges();
     expect(el.textContent).toContain('Bubba');
   });
 
   it('should request login if not logged in', () => {
-    userService.isLoggedIn = false; // welcome message hasn't been shown yet
+    userService.isLoggedIn = false; // 환영 메시지는 아직 표시되지 않습니다.
     fixture.detectChanges();
     const content = el.textContent;
     expect(content).not.toContain('Welcome', 'not welcomed');
@@ -5409,7 +5409,7 @@ describe('WelcomeComponent', () => {
   it('stub object and injected UserService should not be the same', () => {
     expect(userServiceStub === userService).toBe(false);
 
-    // Changing the stub object has no effect on the injected service
+    // 목 객체의 프로퍼티 값을 변경해도 의존성으로 주입된 서비스에는 반영되지 않습니다.
     userServiceStub.isLoggedIn = false;
     expect(userService.isLoggedIn).toBe(true);
   });
