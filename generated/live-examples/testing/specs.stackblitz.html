@@ -1690,8 +1690,7 @@ describe('Angular async helper', () => {
      }));
 
   it('should get Date diff correctly in fakeAsync with rxjs scheduler', fakeAsync(() => {
-       // need to add `import 'zone.js/dist/zone-patch-rxjs-fake-async'
-       // to patch rxjs scheduler
+       // rxjs 스케쥴러를 사용하기 위해 `import 'zone.js/dist/zone-patch-rxjs-fake-async'를 추가해야 합니다.
        let result = null;
        of ('hello').pipe(delay(1000)).subscribe(v => { result = v; });
        expect(result).toBeNull();
@@ -1709,12 +1708,12 @@ describe('Angular async helper', () => {
      }));
 
   describe('use jasmine.clock()', () => {
-    // need to config __zone_symbol__fakeAsyncPatchLock flag
-    // before loading zone.js/dist/zone-testing
+    // zone.js/dist/zone-testing 패키지를 로드하기 전에 __zone_symbol_fakeAsyncPatchLock 플래그 설정이 필요합니다.
     beforeEach(() => { jasmine.clock().install(); });
     afterEach(() => { jasmine.clock().uninstall(); });
     it('should auto enter fakeAsync', () => {
-      // is in fakeAsync now, don't need to call fakeAsync(testFn)
+      // 이 코드는 fakeAsync 테스트 존 안에서 실행됩니다.
+      // 이 때 fakeAsync()를 명시적으로 실행할 필요는 없습니다.
       let called = false;
       setTimeout(() => { called = true; }, 100);
       jasmine.clock().tick(100);
@@ -4971,16 +4970,16 @@ describe('TwainComponent (marbles)', () => {
 
   // A synchronous test that simulates async behavior
   it('should show quote after getQuote (marbles)', () => {
-    // observable test quote value and complete(), after delay
+    // 옵저버블은 약간 지연된 후 테스트 문장을 전달하고 종료됩니다.
     const q$ = cold('---x|', { x: testQuote });
     getQuoteSpy.and.returnValue( q$ );
 
     fixture.detectChanges(); // ngOnInit()
     expect(quoteEl.textContent).toBe('...', 'should show placeholder');
 
-    getTestScheduler().flush(); // flush the observables
+    getTestScheduler().flush(); // 옵저버블을 실행합니다.
 
-    fixture.detectChanges(); // update view
+    fixture.detectChanges(); // 화면을 갱신합니다.
 
     expect(quoteEl.textContent).toBe(testQuote, 'should show quote');
     expect(errorMessage()).toBeNull('should not show error');
@@ -4988,16 +4987,16 @@ describe('TwainComponent (marbles)', () => {
 
   // Still need fakeAsync() because of component's setTimeout()
   it('should display error when TwainService fails', fakeAsync(() => {
-    // observable error after delay
+    // 옵저버블은 약간 지연된 후 에러를 전달하고 종료됩니다.
     const q$ = cold('---#|', null, new Error('TwainService test failure'));
     getQuoteSpy.and.returnValue( q$ );
 
     fixture.detectChanges(); // ngOnInit()
     expect(quoteEl.textContent).toBe('...', 'should show placeholder');
 
-    getTestScheduler().flush(); // flush the observables
-    tick();                     // component shows error after a setTimeout()
-    fixture.detectChanges();    // update error message
+    getTestScheduler().flush(); // 옵저버블을 실행합니다.
+    tick();                     // 컴포넌트가 사용하는 setTimeout()을 처리합니다.
+    fixture.detectChanges();    // 화면을 갱신합니다.
 
     expect(errorMessage()).toMatch(/test failure/, 'should display error');
     expect(quoteEl.textContent).toBe('...', 'should show placeholder');
@@ -5092,7 +5091,7 @@ describe('TwainComponent', () => {
 
   describe('when test with asynchronous observable', () => {
     beforeEach(() => {
-      // Simulate delayed observable values with the `asyncData()` helper
+      // `asyncData()` 헬퍼 함수를 사용해서 옵저버블을 비동기로 처리합니다.
       getQuoteSpy.and.returnValue(asyncData(testQuote));
     });
 
@@ -5115,8 +5114,8 @@ describe('TwainComponent', () => {
       fixture.detectChanges(); // ngOnInit()
       expect(quoteEl.textContent).toBe('...', 'should show placeholder');
 
-      tick(); // flush the observable to get the quote
-      fixture.detectChanges(); // update view
+      tick(); // 옵저버블을 실행합니다.
+      fixture.detectChanges(); // 화면을 갱신합니다.
 
       expect(quoteEl.textContent).toBe(testQuote, 'should show quote');
       expect(errorMessage()).toBeNull('should not show error');
@@ -5126,8 +5125,8 @@ describe('TwainComponent', () => {
       fixture.detectChanges(); // ngOnInit()
       expect(quoteEl.textContent).toBe('...', 'should show placeholder');
 
-      fixture.whenStable().then(() => { // wait for async getQuote
-        fixture.detectChanges();        // update view with quote
+      fixture.whenStable().then(() => { // 비동기 getQuote를 기다립니다.
+        fixture.detectChanges();        // 화면을 갱신합니다.
         expect(quoteEl.textContent).toBe(testQuote);
         expect(errorMessage()).toBeNull('should not show error');
       });
@@ -5138,7 +5137,7 @@ describe('TwainComponent', () => {
       fixture.detectChanges();
 
       component.quote.pipe( last() ).subscribe(() => {
-        fixture.detectChanges(); // update view with quote
+        fixture.detectChanges(); // 화면을 갱신합니다.
         expect(quoteEl.textContent).toBe(testQuote);
         expect(errorMessage()).toBeNull('should not show error');
         done();
@@ -5148,9 +5147,9 @@ describe('TwainComponent', () => {
     it('should show quote after getQuote (spy done)', (done: DoneFn) => {
       fixture.detectChanges();
 
-      // the spy's most recent call returns the observable with the test quote
+      // 컴포넌트가 받는 문자열은 스파이가 마지막으로 실행되었을 때 반환하는 값으로 참조할 수도 있습니다.
       getQuoteSpy.calls.mostRecent().returnValue.subscribe(() => {
-        fixture.detectChanges(); // update view with quote
+        fixture.detectChanges(); // 화면을 갱신합니다.
         expect(quoteEl.textContent).toBe(testQuote);
         expect(errorMessage()).toBeNull('should not show error');
         done();
@@ -5489,14 +5488,12 @@ can be found in the LICENSE file at http://angular.io/license
 */
 import { defer } from 'rxjs';
 
-/** Create async observable that emits-once and completes
- *  after a JS engine turn */
+/** JS 실행 싸이클이 한 번 지난 뒤에 Observable을 보내고 바로 종료합니다. */
 export function asyncData<T>(data: T) {
   return defer(() => Promise.resolve(data));
 }
 
-/** Create async observable error that errors
- *  after a JS engine turn */
+/** JS 실행 싸이클이 한 번 지난 뒤에 에러 Observable을 보내고 바로 종료합니다. */
 export function asyncError<T>(errorObject: any) {
   return defer(() => Promise.reject(errorObject));
 }
