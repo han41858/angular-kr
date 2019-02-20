@@ -1225,17 +1225,17 @@ describe('DashboardHeroComponent when tested directly', () => {
     fixture = TestBed.createComponent(DashboardHeroComponent);
     comp    = fixture.componentInstance;
 
-    // find the hero's DebugElement and element
+    // 컴포넌트의 DebugElement와 HTMLElement를 참조합니다.
     heroDe  = fixture.debugElement.query(By.css('.hero'));
     heroEl = heroDe.nativeElement;
 
-    // mock the hero supplied by the parent component
+    // 컴포넌트에 사용할 히어로 정보를 선언합니다.
     expectedHero = { id: 42, name: 'Test Name' };
 
-    // simulate the parent setting the input property with that hero
+    // 부모 컴포넌트에서 입력 프로퍼티로 받는 과정을 처리합니다.
     comp.hero = expectedHero;
 
-    // trigger initial data binding
+    // 초기 데이터 바인딩을 실행합니다.
     fixture.detectChanges();
   });
 
@@ -1264,8 +1264,8 @@ describe('DashboardHeroComponent when tested directly', () => {
     let selectedHero: Hero;
     comp.selected.subscribe(hero => selectedHero = hero);
 
-    click(heroDe); // click helper with DebugElement
-    click(heroEl); // click helper with native element
+    click(heroDe); // DebugElement로 클릭 헬퍼를 실행합니다.
+    click(heroEl); // 네이티브 엘리먼트로 클릭 헬퍼를 실행합니다.
 
     expect(selectedHero).toBe(expectedHero);
   });
@@ -1286,11 +1286,11 @@ describe('DashboardHeroComponent when inside a test host', () => {
   }));
 
   beforeEach(() => {
-    // create TestHostComponent instead of DashboardHeroComponent
+    // DashboardHeroComponent 대신 TestHostComponent를 생성합니다.
     fixture  = TestBed.createComponent(TestHostComponent);
     testHost = fixture.componentInstance;
     heroEl   = fixture.nativeElement.querySelector('.hero');
-    fixture.detectChanges(); // trigger initial data binding
+    fixture.detectChanges(); // 초기 데이터 바인딩을 실행합니다.
   });
 
   it('should display hero name', () => {
@@ -1300,7 +1300,7 @@ describe('DashboardHeroComponent when inside a test host', () => {
 
   it('should raise selected event when clicked', () => {
     click(heroEl);
-    // selected hero should be the same data bound hero
+    // 선택된 히어로는 데이터 바인딩한 히어로와 같아야 합니다.
     expect(testHost.selectedHero).toBe(testHost.hero);
   });
 });
@@ -1540,13 +1540,13 @@ function tests(heroClick: Function) {
 
     it('should tell ROUTER to navigate when hero clicked', () => {
 
-      heroClick(); // trigger click on first inner <div class=&quot;hero&quot;>
+      heroClick(); // <div class=&quot;hero&quot;> 엘리먼트 중 첫번째 엘리먼트를 클릭합니다.
 
-      // args passed to router.navigateByUrl() spy
+      // 컴포넌트가 이동하는 주소는 router.navigateByUrl() 스파이의 인자로 전달됩니다.
       const spy = router.navigateByUrl as jasmine.Spy;
       const navArgs = spy.calls.first().args[0];
 
-      // expecting to navigate to id of the component's first hero
+      // 이동하려는 주소가 컴포넌트의 히어로 목록 중 첫번째의 id와 같은지 검사합니다.
       const id = comp.heroes[0].id;
       expect(navArgs).toBe('/heroes/' + id,
         'should nav to HeroDetail for first hero');
@@ -3499,7 +3499,7 @@ export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
 
   ngOnInit(): void {
-    // get hero when `id` param changes
+    // `id` 인자가 바뀔때마다 히어로 객체를 가져옵니다.
     this.route.paramMap.subscribe(pmap => this.getHero(pmap.get('id')));
   }
 
@@ -5448,22 +5448,22 @@ import { convertToParamMap, ParamMap, Params } from '@angular/router';
 import { ReplaySubject } from 'rxjs';
 
 /**
- * An ActivateRoute test double with a `paramMap` observable.
- * Use the `setParamMap()` method to add the next `paramMap` value.
+ * `paramMap` 옵저버블을 제공하는 ActivatedRoute 클래스의 목 클래스를 정의합니다.
+ * `paramMap`으로 데이터를 보낼 때는 `setParamMap()` 메소드를 활용합니다.
  */
 export class ActivatedRouteStub {
-  // Use a ReplaySubject to share previous values with subscribers
-  // and pump new values into the `paramMap` observable
+  // 구독자가 이전 값을 참조할 수 있도록 ReplaySubject를 사용합니다.
+  // `paramMap` 옵저버블로 제공되는 데이터도 이 객체로 전달됩니다.
   private subject = new ReplaySubject<ParamMap>();
 
   constructor(initialParams?: Params) {
     this.setParamMap(initialParams);
   }
 
-  /** The mock paramMap observable */
+  /** 목 paramMap 옵저버블 */
   readonly paramMap = this.subject.asObservable();
 
-  /** Set the paramMap observables's next value */
+  /** paramMap 옵저버블로 데이터를 전달합니다. */
   setParamMap(params?: Params) {
     this.subject.next(convertToParamMap(params));
   };
@@ -5541,13 +5541,13 @@ export function newEvent(eventName: string, bubbles = false, cancelable = false)
 }
 
 // See https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button
-/** Button events to pass to `DebugElement.triggerEventHandler` for RouterLink event handler */
+/** RouterLink 이벤트 핸들러를 위해 버튼 이벤트 객체의 일부를 다시 선언합니다. */
 export const ButtonClickEvents = {
    left:  { button: 0 },
    right: { button: 2 }
 };
 
-/** Simulate element click. Defaults to mouse left-button click event. */
+/** 엘리먼트 클릭을 처리합니다. 이벤트 객체의 기본값은 마우스 왼쪽 버튼 클릭 이벤트입니다. */
 export function click(el: DebugElement | HTMLElement, eventObj: any = ButtonClickEvents.left): void {
   if (el instanceof HTMLElement) {
     el.click();

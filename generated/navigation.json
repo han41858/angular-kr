@@ -999,12 +999,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.024cf1790",
+    "build": "sha.8e251de08",
     "version": "7.2.1-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "7.2.1-local+sha.024cf1790",
+    "full": "7.2.1-local+sha.8e251de08",
     "branch": "master",
-    "commitSHA": "024cf17906c75a2663abdf6e225a73911eaf10c2"
+    "commitSHA": "8e251de08ecf33162f144fde7e13cdad33a242f1"
   }
 }
