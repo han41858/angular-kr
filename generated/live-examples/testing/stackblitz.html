@@ -1592,8 +1592,7 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/shared/highlight.directive.ts]" value="import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 
 @Directive({ selector: '[highlight]' })
-/** Set backgroundColor for the attached element to highlight color
- *  and set the element's customProperty to true */
+/** 엘리먼트의 배경색을 변경하고 customProperty를 true로 설정합니다. */
 export class HighlightDirective implements OnChanges {
 
   defaultColor =  'rgb(211, 211, 211)'; // lightgray
@@ -1642,7 +1641,7 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/shared/title-case.pipe.ts]" value="import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({name: 'titlecase', pure: true})
-/** Transform to Title Case: uppercase the first letter of the words in a string.*/
+/** 문자열의 각 단어 중 첫글자를 대문자로 변환합니다. */
 export class TitleCasePipe implements PipeTransform {
   transform(input: string): string {
     return input.length === 0 ? '' :

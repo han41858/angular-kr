@@ -341,7 +341,7 @@ describe('AboutComponent (highlightDirective)', () => {
       schemas:      [ NO_ERRORS_SCHEMA ]
     })
     .createComponent(AboutComponent);
-    fixture.detectChanges(); // initial binding
+    fixture.detectChanges(); // 초기 바인딩
   });
 
   it('should have skyblue <h2>', () => {
@@ -4740,16 +4740,16 @@ describe('HighlightDirective', () => {
     })
     .createComponent(TestComponent);
 
-    fixture.detectChanges(); // initial binding
+    fixture.detectChanges(); // 초기 바인딩
 
-    // all elements with an attached HighlightDirective
+    // HighlightDirective를 사용한 엘리먼트를 모두 쿼리합니다.
     des = fixture.debugElement.queryAll(By.directive(HighlightDirective));
 
-    // the h2 without the HighlightDirective
+    // HighlightDirective를 사용하지 않은 h2를 쿼리합니다.
     bareH2 = fixture.debugElement.query(By.css('h2:not([highlight])'));
   });
 
-  // color tests
+  // 색상 테스트
   it('should have three highlighted elements', () => {
     expect(des.length).toBe(3);
   });
@@ -4766,11 +4766,11 @@ describe('HighlightDirective', () => {
   });
 
   it('should bind <input> background to value color', () => {
-    // easier to work with nativeElement
+    // nativeElement를 사용하면 편합니다.
     const input = des[2].nativeElement as HTMLInputElement;
     expect(input.style.backgroundColor).toBe('cyan', 'initial backgroundColor');
 
-    // dispatch a DOM event so that Angular responds to the input value change.
+    // 입력 필드의 값을 변경하고 DOM 이벤트를 보내면 Angular가 이 이벤트에 반응합니다.
     input.value = 'green';
     input.dispatchEvent(newEvent('input'));
     fixture.detectChanges();
@@ -4821,8 +4821,7 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/shared/highlight.directive.ts]" value="import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 
 @Directive({ selector: '[highlight]' })
-/** Set backgroundColor for the attached element to highlight color
- *  and set the element's customProperty to true */
+/** 엘리먼트의 배경색을 변경하고 customProperty를 true로 설정합니다. */
 export class HighlightDirective implements OnChanges {
 
   defaultColor =  'rgb(211, 211, 211)'; // lightgray
@@ -4871,7 +4870,7 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/shared/title-case.pipe.spec.ts]" value="import { TitleCasePipe } from './title-case.pipe';
 
 describe('TitleCasePipe', () => {
-  // This pipe is a pure, stateless function so no need for BeforeEach
+  // 파이프는 순수 함수이며 스테이트도 없습니다. 따라서 BeforeEach는 필요 없습니다.
   let pipe = new TitleCasePipe();
 
   it('transforms &quot;abc&quot; to &quot;Abc&quot;', () => {
@@ -4882,7 +4881,7 @@ describe('TitleCasePipe', () => {
     expect(pipe.transform('abc def')).toBe('Abc Def');
   });
 
-  // ... more tests ...
+  // ... 테스트 계속 ...
   it('leaves &quot;Abc Def&quot; unchanged', () => {
     expect(pipe.transform('Abc Def')).toBe('Abc Def');
   });
@@ -4904,7 +4903,7 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/shared/title-case.pipe.ts]" value="import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({name: 'titlecase', pure: true})
-/** Transform to Title Case: uppercase the first letter of the words in a string.*/
+/** 문자열의 각 단어 중 첫글자를 대문자로 변환합니다. */
 export class TitleCasePipe implements PipeTransform {
   transform(input: string): string {
     return input.length === 0 ? '' :
