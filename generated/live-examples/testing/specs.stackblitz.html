@@ -2410,7 +2410,7 @@ describe('demo (with TestBed):', () => {
 
       expect(el.references['nc']).toBe(comp, '#nc reference to component');
 
-      // Filter for DebugElements with a #content reference
+      // #content 라는 템플릿 변수가 존재하는 DbugElement들을 쿼리합니다.
       const contentRefs = el.queryAll( de => de.references['content']);
       expect(contentRefs.length).toBe(4, 'elements w/ a #content reference');
     });
@@ -3649,7 +3649,7 @@ describe('HeroListComponent', () => {
   }));
 
   it('should find `HighlightDirective` with `By.directive', () => {
-    // Can find DebugElement either by css selector or by directive
+    // CSS 셀렉터나 디렉티브 토큰을 사용해서 DebugElement를 쿼리할 수 있습니다.
     const h2        = fixture.debugElement.query(By.css('h2'));
     const directive = fixture.debugElement.query(By.directive(HighlightDirective));
     expect(h2).toBe(directive);
@@ -5486,12 +5486,12 @@ can be found in the LICENSE file at http://angular.io/license
 */
 import { defer } from 'rxjs';
 
-/** JS 실행 싸이클이 한 번 지난 뒤에 Observable을 보내고 바로 종료합니다. */
+/** JS 실행 싸이클이 한 번 실행된 뒤에 Observable을 보내고 바로 종료합니다. */
 export function asyncData<T>(data: T) {
   return defer(() => Promise.resolve(data));
 }
 
-/** JS 실행 싸이클이 한 번 지난 뒤에 에러 Observable을 보내고 바로 종료합니다. */
+/** JS 실행 싸이클이 한 번 실행된 뒤에 에러 Observable을 보내고 바로 종료합니다. */
 export function asyncError<T>(errorObject: any) {
   return defer(() => Promise.reject(errorObject));
 }
