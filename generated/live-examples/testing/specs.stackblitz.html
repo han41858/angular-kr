@@ -1,5 +1,5 @@
 <html lang="en"><head></head><body>
-    <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1" target="_self"><input type="hidden" name="files[src/styles.css]" value="/* Master Styles */
+    <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1" target="_self"><input type="hidden" name="files[src/styles.css]" value="/* Global Styles */
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +14,7 @@ body {
   margin: 2em;
 }
 body, input[text], button {
-  color: #888;
+  color: #333;
   font-family: Cambria, Georgia;
 }
 a {
@@ -472,7 +472,7 @@ import { AboutComponent } from './about/about.component';
     RouterModule.forRoot([
       { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
       { path: 'about', component: AboutComponent },
-      { path: 'heroes', loadChildren: './hero/hero.module#HeroModule'}
+      { path: 'heroes', loadChildren: () => import('./hero/hero.module').then(mod => mod.HeroModule)}
     ])
   ],
   exports: [ RouterModule ] // re-export the module declarations
@@ -1633,78 +1633,95 @@ import { interval, of } from 'rxjs';
 import { delay, take } from 'rxjs/operators';
 
 describe('Angular async helper', () => {
-  let actuallyDone = false;
 
-  beforeEach(() => { actuallyDone = false; });
+  describe('async', () => {
+    let actuallyDone = false;
 
-  afterEach(() => { expect(actuallyDone).toBe(true, 'actuallyDone should be true'); });
+    beforeEach(() => { actuallyDone = false; });
 
-  it('should run normal test', () => { actuallyDone = true; });
+    afterEach(() => { expect(actuallyDone).toBe(true, 'actuallyDone should be true'); });
 
-  it('should run normal async test', (done: DoneFn) => {
-    setTimeout(() => {
-      actuallyDone = true;
-      done();
-    }, 0);
+    it('should run normal test', () => { actuallyDone = true; });
+
+    it('should run normal async test', (done: DoneFn) => {
+      setTimeout(() => {
+        actuallyDone = true;
+        done();
+      }, 0);
+    });
+
+    it('should run async test with task',
+       async(() => { setTimeout(() => { actuallyDone = true; }, 0); }));
+
+    it('should run async test with task', async(() => {
+      const id = setInterval(() => {
+        actuallyDone = true;
+        clearInterval(id);
+      }, 100);
+    }));
+
+    it('should run async test with successful promise', async(() => {
+      const p = new Promise(resolve => { setTimeout(resolve, 10); });
+      p.then(() => { actuallyDone = true; });
+    }));
+
+    it('should run async test with failed promise', async(() => {
+      const p = new Promise((resolve, reject) => { setTimeout(reject, 10); });
+      p.catch(() => { actuallyDone = true; });
+    }));
+
+    // Use done. Can also use async or fakeAsync.
+    it('should run async test with successful delayed Observable', (done: DoneFn) => {
+      const source = of (true).pipe(delay(10));
+      source.subscribe(val => actuallyDone = true, err => fail(err), done);
+    });
+
+    it('should run async test with successful delayed Observable', async(() => {
+      const source = of (true).pipe(delay(10));
+      source.subscribe(val => actuallyDone = true, err => fail(err));
+    }));
+
+    it('should run async test with successful delayed Observable', fakeAsync(() => {
+      const source = of (true).pipe(delay(10));
+      source.subscribe(val => actuallyDone = true, err => fail(err));
+
+      tick(10);
+    }));
   });
 
-  it('should run async test with task',
-     async(() => { setTimeout(() => { actuallyDone = true; }, 0); }));
+  describe('fakeAsync', () => {
+    it('should run timeout callback with delay after call tick with millis', fakeAsync(() => {
+        let called = false;
+        setTimeout(() => { called = true; }, 100);
+        tick(100);
+        expect(called).toBe(true);
+      }));
 
-  it('should run async test with task', async(() => {
-       const id = setInterval(() => {
-         actuallyDone = true;
-         clearInterval(id);
-       }, 100);
-     }));
+    it('should get Date diff correctly in fakeAsync', fakeAsync(() => {
+        const start = Date.now();
+        tick(100);
+        const end = Date.now();
+        expect(end - start).toBe(100);
+      }));
 
-  it('should run async test with successful promise', async(() => {
-       const p = new Promise(resolve => { setTimeout(resolve, 10); });
-       p.then(() => { actuallyDone = true; });
-     }));
+    it('should get Date diff correctly in fakeAsync with rxjs scheduler', fakeAsync(() => {
+        // rxjs 스케쥴러를 사용하기 위해 `import 'zone.js/dist/zone-patch-rxjs-fake-async'를 추가해야 합니다.
+        let result = null;
+        of ('hello').pipe(delay(1000)).subscribe(v => { result = v; });
+        expect(result).toBeNull();
+        tick(1000);
+        expect(result).toBe('hello');
 
-  it('should run async test with failed promise', async(() => {
-       const p = new Promise((resolve, reject) => { setTimeout(reject, 10); });
-       p.catch(() => { actuallyDone = true; });
-     }));
+        const start = new Date().getTime();
+        let dateDiff = 0;
+        interval(1000).pipe(take(2)).subscribe(() => dateDiff = (new Date().getTime() - start));
 
-  // Use done. Can also use async or fakeAsync.
-  it('should run async test with successful delayed Observable', (done: DoneFn) => {
-    const source = of (true).pipe(delay(10));
-    source.subscribe(val => actuallyDone = true, err => fail(err), done);
+        tick(1000);
+        expect(dateDiff).toBe(1000);
+        tick(1000);
+        expect(dateDiff).toBe(2000);
+      }));
   });
-
-  it('should run timeout callback with delay after call tick with millis', fakeAsync(() => {
-       let called = false;
-       setTimeout(() => { called = true; }, 100);
-       tick(100);
-       expect(called).toBe(true);
-     }));
-
-  it('should get Date diff correctly in fakeAsync', fakeAsync(() => {
-       const start = Date.now();
-       tick(100);
-       const end = Date.now();
-       expect(end - start).toBe(100);
-     }));
-
-  it('should get Date diff correctly in fakeAsync with rxjs scheduler', fakeAsync(() => {
-       // rxjs 스케쥴러를 사용하기 위해 `import 'zone.js/dist/zone-patch-rxjs-fake-async'를 추가해야 합니다.
-       let result = null;
-       of ('hello').pipe(delay(1000)).subscribe(v => { result = v; });
-       expect(result).toBeNull();
-       tick(1000);
-       expect(result).toBe('hello');
-
-       const start = new Date().getTime();
-       let dateDiff = 0;
-       interval(1000).pipe(take(2)).subscribe(() => dateDiff = (new Date().getTime() - start));
-
-       tick(1000);
-       expect(dateDiff).toBe(1000);
-       tick(1000);
-       expect(dateDiff).toBe(2000);
-     }));
 
   describe('use jasmine.clock()', () => {
     // zone.js/dist/zone-testing 패키지를 로드하기 전에 __zone_symbol_fakeAsyncPatchLock 플래그 설정이 필요합니다.
@@ -1741,18 +1758,6 @@ describe('Angular async helper', () => {
          });
        }));
   });
-
-  it('should run async test with successful delayed Observable', async(() => {
-       const source = of (true).pipe(delay(10));
-       source.subscribe(val => actuallyDone = true, err => fail(err));
-     }));
-
-  it('should run async test with successful delayed Observable', fakeAsync(() => {
-       const source = of (true).pipe(delay(10));
-       source.subscribe(val => actuallyDone = true, err => fail(err));
-
-       tick(10);
-     }));
 
 });
 
@@ -3800,7 +3805,7 @@ const maxQuotes = Infinity; // 0;
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 11, name: 'Mr. Nice' },
+      { id: 11, name: 'Dr Nice' },
       { id: 12, name: 'Narco' },
       { id: 13, name: 'Bombasto' },
       { id: 14, name: 'Celeritas' },
@@ -4153,211 +4158,6 @@ export const _dummy = undefined;
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/model/http-hero.service.spec.ts]" value="/**
- * Test the HeroService when implemented with the OLD HttpModule
- */
-import {
-   async, inject, TestBed
-} from '@angular/core/testing';
-
-import {
-  MockBackend,
-  MockConnection
-} from '@angular/http/testing';
-
-import {
-  HttpModule, Http, XHRBackend, Response, ResponseOptions
-} from '@angular/http';
-
-import { of } from 'rxjs';
-
-import { Hero } from './hero';
-import { HttpHeroService } from './http-hero.service';
-
-const makeHeroData = () => [
-  { id: 1, name: 'Windstorm' },
-  { id: 2, name: 'Bombasto' },
-  { id: 3, name: 'Magneta' },
-  { id: 4, name: 'Tornado' }
-] as Hero[];
-
-////////  Tests  /////////////
-describe('HttpHeroService (using old HttpModule)', () => {
-  let backend: MockBackend;
-  let service: HttpHeroService;
-
-  beforeEach( () => {
-    TestBed.configureTestingModule({
-      imports: [ HttpModule ],
-      providers: [
-        HttpHeroService,
-        { provide: XHRBackend, useClass: MockBackend }
-      ]
-    });
-  });
-
-  it('can instantiate service via DI', () => {
-      service = TestBed.get(HttpHeroService);
-      expect(service instanceof HttpHeroService).toBe(true);
-  });
-
-  it('can instantiate service with &quot;new&quot;', () => {
-    const http = TestBed.get(Http);
-    expect(http).not.toBeNull('http should be provided');
-    let service = new HttpHeroService(http);
-    expect(service instanceof HttpHeroService).toBe(true, 'new service should be ok');
-  });
-
-  it('can provide the mockBackend as XHRBackend', () => {
-    const backend = TestBed.get(XHRBackend);
-    expect(backend).not.toBeNull('backend should be provided');
-  });
-
-  describe('when getHeroes', () => {
-    let fakeHeroes: Hero[];
-    let http: Http;
-    let response: Response;
-
-    beforeEach(() => {
-
-      backend = TestBed.get(XHRBackend);
-      http = TestBed.get(Http);
-
-      service = new HttpHeroService(http);
-      fakeHeroes = makeHeroData();
-      let options = new ResponseOptions({status: 200, body: {data: fakeHeroes}});
-      response = new Response(options);
-    });
-
-    it('should have expected fake heroes (then)', () => {
-      backend.connections.subscribe((c: MockConnection) => c.mockRespond(response));
-
-      service.getHeroes().toPromise()
-      // .then(() => Promise.reject('deliberate'))
-        .then(heroes => {
-          expect(heroes.length).toBe(fakeHeroes.length,
-            'should have expected no. of heroes');
-        })
-        .catch(fail);
-    });
-
-    it('should have expected fake heroes (Observable tap)', () => {
-      backend.connections.subscribe((c: MockConnection) => c.mockRespond(response));
-
-      service.getHeroes().subscribe(
-        heroes => {
-          expect(heroes.length).toBe(fakeHeroes.length,
-            'should have expected no. of heroes');
-        },
-        fail
-      );
-    });
-
-
-    it('should be OK returning no heroes', () => {
-      let resp = new Response(new ResponseOptions({status: 200, body: {data: []}}));
-      backend.connections.subscribe((c: MockConnection) => c.mockRespond(resp));
-
-      service.getHeroes().subscribe(
-        heroes => {
-          expect(heroes.length).toBe(0, 'should have no heroes');
-        },
-        fail
-      );
-    });
-
-    it('should treat 404 as an Observable error', () => {
-      let resp = new Response(new ResponseOptions({status: 404}));
-      backend.connections.subscribe((c: MockConnection) => c.mockRespond(resp));
-
-      service.getHeroes().subscribe(
-        heroes => fail('should not respond with heroes'),
-        err => {
-          expect(err).toMatch(/Bad response status/, 'should catch bad response status code');
-          return of(null); // failure is the expected test result
-        });
-    });
-  });
-});
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/model/http-hero.service.ts]" value="// The OLD Http module. See HeroService for use of the current HttpClient
-import { Injectable }     from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Headers, RequestOptions } from '@angular/http';
-import { Hero }           from './hero';
-
-import { Observable } from 'rxjs';
-import { throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
-
-@Injectable()
-export class HttpHeroService {
-  private _heroesUrl = 'app/heroes';  // URL to web api
-
-  constructor (private http: Http) {}
-
-  getHeroes (): Observable<Hero[]> {
-    return this.http.get(this._heroesUrl).pipe(
-      map(this.extractData),
-      // tap(data => console.log(data)), // eyeball results in the console
-      catchError(this.handleError)
-    );
-  }
-
-  getHero(id: number | string) {
-    return this.http.get('app/heroes/?id=${id}').pipe(
-      map((r: Response) => r.json().data as Hero[])
-    );
-  }
-
-  addHero (name: string): Observable<Hero>  {
-    let body = JSON.stringify({ name });
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
-
-    return this.http.post(this._heroesUrl, body, options).pipe(
-      map(this.extractData),
-      catchError(this.handleError)
-    );
-  }
-
-  updateHero (hero: Hero): Observable<Hero>  {
-    let body = JSON.stringify(hero);
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
-
-    return this.http.put(this._heroesUrl, body, options).pipe(
-      map(this.extractData),
-      catchError(this.handleError)
-    );
-  }
-
-  private extractData(res: Response) {
-    if (res.status < 200 || res.status >= 300) {
-      throw new Error('Bad response status: ' + res.status);
-    }
-    let body = res.json();
-    return body.data || { };
-  }
-
-  private handleError (error: any) {
-    // In a real world app, we might send the error to remote logging infrastructure
-    let errMsg = error.message || 'Server error';
-    console.error(errMsg); // log to console instead
-    return throwError(errMsg);
-  }
-}
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/model/index.ts]" value="export * from './hero';
 export * from './hero.service';
 export * from './user.service';
@@ -4542,7 +4342,7 @@ describe('HttpClient testing', () => {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/model/testing/index.ts]" value="export * from './fake-hero.service';
+*/"><input type="hidden" name="files[src/app/model/testing/index.ts]" value="export * from './test-hero.service';
 
 
 /*
@@ -4689,7 +4489,7 @@ can be found in the LICENSE file at http://angular.io/license
 })
 export class CanvasComponent implements AfterViewInit {
   blobSize: number;
-  @ViewChild('sampleCanvas') sampleCanvas;
+  @ViewChild('sampleCanvas', {static: false}) sampleCanvas;
 
   constructor() { }
 
@@ -5621,20 +5421,20 @@ function elementText(n: any): string {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/testing/router-link-directive-stub.ts]" value="import { Directive, Input } from '@angular/core';
+*/"><input type="hidden" name="files[src/testing/router-link-directive-stub.ts]" value="import { Directive, Input, HostListener } from '@angular/core';
 
 // export for convenience.
 export { RouterLink} from '@angular/router';
 
 /* tslint:disable:directive-class-suffix */
 @Directive({
-  selector: '[routerLink]',
-  host: { '(click)': 'onClick()' }
+  selector: '[routerLink]'
 })
 export class RouterLinkDirectiveStub {
   @Input('routerLink') linkParams: any;
   navigatedTo: any = null;
 
+  @HostListener('click')
   onClick() {
     this.navigatedTo = this.linkParams;
   }
@@ -5688,7 +5488,6 @@ import './app/hero/hero-detail.component.no-testbed.spec.ts';
 import './app/hero/hero-detail.component.spec.ts';
 import './app/hero/hero-list.component.spec.ts';
 import './app/model/hero.service.spec.ts';
-import './app/model/http-hero.service.spec.ts';
 import './app/model/testing/http-client.spec.ts';
 import './app/shared/highlight.directive.spec.ts';
 import './app/shared/title-case.pipe.spec.ts';
@@ -5794,11 +5593,11 @@ can be found in the LICENSE file at http://angular.io/license
   &quot;newProjectRoot&quot;: &quot;projects&quot;,
   &quot;projects&quot;: {
     &quot;angular.io-example&quot;: {
+      &quot;projectType&quot;: &quot;application&quot;,
+      &quot;schematics&quot;: {},
       &quot;root&quot;: &quot;&quot;,
       &quot;sourceRoot&quot;: &quot;src&quot;,
-      &quot;projectType&quot;: &quot;application&quot;,
       &quot;prefix&quot;: &quot;app&quot;,
-      &quot;schematics&quot;: {},
       &quot;architect&quot;: {
         &quot;build&quot;: {
           &quot;builder&quot;: &quot;@angular-devkit/build-angular:browser&quot;,
@@ -5807,14 +5606,13 @@ can be found in the LICENSE file at http://angular.io/license
             &quot;index&quot;: &quot;src/index.html&quot;,
             &quot;main&quot;: &quot;src/main.ts&quot;,
             &quot;polyfills&quot;: &quot;src/polyfills.ts&quot;,
-            &quot;tsConfig&quot;: &quot;src/tsconfig.app.json&quot;,
+            &quot;tsConfig&quot;: &quot;tsconfig.app.json&quot;,
             &quot;assets&quot;: [
               &quot;src/favicon.ico&quot;,
               &quot;src/assets&quot;
             ],
             &quot;styles&quot;: [
-              &quot;src/styles.css&quot;,
-              &quot;src/test.css&quot;
+              &quot;src/styles.css&quot;
             ],
             &quot;scripts&quot;: []
           },
@@ -5834,7 +5632,14 @@ can be found in the LICENSE file at http://angular.io/license
               &quot;aot&quot;: true,
               &quot;extractLicenses&quot;: true,
               &quot;vendorChunk&quot;: false,
-              &quot;buildOptimizer&quot;: true
+              &quot;buildOptimizer&quot;: true,
+              &quot;budgets&quot;: [
+                {
+                  &quot;type&quot;: &quot;initial&quot;,
+                  &quot;maximumWarning&quot;: &quot;2mb&quot;,
+                  &quot;maximumError&quot;: &quot;5mb&quot;
+                }
+              ]
             }
           }
         },
@@ -5860,37 +5665,32 @@ can be found in the LICENSE file at http://angular.io/license
           &quot;options&quot;: {
             &quot;main&quot;: &quot;src/test.ts&quot;,
             &quot;polyfills&quot;: &quot;src/polyfills.ts&quot;,
-            &quot;tsConfig&quot;: &quot;src/tsconfig.spec.json&quot;,
-            &quot;karmaConfig&quot;: &quot;src/karma.conf.js&quot;,
-            &quot;styles&quot;: [
-              &quot;src/styles.css&quot;
-            ],
-            &quot;scripts&quot;: [],
+            &quot;tsConfig&quot;: &quot;tsconfig.spec.json&quot;,
+            &quot;karmaConfig&quot;: &quot;karma.conf.js&quot;,
             &quot;assets&quot;: [
               &quot;src/favicon.ico&quot;,
               &quot;src/assets&quot;
-            ]
+            ],
+            &quot;styles&quot;: [
+              &quot;src/styles.css&quot;,
+              &quot;src/test.css&quot;
+            ],
+            &quot;scripts&quot;: []
           }
         },
         &quot;lint&quot;: {
           &quot;builder&quot;: &quot;@angular-devkit/build-angular:tslint&quot;,
           &quot;options&quot;: {
             &quot;tsConfig&quot;: [
-              &quot;src/tsconfig.app.json&quot;,
-              &quot;src/tsconfig.spec.json&quot;
+              &quot;tsconfig.app.json&quot;,
+              &quot;tsconfig.spec.json&quot;,
+              &quot;e2e/tsconfig.json&quot;
             ],
             &quot;exclude&quot;: [
               &quot;**/node_modules/**&quot;
             ]
           }
-        }
-      }
-    },
-    &quot;angular.io-example-e2e&quot;: {
-      &quot;root&quot;: &quot;e2e/&quot;,
-      &quot;projectType&quot;: &quot;application&quot;,
-      &quot;prefix&quot;: &quot;&quot;,
-      &quot;architect&quot;: {
+        },
         &quot;e2e&quot;: {
           &quot;builder&quot;: &quot;@angular-devkit/build-angular:protractor&quot;,
           &quot;options&quot;: {
@@ -5901,15 +5701,6 @@ can be found in the LICENSE file at http://angular.io/license
             &quot;production&quot;: {
               &quot;devServerTarget&quot;: &quot;angular.io-example:serve:production&quot;
             }
-          }
-        },
-        &quot;lint&quot;: {
-          &quot;builder&quot;: &quot;@angular-devkit/build-angular:tslint&quot;,
-          &quot;options&quot;: {
-            &quot;tsConfig&quot;: &quot;e2e/tsconfig.e2e.json&quot;,
-            &quot;exclude&quot;: [
-              &quot;**/node_modules/**&quot;
-            ]
           }
         }
       }
@@ -5937,29 +5728,6 @@ can be found in the LICENSE file at http://angular.io/license
  * BROWSER POLYFILLS
  */
 
-/** IE9, IE10 and IE11 requires all of the following polyfills. **/
-// import 'core-js/es6/symbol';
-// import 'core-js/es6/object';
-// import 'core-js/es6/function';
-// import 'core-js/es6/parse-int';
-// import 'core-js/es6/parse-float';
-// import 'core-js/es6/number';
-// import 'core-js/es6/math';
-// import 'core-js/es6/string';
-// import 'core-js/es6/date';
-// import 'core-js/es6/array';
-// import 'core-js/es6/regexp';
-// import 'core-js/es6/map';
-// import 'core-js/es6/weak-map';
-// import 'core-js/es6/set';
-
-/**
- * If the application will be indexed by Google Search, the following is required.
- * Googlebot uses a renderer based on Chrome 41.
- * https://developers.google.com/search/docs/guides/rendering
- **/
-// import 'core-js/es6/array';
-
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
 // import 'classlist.js';  // Run `npm install --save classlist.js`.
 
@@ -5977,29 +5745,37 @@ import 'core-js/es7/reflect';
  * Web Animations `@angular/platform-browser/animations`
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
  * Standard animation support in Angular DOES NOT require any polyfills (as of Angular 6.0).
- **/
+ */
 // import 'web-animations-js';  // Run `npm install --save web-animations-js`.
 
 /**
  * By default, zone.js will patch all possible macroTask and DomEvents
  * user can disable parts of macroTask/DomEvents patch by setting following flags
+ * because those flags need to be set before `zone.js` being loaded, and webpack
+ * will put import in the top of bundle, so user need to create a separate file
+ * in this directory (for example: zone-flags.ts), and put the following flags
+ * into that file, and then add the following code before importing zone.js.
+ * import './zone-flags.ts';
+ *
+ * The flags allowed in zone-flags.ts are listed here.
+ *
+ * The following flags will work for all browsers.
+ *
+ * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame
+ * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick
+ * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames
+ *
+ *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js
+ *  with the following flag, it will bypass `zone.js` patch for IE/Edge
+ *
+ *  (window as any).__Zone_enable_cross_context_check = true;
+ *
  */
-
- // (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame
- // (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick
- // (window as any).__zone_symbol__BLACK_LISTED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames
-
- /*
- * in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js
- * with the following flag, it will bypass `zone.js` patch for IE/Edge
- */
-// (window as any).__Zone_enable_cross_context_check = true;
 
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
 import 'zone.js/dist/zone';  // Included with Angular CLI.
-
 
 
 /***************************************************************************************************
@@ -6011,7 +5787,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="tags[0]" value="angular"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="testing"><input type="hidden" name="description" value="Angular Example - Testing - specs"><input type="hidden" name="dependencies" value="{&quot;@angular/animations&quot;:&quot;^7.0.0&quot;,&quot;@angular/common&quot;:&quot;^7.0.0&quot;,&quot;@angular/compiler&quot;:&quot;^7.0.0&quot;,&quot;@angular/core&quot;:&quot;^7.0.0&quot;,&quot;@angular/forms&quot;:&quot;^7.0.0&quot;,&quot;@angular/http&quot;:&quot;^7.0.0&quot;,&quot;@angular/platform-browser&quot;:&quot;^7.0.0&quot;,&quot;@angular/platform-browser-dynamic&quot;:&quot;^7.0.0&quot;,&quot;@angular/router&quot;:&quot;^7.0.0&quot;,&quot;angular-in-memory-web-api&quot;:&quot;^0.6.0&quot;,&quot;core-js&quot;:&quot;^2.5.4&quot;,&quot;rxjs&quot;:&quot;^6.3.0&quot;,&quot;web-animations-js&quot;:&quot;^2.3.1&quot;,&quot;zone.js&quot;:&quot;~0.8.26&quot;,&quot;jasmine-core&quot;:&quot;~2.99.1&quot;,&quot;jasmine-marbles&quot;:&quot;^0.4.0&quot;}"></form>
+*/"><input type="hidden" name="tags[0]" value="angular"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="testing"><input type="hidden" name="description" value="Angular Example - Testing - specs"><input type="hidden" name="dependencies" value="{&quot;@angular/animations&quot;:&quot;^8.0.0-rc&quot;,&quot;@angular/common&quot;:&quot;^8.0.0-rc&quot;,&quot;@angular/compiler&quot;:&quot;^8.0.0-rc&quot;,&quot;@angular/core&quot;:&quot;^8.0.0-rc&quot;,&quot;@angular/forms&quot;:&quot;^8.0.0-rc&quot;,&quot;@angular/platform-browser&quot;:&quot;^8.0.0-rc&quot;,&quot;@angular/platform-browser-dynamic&quot;:&quot;^8.0.0-rc&quot;,&quot;@angular/router&quot;:&quot;^8.0.0-rc&quot;,&quot;angular-in-memory-web-api&quot;:&quot;^0.8.0&quot;,&quot;core-js&quot;:&quot;^2.5.4&quot;,&quot;rxjs&quot;:&quot;^6.5.1&quot;,&quot;tslib&quot;:&quot;^1.9.0&quot;,&quot;web-animations-js&quot;:&quot;^2.3.1&quot;,&quot;zone.js&quot;:&quot;~0.9.1&quot;,&quot;jasmine-core&quot;:&quot;~2.99.1&quot;,&quot;jasmine-marbles&quot;:&quot;^0.5.0&quot;}"></form>
     <script>
       var embedded = 'ctl=1';
       var isEmbedded = window.location.search.indexOf(embedded) > -1;
