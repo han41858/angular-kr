@@ -10,6 +10,9 @@
     <loc>https://angular.io/guide/aot-compiler</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/app-shell</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/architecture-components</loc>
   </url>
   <url>
@@ -28,6 +31,9 @@
     <loc>https://angular.io/guide/attribute-directives</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/bazel</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/bootstrapping</loc>
   </url>
   <url>
@@ -37,10 +43,10 @@
     <loc>https://angular.io/guide/build</loc>
   </url>
   <url>
-    <loc>https://angular.io/guide/change-log</loc>
+    <loc>https://angular.io/guide/cheatsheet</loc>
   </url>
   <url>
-    <loc>https://angular.io/guide/cheatsheet</loc>
+    <loc>https://angular.io/guide/cli-builder</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/comparing-observables</loc>
@@ -71,6 +77,9 @@
   </url>
   <url>
     <loc>https://angular.io/guide/deployment</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/deprecations</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/displaying-data</loc>
@@ -121,6 +130,9 @@
     <loc>https://angular.io/guide/i18n</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/ivy</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/language-service</loc>
   </url>
   <url>
@@ -166,9 +178,6 @@
     <loc>https://angular.io/guide/providers</loc>
   </url>
   <url>
-    <loc>https://angular.io/guide/quickstart</loc>
-  </url>
-  <url>
     <loc>https://angular.io/guide/reactive-forms</loc>
   </url>
   <url>
@@ -185,6 +194,15 @@
   </url>
   <url>
     <loc>https://angular.io/guide/rx-library</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/schematics-authoring</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/schematics-for-libraries</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/schematics</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/security</loc>
@@ -208,6 +226,9 @@
     <loc>https://angular.io/guide/set-document-title</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/setup-local</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/setup</loc>
   </url>
   <url>
@@ -215,6 +236,9 @@
   </url>
   <url>
     <loc>https://angular.io/guide/singleton-services</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/static-query-migration</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/structural-directives</loc>
@@ -256,7 +280,25 @@
     <loc>https://angular.io/guide/visual-studio-2015</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/web-worker</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/workspace-config</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/start/data</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/start/deployment</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/start/forms</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/start</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/start/routing</loc>
   </url>
   <url>
     <loc>https://angular.io/tutorial</loc>
@@ -286,6 +328,9 @@
     <loc>https://angular.io/about</loc>
   </url>
   <url>
+    <loc>https://angular.io/analytics</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api</loc>
   </url>
   <url>
@@ -307,6 +352,9 @@
     <loc>https://angular.io/presskit</loc>
   </url>
   <url>
+    <loc>https://angular.io/README</loc>
+  </url>
+  <url>
     <loc>https://angular.io/resources-contributing</loc>
   </url>
   <url>
@@ -316,10 +364,10 @@
     <loc>https://angular.io/license</loc>
   </url>
   <url>
-    <loc>https://angular.io/announcements</loc>
+    <loc>https://angular.io/cli/add</loc>
   </url>
   <url>
-    <loc>https://angular.io/cli/add</loc>
+    <loc>https://angular.io/cli/analytics</loc>
   </url>
   <url>
     <loc>https://angular.io/cli/build</loc>
@@ -334,22 +382,13 @@
     <loc>https://angular.io/cli/e2e</loc>
   </url>
   <url>
-    <loc>https://angular.io/cli/eject</loc>
-  </url>
-  <url>
     <loc>https://angular.io/cli/generate</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/cli/get</loc>
   </url>
   <url>
     <loc>https://angular.io/cli/help</loc>
   </url>
   <url>
     <loc>https://angular.io/cli/lint</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/cli/make-this-awesome</loc>
   </url>
   <url>
     <loc>https://angular.io/cli/new</loc>
@@ -359,9 +398,6 @@
   </url>
   <url>
     <loc>https://angular.io/cli/serve</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/cli/set</loc>
   </url>
   <url>
     <loc>https://angular.io/cli/test</loc>
@@ -377,6 +413,9 @@
   </url>
   <url>
     <loc>https://angular.io/cli</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/cli/usage-analytics-gathering</loc>
   </url>
   <url>
     <loc>https://angular.io/api/animations</loc>
@@ -727,6 +766,9 @@
     <loc>https://angular.io/api/common/NgClass</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/common/NgClassBase</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/common/NgForOf</loc>
   </url>
   <url>
@@ -746,6 +788,9 @@
   </url>
   <url>
     <loc>https://angular.io/api/common/NgStyle</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/NgStyleBase</loc>
   </url>
   <url>
     <loc>https://angular.io/api/common/NgSwitch</loc>
@@ -874,6 +919,39 @@
     <loc>https://angular.io/api/common/testing/MockLocationStrategy</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/common/testing/MOCK_PLATFORM_LOCATION_CONFIG</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/testing/MockPlatformLocation</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/testing/MockPlatformLocationConfig</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/upgrade</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/upgrade/$locationShim</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/upgrade/$locationShimProvider</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/upgrade/LOCATION_UPGRADE_CONFIGURATION</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/upgrade/LocationUpgradeConfig</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/upgrade/LocationUpgradeModule</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/upgrade/AngularJSUrlCodec</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/upgrade/UrlCodec</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/core</loc>
   </url>
   <url>
@@ -934,6 +1012,9 @@
     <loc>https://angular.io/api/core/DebugElement</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/core/DebugEventListener</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/core/DebugNode</loc>
   </url>
   <url>
@@ -988,6 +1069,9 @@
     <loc>https://angular.io/api/core/WtfScopeFn</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/core/AbstractType</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/core/Type</loc>
   </url>
   <url>
@@ -1003,10 +1087,34 @@
     <loc>https://angular.io/api/core/SecurityContext</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/ANALYZE_FOR_ENTRY_COMPONENTS</loc>
+    <loc>https://angular.io/api/core/Attribute</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/Attribute</loc>
+    <loc>https://angular.io/api/core/AfterContentChecked</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/AfterContentInit</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/AfterViewChecked</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/AfterViewInit</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/DoCheck</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/OnChanges</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/OnDestroy</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/OnInit</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/ANALYZE_FOR_ENTRY_COMPONENTS</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/ContentChild</loc>
@@ -1045,43 +1153,19 @@
     <loc>https://angular.io/api/core/Pipe</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/AfterContentChecked</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/AfterContentInit</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/AfterViewChecked</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/AfterViewInit</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/DoCheck</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/OnChanges</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/OnDestroy</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/OnInit</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/CUSTOM_ELEMENTS_SCHEMA</loc>
-  </url>
-  <url>
     <loc>https://angular.io/api/core/DoBootstrap</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/ModuleWithProviders</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/NO_ERRORS_SCHEMA</loc>
+    <loc>https://angular.io/api/core/NgModule</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/NgModule</loc>
+    <loc>https://angular.io/api/core/CUSTOM_ELEMENTS_SCHEMA</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/NO_ERRORS_SCHEMA</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/SchemaMetadata</loc>
@@ -1097,9 +1181,6 @@
   </url>
   <url>
     <loc>https://angular.io/api/core/defineInjectable</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/defineInjector</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/InjectableType</loc>
@@ -1123,13 +1204,13 @@
     <loc>https://angular.io/api/core/InjectableProvider</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/INJECTOR</loc>
-  </url>
-  <url>
     <loc>https://angular.io/api/core/Injector</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/inject</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/INJECTOR</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/ReflectiveInjector</loc>
@@ -1157,9 +1238,6 @@
   </url>
   <url>
     <loc>https://angular.io/api/core/ClassProvider</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/createInjector</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/ResolvedReflectiveFactory</loc>
@@ -1573,102 +1651,6 @@
     <loc>https://angular.io/api/forms/ReactiveFormsModule</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/http</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/BrowserXhr</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/JSONPBackend</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/JSONPConnection</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/CookieXSRFStrategy</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/XHRBackend</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/XHRConnection</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/BaseRequestOptions</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/RequestOptions</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/BaseResponseOptions</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/ResponseOptions</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/ReadyState</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/RequestMethod</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/ResponseContentType</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/ResponseType</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/Headers</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/Http</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/Jsonp</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/HttpModule</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/JsonpModule</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/Connection</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/ConnectionBackend</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/RequestOptionsArgs</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/ResponseOptionsArgs</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/XSRFStrategy</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/Request</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/Response</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/QueryEncoder</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/URLSearchParams</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/testing</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/testing/MockConnection</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/http/testing/MockBackend</loc>
-  </url>
-  <url>
     <loc>https://angular.io/api/platform-browser</loc>
   </url>
   <url>
@@ -1706,9 +1688,6 @@
   </url>
   <url>
     <loc>https://angular.io/api/platform-browser/By</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-browser/DOCUMENT</loc>
   </url>
   <url>
     <loc>https://angular.io/api/platform-browser/EVENT_MANAGER_PLUGINS</loc>
@@ -1898,6 +1877,9 @@
   </url>
   <url>
     <loc>https://angular.io/api/router/Data</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/router/DeprecatedLoadChildren</loc>
   </url>
   <url>
     <loc>https://angular.io/api/router/LoadChildren</loc>
@@ -2132,6 +2114,9 @@
   </url>
   <url>
     <loc>https://angular.io/api/service-worker/ServiceWorkerModule</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/service-worker/SwRegistrationOptions</loc>
   </url>
   <url>
     <loc>https://angular.io/api/service-worker/SwPush</loc>
