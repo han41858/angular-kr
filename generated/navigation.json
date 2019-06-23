@@ -1120,19 +1120,19 @@
       "includePrerelease": false
     },
     "loose": false,
-    "raw": "8.1.0-beta.0",
+    "raw": "8.1.0-next.3",
     "major": 8,
     "minor": 1,
     "patch": 0,
     "prerelease": [
       "local"
     ],
-    "build": "sha.071906f84",
+    "build": "sha.fb5f1bff3",
     "version": "8.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "8.1.0-local+sha.071906f84",
+    "full": "8.1.0-local+sha.fb5f1bff3",
     "branch": "master",
-    "commitSHA": "071906f846ad9755817d19821c7810d90bf8ef22"
+    "commitSHA": "fb5f1bff374cc412a51e0929ec43b7f6d97251fc"
   }
 }

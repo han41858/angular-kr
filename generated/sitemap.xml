@@ -625,6 +625,9 @@
     <loc>https://angular.io/api/common/http/HttpSentEvent</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/common/http/HttpUploadProgressEvent</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/common/http/HttpUserEvent</loc>
   </url>
   <url>
@@ -1238,6 +1241,12 @@
   </url>
   <url>
     <loc>https://angular.io/api/core/ClassProvider</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/ValueSansProvider</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/ClassSansProvider</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/ResolvedReflectiveFactory</loc>
@@ -2162,5 +2171,14 @@
   </url>
   <url>
     <loc>https://angular.io/api/upgrade/static/UpgradeModule</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/upgrade/static/testing</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/upgrade/static/testing/createAngularTestingModule</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/upgrade/static/testing/createAngularJSTestingModule</loc>
   </url>
 </urlset>

@@ -522,6 +522,14 @@
         "securityRisk": false
       },
       {
+        "name": "httpuploadprogressevent",
+        "title": "HttpUploadProgressEvent",
+        "path": "api/common/http/HttpUploadProgressEvent",
+        "docType": "interface",
+        "stability": "stable",
+        "securityRisk": false
+      },
+      {
         "name": "httpurlencodingcodec",
         "title": "HttpUrlEncodingCodec",
         "path": "api/common/http/HttpUrlEncodingCodec",
@@ -1565,6 +1573,14 @@
         "securityRisk": false
       },
       {
+        "name": "classsansprovider",
+        "title": "ClassSansProvider",
+        "path": "api/core/ClassSansProvider",
+        "docType": "interface",
+        "stability": "stable",
+        "securityRisk": false
+      },
+      {
         "name": "collectionchangerecord",
         "title": "CollectionChangeRecord",
         "path": "api/core/CollectionChangeRecord",
@@ -2544,6 +2560,14 @@
         "name": "valueprovider",
         "title": "ValueProvider",
         "path": "api/core/ValueProvider",
+        "docType": "interface",
+        "stability": "stable",
+        "securityRisk": false
+      },
+      {
+        "name": "valuesansprovider",
+        "title": "ValueSansProvider",
+        "path": "api/core/ValueSansProvider",
         "docType": "interface",
         "stability": "stable",
         "securityRisk": false
@@ -4615,6 +4639,29 @@
         "title": "UpgradeModule",
         "path": "api/upgrade/static/UpgradeModule",
         "docType": "ngmodule",
+        "stability": "stable",
+        "securityRisk": false
+      }
+    ]
+  },
+  {
+    "name": "upgrade/static/testing",
+    "title": "upgrade/static/testing",
+    "path": "api/upgrade/static/testing",
+    "items": [
+      {
+        "name": "createangularjstestingmodule",
+        "title": "createAngularJSTestingModule",
+        "path": "api/upgrade/static/testing/createAngularJSTestingModule",
+        "docType": "function",
+        "stability": "stable",
+        "securityRisk": false
+      },
+      {
+        "name": "createangulartestingmodule",
+        "title": "createAngularTestingModule",
+        "path": "api/upgrade/static/testing/createAngularTestingModule",
+        "docType": "function",
         "stability": "stable",
         "securityRisk": false
       }
