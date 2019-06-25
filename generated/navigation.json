@@ -72,40 +72,54 @@
       "hidden": true
     },
     {
-      "title": "Getting Started",
-      "tooltip": "Learn the basics by building your first Angular application.",
+      "title!": "Getting Started",
+      "title": "시작하기",
+      "tooltip!": "Learn the basics by building your first Angular application.",
+      "tooltip": "Angular 애플리케이션의 기본 구성 요소에 대해 알아보세요.",
       "children": [
         {
           "url": "start",
-          "title": "Your First App",
-          "tooltip": "Introduction to Angular's component model, template syntax, and component communication."
+          "title!": "Your First App",
+          "title": "첫번째 앱 만들기",
+          "tooltip!": "Introduction to Angular's component model, template syntax, and component communication.",
+          "tooltip": "Angular의 컴포넌트 모델, 템플릿 문법, 컴포넌트끼리 통신하는 방법에 대해 소개합니다."
         },
         {
           "url": "start/routing",
-          "title": "Routing",
-          "tooltip": "Introduction to routing between components using the browser's URL."
+          "title!": "Routing",
+          "title": "라우팅",
+          "tooltip!": "Introduction to routing between components using the browser's URL.",
+          "tooltip": "브라우저 URL에 따라 컴포넌트를 전환하는 방법에 대해 소개합니다."
         },
         {
           "url": "start/data",
-          "title": "Managing Data",
-          "tooltip": "Introduction to services and accessing external data via HTTP."
+          "title!": "Managing Data",
+          "title": "데이터 다루기",
+          "tooltip!": "Introduction to services and accessing external data via HTTP.",
+          "tooltip": "서비스를 사용해서 HTTP 프로토콜로 외부와 데이터 통신하는 방법에 대해 소개합니다."
         },
         {
           "url": "start/forms",
-          "title": "Forms",
-          "tooltip": "Learn about fetching and managing data from users with forms."
+          "title!": "Forms",
+          "title": "폼",
+          "tooltip!": "Learn about fetching and managing data from users with forms.",
+          "tooltip": "사용자가 입력하는 데이터를 폼으로 처리하는 방법에 대해 소개합니다."
         },
         {
           "url": "start/deployment",
-          "title": "Deployment",
-          "tooltip": "Move to local development, or deploy your application to Firebase or your own server."
+          "title!": "Deployment",
+          "title": "배포",
+          "tooltip!": "Move to local development, or deploy your application to Firebase or your own server.",
+          "tooltip": "로컬 개발환경을 설정하는 방법, Firebase나 자체 서버에 애플리케이션을 배포하는 방법에 대해 소개합니다."
         }
       ]
     },
     {
       "url": "guide/setup-local",
-      "title": "Setup",
-      "tooltip": "Setting up for local development with the Angular CLI."
+      "title!": "Setup",
+      "title": "환경설정",
+      "tooltip!": "Setting up for local development with the Angular CLI.",
+      "tooltip": "Angular CLI로 로컬 개발환경을 설정해 보세요."
     },
     {
       "title!": "Fundamentals",
@@ -114,54 +128,73 @@
       "tooltip": "Angular 기초 지식",
       "children": [
         {
-          "title": "Tour of Heroes App",
-          "tooltip": "The Tour of Heroes app is used as a reference point in many Angular examples.",
+          "title!": "Tour of Heroes App",
+          "title": "히어로들의 여행 앱",
+          "tooltip!": "The Tour of Heroes app is used as a reference point in many Angular examples.",
+          "tooltip": "히어로들의 여행 앱을 자세하게 살펴보면서 Angular에 대해 알아봅시다.",
           "children": [
             {
               "url": "tutorial",
-              "title": "Introduction",
-              "tooltip": "Introduction to the Tour of Heroes tutorial"
+              "title!": "Introduction",
+              "title": "소개",
+              "tooltip!": "Introduction to the Tour of Heroes tutorial",
+              "tooltip": "히어로들의 여행 튜토리얼 앱에 대해 소개합니다."
             },
             {
               "url": "tutorial/toh-pt0",
-              "title": "The Application Shell",
-              "tooltip": "Creating the application shell"
+              "title!": "The Application Shell",
+              "title": "애플리케이션 기본 틀",
+              "tooltip!": "Creating the application shell",
+              "tooltip": "애플리케이션 기본 틀을 만들어 봅시다."
             },
             {
               "url": "tutorial/toh-pt1",
-              "title": "1. The Hero Editor",
-              "tooltip": "Part 1: Build a simple hero editor"
+              "title!": "1. The Hero Editor",
+              "title": "1. 히어로 편집기",
+              "tooltip!": "Part 1: Build a simple hero editor",
+              "tooltip": "1단계: 간단한 히어로 편집기를 만들어 봅시다."
             },
             {
               "url": "tutorial/toh-pt2",
-              "title": "2. Displaying a List",
-              "tooltip": "Part 2: Build a master/detail page with a list of heroes."
+              "title!": "2. Displaying a List",
+              "title": "2. 목록 표시하기",
+              "tooltip!": "Part 2: Build a master/detail page with a list of heroes.",
+              "tooltip": "2단계: 히어로의 목록을 표시하는 마스터/상세정보 페이지를 만들어 봅시다."
             },
             {
               "url": "tutorial/toh-pt3",
-              "title": "3. Master/Detail Components",
-              "tooltip": "Part 3: Refactor the master/detail view into separate components."
+              "title!": "3. Master/Detail Components",
+              "title": "3. 마스터/상세정보 컴포넌트",
+              "tooltip!": "Part 3: Refactor the master/detail view into separate components.",
+              "tooltip": "3단계: 마스터/상세정보 화면을 개별 컴포넌트로 리팩토링해 봅시다."
             },
             {
               "url": "tutorial/toh-pt4",
-              "title": "4. Services",
-              "tooltip": "Part 4: Create a reusable service to manage hero data."
+              "title!": "4. Services",
+              "title": "4. 서비스",
+              "tooltip!": "Part 4: Create a reusable service to manage hero data.",
+              "tooltip": "4단계: 히어로 데이터를 처리하는 로직은 재사용할 수 있게 서비스로 만들어 봅시다."
             },
             {
               "url": "tutorial/toh-pt5",
-              "title": "5. Routing",
-              "tooltip": "Part 5: Add the Angular router and navigate among the views."
+              "title!": "5. Routing",
+              "title": "5. 라우팅",
+              "tooltip!": "Part 5: Add the Angular router and navigate among the views.",
+              "tooltip": "5단계: Angular 라우터를 추가하고 화면을 전환해 봅시다."
             },
             {
               "url": "tutorial/toh-pt6",
               "title": "6. HTTP",
-              "tooltip": "Part 6: Use HTTP to retrieve and save hero data."
+              "tooltip!": "Part 6: Use HTTP to retrieve and save hero data.",
+              "tooltip": "6단계: HTTP 통신으로 히어로 데이터를 가져오고 저장해 봅시다."
             }
           ]
         },
         {
-          "title": "Architecture",
-          "tooltip": "The basic building blocks of Angular applications.",
+          "title!": "Architecture",
+          "title": "아키텍처",
+          "tooltip!": "The basic building blocks of Angular applications.",
+          "tooltip": "Angular 애플리케이션을 구성하는 기본 요소에 대해 알아봅시다.",
           "children": [
             {
               "url": "guide/architecture",
@@ -663,67 +696,90 @@
           ]
         },
         {
-          "title": "Angular Libraries",
-          "tooltip": "Extending Angular with shared libraries.",
+          "title!": "Angular Libraries",
+          "title": "Angular 라이브러리",
+          "tooltip!": "Extending Angular with shared libraries.",
+          "tooltip": "다른 개발자가 공유한 라이브러리로 Angular는 확장해보세요.",
           "children": [
             {
               "url": "guide/libraries",
-              "title": "Libraries Overview",
-              "tooltip": "Understand how and when to use or create libraries."
+              "title!": "Libraries Overview",
+              "title": "개요",
+              "tooltip!": "Understand how and when to use or create libraries.",
+              "tooltip": "라이브러리는 언제 만들고 어떻게 사용하는지 알아봅시다."
             },
             {
               "url": "guide/using-libraries",
-              "title": "Using Published Libraries",
-              "tooltip": "Integrate published libraries into an app."
+              "title!": "Using Published Libraries",
+              "title": "공유된 라이브러리 사용하기",
+              "tooltip!": "Integrate published libraries into an app.",
+              "tooltip": "공유된 라이브러리를 앱에 추가해 봅시다."
             },
             {
               "url": "guide/creating-libraries",
-              "title": "Creating Libraries",
-              "tooltip": "Extend Angular by creating, publishing, and using your own libraries."
+              "title!": "Creating Libraries",
+              "title": "라이브러리 만들기",
+              "tooltip!": "Extend Angular by creating, publishing, and using your own libraries.",
+              "tooltip": "라이브러리를 만들고 배포해서 Angular 생태계를 직접 확장해 보세요."
             }
           ]
         },
         {
-          "title": "Schematics",
-          "tooltip": "Understanding schematics.",
+          "title!": "Schematics",
+          "title": "스키매틱",
+          "tooltip!": "Understanding schematics.",
+          "tooltip": "스키매틱 이해하기",
           "children": [
             {
               "url": "guide/schematics",
-              "title": "Schematics Overview",
-              "tooltip": "Understand how schematics are used in Angular."
+              "title!": "Schematics Overview",
+              "title": "스키매틱 소개",
+              "tooltip!": "Understand how schematics are used in Angular.",
+              "tooltip": "Angular에서 스키매틱이 어떻게 사용되는지 알아봅시다."
             },
             {
               "url": "guide/schematics-authoring",
-              "title": "Authoring Schematics",
-              "tooltip": "Understand the structure of a schematic."
+              "title!": "Authoring Schematics",
+              "title": "스키매틱 정의하기",
+              "tooltip!": "Understand the structure of a schematic.",
+              "tooltip": "스키매틱을 구성하는 요소에 대해 알아봅시다."
             },
             {
               "url": "guide/schematics-for-libraries",
-              "title": "Schematics for Libraries",
-              "tooltip": "Use schematics to integrate your library with the Angular CLI."
+              "title!": "Schematics for Libraries",
+              "title": "스키매틱을 라이브러리로 사용하기",
+              "tooltip!": "Use schematics to integrate your library with the Angular CLI.",
+              "tooltip": "Angular CLI를 사용해서 스키매틱을 라이브러리처럼 사용해 보세요."
             }
           ]
         },
         {
           "url": "guide/cli-builder",
-          "title": "CLI Builders",
-          "tooltip": "Using builders to customize Angular CLI."
+          "title!": "CLI Builders",
+          "title": "CLI 빌더",
+          "tooltip!": "Using builders to customize Angular CLI.",
+          "tooltip": "빌더를 사용해서 Angular CLI를 커스터마이징 해보세요."
         },
         {
           "url": "guide/ivy",
           "title": "Angular Ivy",
-          "tooltip": "Opting into Angular Ivy with Angular CLI."
+          "tooltip!": "Opting into Angular Ivy with Angular CLI.",
+          "tooltip": "Angular CLI를 사용해서 Angular Ivy를 도입해 보세요."
         },
         {
           "url": "guide/web-worker",
-          "title": "Web Workers",
-          "tooltip": "Using Web Workers with Angular CLI."
+          "title!": "Web Workers",
+          "title": "웹 워커",
+          "tooltip!": "Using Web Workers with Angular CLI.",
+          "tooltip": "Angular CLI를 사용해서 웹 워커를 도입해 보세요."
         }
       ]
     },
     {
-      "title": "Dev Workflow",
-      "tooltip": "Build, testing, and deployment information.",
+      "title!": "Dev Workflow",
+      "title": "개발 과정",
+      "tooltip!": "Build, testing, and deployment information.",
+      "tooltip": "빌드, 테스트, 배포 과정에 대해 설명합니다.",
       "children": [
         {
           "url": "guide/setup",
@@ -747,8 +803,10 @@
         },
         {
           "url": "guide/bazel",
-          "title": "Building with Bazel",
-          "tooltip": "How to set up your environment to build and test with Bazel."
+          "title!": "Building with Bazel",
+          "title": "Bazel로 빌드하기",
+          "tooltip!": "How to set up your environment to build and test with Bazel.",
+          "tooltip": "Bazel을 사용한 빌드 환경을 어떻게 구성하는지, 이 환경에서 테스트는 어떻게 실행하는지 안내합니다."
         },
         {
           "url": "guide/testing",
@@ -765,13 +823,17 @@
           "tooltip": "Angular 앱을 배포하는 방법에 대해 안내합니다."
         },
         {
-          "title": "Dev Tool Integration",
-          "tooltip": "Integrate with your development environment and tools.",
+          "title!": "Dev Tool Integration",
+          "title": "개발 툴 지원",
+          "tooltip!": "Integrate with your development environment and tools.",
+          "tooltip": "개발 환경과 툴에 적용할 수 있는 Angular 지원 기능에 대해 안내합니다.",
           "children": [
             {
               "url": "guide/language-service",
-              "title": "Language Service",
-              "tooltip": "Use Angular Language Service to speed up dev time."
+              "title!": "Language Service",
+              "title": "언어 지원 서비스",
+              "tooltip!": "Use Angular Language Service to speed up dev time.",
+              "tooltip": "Angular 언어 지원 서비스를 활용하면 개발 속도를 빠르게 향상시킬 수 있습니다."
             },
             {
               "url": "guide/visual-studio-2015",
@@ -784,33 +846,45 @@
       ]
     },
     {
-      "title": "Configuration",
-      "tooltip": "Workspace and project structure, configuration files.",
+      "title!": "Configuration",
+      "title": "개발환경 설정",
+      "tooltip!": "Workspace and project structure, configuration files.",
+      "tooltip": "워크스페이스와 프로젝트 구조, 환경설정 파일에 대해 안내합니다.",
       "children": [
         {
           "url": "guide/file-structure",
-          "title": "Project File Structure",
-          "tooltip": "How your Angular workspace looks on your filesystem."
+          "title!": "Project File Structure",
+          "title": "프로젝트 파일 구조",
+          "tooltip!": "How your Angular workspace looks on your filesystem.",
+          "tooltip": "Angular 워크스페이스는 어떤 구조인지 확인해 봅시다."
         },
         {
           "url": "guide/workspace-config",
-          "title": "Workspace Configuration",
-          "tooltip": "The \"angular.json\" file contains workspace and project configuration defaults for Angular CLI commands."
+          "title!": "Workspace Configuration",
+          "title": "워크스페이스 설정",
+          "tooltip!": "The \"angular.json\" file contains workspace and project configuration defaults for Angular CLI commands.",
+          "tooltip": "워크스페이스와 프로젝트 환경에서 동작하는 Angular CLI 명령의 기본값을 설정하는 \"angular.json\" 파일에 대해 알아봅시다."
         },
         {
           "url": "guide/npm-packages",
-          "title": "npm Dependencies",
-          "tooltip": "Description of npm packages required at development time and at runtime."
+          "title!": "npm Dependencies",
+          "title": "npm 의존성 패키지",
+          "tooltip!": "Description of npm packages required at development time and at runtime.",
+          "tooltip": "개발 환경과 실행 환경에 필요한 npm 패키지들에 대해 알아봅시다."
         },
         {
           "url": "guide/typescript-configuration",
-          "title": "TypeScript Configuration",
-          "tooltip": "TypeScript configuration for Angular developers."
+          "title!": "TypeScript Configuration",
+          "title": "TypeScript 설정",
+          "tooltip!": "TypeScript configuration for Angular developers.",
+          "tooltip": "Angular 코드에 적용되는 TypeScript 설정에 대해 알아봅시다."
         },
         {
           "url": "guide/browser-support",
-          "title": "Browser Support",
-          "tooltip": "Browser support and polyfills guide."
+          "title!": "Browser Support",
+          "title": "브라우저 지원",
+          "tooltip!": "Browser support and polyfills guide.",
+          "tooltip": "브라우저 지원과 폴리필 가이드에 대해 안내합니다."
         }
       ]
     },
@@ -836,8 +910,10 @@
         },
         {
           "url": "guide/deprecations",
-          "title": "Deprecations",
-          "tooltip": "Summary of Angular APIs and features that are deprecated."
+          "title!": "Deprecations",
+          "title": "지원 중단 기능",
+          "tooltip!": "Summary of Angular APIs and features that are deprecated.",
+          "tooltip": "지원이 중단되는 Angular API와 기능에 대해 알아봅시다."
         }
       ]
     },
@@ -884,8 +960,10 @@
           "url": "cli"
         },
         {
-          "title": "Usage Analytics",
-          "tooltip": "For administrators, guide to gathering usage analytics from your users.",
+          "title!": "Usage Analytics",
+          "title": "사용 통계",
+          "tooltip!": "For administrators, guide to gathering usage analytics from your users.",
+          "tooltip": "사용자들이 앱을 어떻게 사용하는지 통계를 작성할 수 있습니다. 관리자를 위한 기능입니다.",
           "url": "cli/usage-analytics-gathering"
         },
         {
@@ -1127,12 +1205,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.fb5f1bff3",
+    "build": "sha.b82985640",
     "version": "8.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "8.1.0-local+sha.fb5f1bff3",
+    "full": "8.1.0-local+sha.b82985640",
     "branch": "master",
-    "commitSHA": "fb5f1bff374cc412a51e0929ec43b7f6d97251fc"
+    "commitSHA": "b82985640404c1decc6ea284f3203cd0c5e0a823"
   }
 }
