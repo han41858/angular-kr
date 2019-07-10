@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1562545074363,
+  "timestamp": 1562800862443,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -1639,7 +1639,7 @@
     "/generated/docs/api/core/testing/TestBedStatic.json": "dc74a537a09b74dcf208b22fc4361512c3dccd0e",
     "/generated/docs/api/core/testing/TestComponentRenderer.json": "59c6748579655f0c05ee3a140940aa9eb153a9a5",
     "/generated/docs/api/core/testing/TestModuleMetadata.json": "7532afcc1168e53a872fd675262f13ba0b726d06",
-    "/generated/docs/api/core/testing/async.json": "a16f2f692ccda20053fe9283f13c7a6dd8dcb25d",
+    "/generated/docs/api/core/testing/async.json": "152725ae3ecd9f8ea6dc6bf1b0cec570fc5501f6",
     "/generated/docs/api/core/testing/discardPeriodicTasks.json": "4bde1a02c3950e40c09efbcd68501f2489ffaeb6",
     "/generated/docs/api/core/testing/fakeAsync.json": "f665e2b8ab32775aa834d1672aaf3130ad1d7057",
     "/generated/docs/api/core/testing/flush.json": "d56be0602fbc17e72be8ee845a5850e313f0ee5f",
@@ -1885,7 +1885,7 @@
     "/generated/docs/api/upgrade/static/testing.json": "220b91b58c8670682554645050e22b600e0a5084",
     "/generated/docs/api/upgrade/static/testing/createAngularJSTestingModule.json": "bdba4ca4c2b68a48517cb18c73c8b37a9c34f944",
     "/generated/docs/api/upgrade/static/testing/createAngularTestingModule.json": "fc47436ec02a46f8493986e8e599d0e6fcc448fa",
-    "/generated/docs/app/search-data.json": "52b517ac20faeb8020d378d8002e93bf8b41723b",
+    "/generated/docs/app/search-data.json": "1a738a74b06e55340ffa7df0a72de24f2fd7c64f",
     "/generated/docs/cli.json": "f47fa1d2b8cdc2db623a412b126ba111a8842cc2",
     "/generated/docs/cli/add.json": "71a22e30958ebaacf3b69e571dcbafdd6ae8ce0c",
     "/generated/docs/cli/analytics.json": "cc90723102c659980e48ee9420e2a3df19340bb8",
@@ -2010,7 +2010,7 @@
     "/generated/docs/resources-contributing.json": "e0189adde7a53b2ddda72fc9fe0b9834ac8a5c38",
     "/generated/docs/resources.json": "a7aa31edca837195261ceea8bbf40411e54c703e",
     "/generated/docs/start.json": "bb1449dd61eb274859a207bf5b3310a21306e728",
-    "/generated/docs/start/data.json": "90d8ca120139291f7e538a04c16a4eb9958f95a8",
+    "/generated/docs/start/data.json": "edab0d39b1a61509c1e066ec7c711c000bba1af1",
     "/generated/docs/start/deployment.json": "65d36b1b9266c4e7809879c187ec4c2b02944abc",
     "/generated/docs/start/forms.json": "11a165d9cebdd34edacf7b3824f28cc0de9d4130",
     "/generated/docs/start/routing.json": "0d13493a95fa496efa851f85e923936e32a7b3c7",
@@ -2446,7 +2446,7 @@
     "/generated/images/marketing/home/ng-conf.png": "a8e3fee5aa2998343a604fda2cb92b05f86659df",
     "/generated/images/marketing/home/responsive-framework.svg": "fb507a225cc081304b8af10adeaed73e87ad5ba6",
     "/generated/images/marketing/home/speed-performance.svg": "9e62d7a089dc460edb41da99d3e8edf912dcf4ba",
-    "/generated/navigation.json": "dc1141ec7bc7cabc971554f6acfcae5303790abd",
+    "/generated/navigation.json": "53f2129a16cbe93e285068a50350f0aa0cab343a",
     "/generated/resources.json": "63ea8c029c1e8c0da6e1215d422db65a26760964",
     "/index.html": "e80294cd7c3dd66fa6f69c0ae8175ee98862fffb",
     "/live-example-live-example-module-ngfactory-es2015.aa785a776a2c1d32d7d7.js": "f20851d1a3dfc8a0b3f36b4e04c9a2e575639803",
