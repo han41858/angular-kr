@@ -677,7 +677,7 @@
             {
               "url": "guide/upgrade",
               "title!": "Upgrading Instructions",
-              "title": "AngularJS 앱 업그레이드 하기",
+              "title": "AngularJS 앱 업그레이드하기",
               "tooltip!": "Incrementally upgrade an AngularJS application to Angular.",
               "tooltip": "AngularJS 애플리케이션을 Angular로 업그레이드 하세요."
             },
@@ -779,7 +779,7 @@
     },
     {
       "title!": "Dev Workflow",
-      "title": "개발 과정",
+      "title": "개발 단계",
       "tooltip!": "Build, testing, and deployment information.",
       "tooltip": "빌드, 테스트, 배포 과정에 대해 설명합니다.",
       "children": [
@@ -1207,12 +1207,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.2dd9ae2c2",
+    "build": "sha.22f81c59f",
     "version": "8.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "8.1.0-local+sha.2dd9ae2c2",
+    "full": "8.1.0-local+sha.22f81c59f",
     "branch": "master",
-    "commitSHA": "2dd9ae2c211d5205fa06331249a03898461b8358"
+    "commitSHA": "22f81c59f79594bd814a7cdd2d28eff8218c4f7f"
   }
 }
