@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://angular.io/guide/accessibility</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/ajs-quick-reference</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/angular-compiler-options</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/animations</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/aot-compiler</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/aot-metadata-errors</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/app-shell</loc>
@@ -130,6 +139,12 @@
     <loc>https://angular.io/guide/i18n</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/ivy-compatibility-examples</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/ivy-compatibility</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/ivy</loc>
   </url>
   <url>
@@ -143,6 +158,24 @@
   </url>
   <url>
     <loc>https://angular.io/guide/lifecycle-hooks</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/migration-dynamic-flag</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/migration-injectable</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/migration-localize</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/migration-module-with-providers</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/migration-renderer</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/migration-undecorated-classes</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/module-types</loc>
@@ -229,9 +262,6 @@
     <loc>https://angular.io/guide/setup-local</loc>
   </url>
   <url>
-    <loc>https://angular.io/guide/setup</loc>
-  </url>
-  <url>
     <loc>https://angular.io/guide/sharing-ngmodules</loc>
   </url>
   <url>
@@ -250,6 +280,9 @@
     <loc>https://angular.io/guide/template-syntax</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/template-typecheck</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/testing</loc>
   </url>
   <url>
@@ -262,10 +295,16 @@
     <loc>https://angular.io/guide/universal</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/updating-to-version-9</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/updating</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/upgrade-performance</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/upgrade-setup</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/upgrade</loc>
@@ -374,6 +413,9 @@
   </url>
   <url>
     <loc>https://angular.io/cli/config</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/cli/deploy</loc>
   </url>
   <url>
     <loc>https://angular.io/cli/doc</loc>
@@ -754,22 +796,22 @@
     <loc>https://angular.io/api/common/getLocaleNumberFormat</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/common/getLocaleCurrencyCode</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/common/getLocaleCurrencyName</loc>
   </url>
   <url>
     <loc>https://angular.io/api/common/getLocaleCurrencySymbol</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/common/getLocaleDirection</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/common/CommonModule</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/common/DeprecatedI18NPipesModule</loc>
-  </url>
-  <url>
     <loc>https://angular.io/api/common/NgClass</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/common/NgClassBase</loc>
   </url>
   <url>
     <loc>https://angular.io/api/common/NgForOf</loc>
@@ -791,9 +833,6 @@
   </url>
   <url>
     <loc>https://angular.io/api/common/NgStyle</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/common/NgStyleBase</loc>
   </url>
   <url>
     <loc>https://angular.io/api/common/NgSwitch</loc>
@@ -856,18 +895,6 @@
     <loc>https://angular.io/api/common/KeyValue</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/common/DeprecatedDatePipe</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/common/DeprecatedCurrencyPipe</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/common/DeprecatedDecimalPipe</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/common/DeprecatedPercentPipe</loc>
-  </url>
-  <url>
     <loc>https://angular.io/api/common/isPlatformBrowser</loc>
   </url>
   <url>
@@ -883,7 +910,22 @@
     <loc>https://angular.io/api/common/ViewportScroller</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/common/PlatformLocation</loc>
+    <loc>https://angular.io/api/common/HashLocationStrategy</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/Location</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/PopStateEvent</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/APP_BASE_HREF</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/LocationStrategy</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/common/PathLocationStrategy</loc>
   </url>
   <url>
     <loc>https://angular.io/api/common/LOCATION_INITIALIZED</loc>
@@ -895,22 +937,7 @@
     <loc>https://angular.io/api/common/LocationChangeListener</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/common/LocationStrategy</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/common/APP_BASE_HREF</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/common/HashLocationStrategy</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/common/PathLocationStrategy</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/common/PopStateEvent</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/common/Location</loc>
+    <loc>https://angular.io/api/common/PlatformLocation</loc>
   </url>
   <url>
     <loc>https://angular.io/api/common/testing</loc>
@@ -1051,25 +1078,13 @@
     <loc>https://angular.io/api/core/LOCALE_ID</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/core/DEFAULT_CURRENCY_CODE</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/core/MissingTranslationStrategy</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/ApplicationModule</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/wtfCreateScope</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/wtfLeave</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/wtfStartTimeRange</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/wtfEndTimeRange</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/WtfScopeFn</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/AbstractType</loc>
@@ -1084,10 +1099,10 @@
     <loc>https://angular.io/api/core/ErrorHandler</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/Sanitizer</loc>
+    <loc>https://angular.io/api/core/SecurityContext</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/SecurityContext</loc>
+    <loc>https://angular.io/api/core/Sanitizer</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/Attribute</loc>
@@ -1219,10 +1234,13 @@
     <loc>https://angular.io/api/core/ReflectiveInjector</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/StaticProvider</loc>
+    <loc>https://angular.io/api/core/ClassProvider</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/ValueProvider</loc>
+    <loc>https://angular.io/api/core/ClassSansProvider</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/ConstructorProvider</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/ConstructorSansProvider</loc>
@@ -1231,22 +1249,34 @@
     <loc>https://angular.io/api/core/ExistingProvider</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/core/ExistingSansProvider</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/core/FactoryProvider</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/FactorySansProvider</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/Provider</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/core/StaticClassProvider</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/StaticClassSansProvider</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/StaticProvider</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/core/TypeProvider</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/ClassProvider</loc>
+    <loc>https://angular.io/api/core/ValueProvider</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/ValueSansProvider</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/ClassSansProvider</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/ResolvedReflectiveFactory</loc>
@@ -1279,12 +1309,6 @@
     <loc>https://angular.io/api/core/NgZone</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/RenderComponentType</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/Renderer</loc>
-  </url>
-  <url>
     <loc>https://angular.io/api/core/Renderer2</loc>
   </url>
   <url>
@@ -1295,9 +1319,6 @@
   </url>
   <url>
     <loc>https://angular.io/api/core/RendererType2</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/core/RootRenderer</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/COMPILER_OPTIONS</loc>
@@ -1421,6 +1442,39 @@
   </url>
   <url>
     <loc>https://angular.io/api/core/platformCore</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global/ngApplyChanges</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global/Listener</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global/ngGetComponent</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global/ngGetContext</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global/ngGetDirectives</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global/ngGetHostElement</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global/ngGetInjector</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global/ngGetListeners</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global/ngGetOwningComponent</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/global/ngGetRootComponents</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/testing</loc>
@@ -1550,9 +1604,6 @@
   </url>
   <url>
     <loc>https://angular.io/api/forms/NgForm</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/forms/NgFormSelectorWarning</loc>
   </url>
   <url>
     <loc>https://angular.io/api/forms/NgModel</loc>
@@ -1715,6 +1766,9 @@
   </url>
   <url>
     <loc>https://angular.io/api/platform-browser/HammerLoader</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/platform-browser/HammerModule</loc>
   </url>
   <url>
     <loc>https://angular.io/api/platform-browser/DomSanitizer</loc>
@@ -1897,6 +1951,9 @@
     <loc>https://angular.io/api/router/LoadChildrenCallback</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/router/QueryParamsHandling</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/router/ResolveData</loc>
   </url>
   <url>
@@ -2015,6 +2072,9 @@
   </url>
   <url>
     <loc>https://angular.io/api/router/ExtraOptions</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/router/InitialNavigation</loc>
   </url>
   <url>
     <loc>https://angular.io/api/router/ROUTER_CONFIGURATION</loc>

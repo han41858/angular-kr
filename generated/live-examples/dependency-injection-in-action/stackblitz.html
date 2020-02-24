@@ -1,5 +1,5 @@
 <html lang="en"><head></head><body>
-    <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1" target="_self"><input type="hidden" name="files[src/app/app-routing.module.ts]" value="import { NgModule } from '@angular/core';
+    <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1?file=src/app/app.component.ts" target="_self"><input type="hidden" name="files[src/app/app-routing.module.ts]" value="import { NgModule } from '@angular/core';
 import { Routes, RouterModule }  from '@angular/router';
 
 const routes: Routes = [];
@@ -252,9 +252,15 @@ export class HeroContactComponent {
       @Host() // HeroCacheService 인스턴스 탐색 범위를 호스트 컴포넌트까지로 제한합니다.
       private heroCache: HeroCacheService,
 
+<<<<<<< HEAD
       @Host()     // LoggerService를 찾을 범위를 제한합니다. 애플리케이션 전역 인스턴스는 가려집니다.
       @Optional() // 서비스 인스턴스가 존재하지 않는 것도 허용합니다.
       private loggerService: LoggerService
+=======
+      @Host()     // limit search for logger; hides the application-wide logger
+      @Optional() // ok if the logger doesn't exist
+      private loggerService?: LoggerService
+>>>>>>> ae0253f34adad0e37d2a5e6596a08aa049ba3072
   ) {
     if (loggerService) {
       this.hasLogger = true;
@@ -500,7 +506,7 @@ const templateC = `
 })
 export class CarolComponent {
   name = 'Carol';
-  constructor( @Optional() public parent: Parent ) { }
+  constructor( @Optional() public parent?: Parent ) { }
 }
 
 @Component({
@@ -509,7 +515,7 @@ export class CarolComponent {
 })
 export class ChrisComponent {
   name = 'Chris';
-  constructor( @Optional() public parent: Parent ) { }
+  constructor( @Optional() public parent?: Parent ) { }
 }
 
 //////  Craig ///////////
@@ -525,7 +531,7 @@ export class ChrisComponent {
   </div>`
 })
 export class CraigComponent {
-  constructor( @Optional() public alex: Base ) { }
+  constructor( @Optional() public alex?: Base ) { }
 }
 
 //////// B - Parent /////////
@@ -546,7 +552,7 @@ const templateB = `
 })
 export class BarryComponent implements Parent {
   name = 'Barry';
-  constructor( @SkipSelf() @Optional() public parent: Parent ) { }
+  constructor( @SkipSelf() @Optional() public parent?: Parent ) { }
 }
 
 @Component({
@@ -556,7 +562,7 @@ export class BarryComponent implements Parent {
 })
 export class BobComponent implements Parent {
   name = 'Bob';
-  constructor( @SkipSelf() @Optional() public parent: Parent ) { }
+  constructor( @SkipSelf() @Optional() public parent?: Parent ) { }
 }
 
 @Component({
@@ -566,7 +572,7 @@ export class BobComponent implements Parent {
 })
 export class BethComponent implements Parent {
   name = 'Beth';
-  constructor( @SkipSelf() @Optional() public parent: Parent ) { }
+  constructor( @SkipSelf() @Optional() public parent?: Parent ) { }
 }
 
 ///////// A - Grandparent //////
@@ -620,7 +626,7 @@ export class AliceComponent implements Parent
   </div>`
 })
 export class CathyComponent {
-  constructor( @Optional() public alex: AlexComponent ) { }
+  constructor( @Optional() public alex?: AlexComponent ) { }
 }
 
 ///////// ParentFinder //////
@@ -909,16 +915,6 @@ can be found in the LICENSE file at http://angular.io/license
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
 // import 'classlist.js';  // Run `npm install --save classlist.js`.
 
-/** IE10 and IE11 requires the following for the Reflect API. */
-/**
- * DO NOT REMOVE
- * By default, Reflect polyfills are auto-included by the CLI and
- * are required for JIT compilation.  StackBlitz examples are
- * compiled using JIT.
- */
-import 'core-js/es6/reflect';
-import 'core-js/es7/reflect';
-
 /**
  * Web Animations `@angular/platform-browser/animations`
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
@@ -939,9 +935,11 @@ import 'core-js/es7/reflect';
  *
  * The following flags will work for all browsers.
  *
- * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame
+ * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch
+ * requestAnimationFrame
  * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick
- * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames
+ * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch
+ * specified eventNames
  *
  *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js
  *  with the following flag, it will bypass `zone.js` patch for IE/Edge
@@ -953,8 +951,7 @@ import 'core-js/es7/reflect';
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-import 'zone.js/dist/zone';  // Included with Angular CLI.
-
+import 'zone.js/dist/zone'; // Included with Angular CLI.
 
 /***************************************************************************************************
  * APPLICATION IMPORTS
@@ -1269,7 +1266,7 @@ can be found in the LICENSE file at http://angular.io/license
   },
   &quot;defaultProject&quot;: &quot;angular.io-example&quot;
 }
-"><input type="hidden" name="tags[0]" value="angular"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="cookbook"><input type="hidden" name="description" value="Angular Example - Dependency Injection"><input type="hidden" name="dependencies" value="{&quot;@angular/animations&quot;:&quot;^8.0.0&quot;,&quot;@angular/common&quot;:&quot;^8.0.0&quot;,&quot;@angular/compiler&quot;:&quot;^8.0.0&quot;,&quot;@angular/core&quot;:&quot;^8.0.0&quot;,&quot;@angular/forms&quot;:&quot;^8.0.0&quot;,&quot;@angular/platform-browser&quot;:&quot;^8.0.0&quot;,&quot;@angular/platform-browser-dynamic&quot;:&quot;^8.0.0&quot;,&quot;@angular/router&quot;:&quot;^8.0.0&quot;,&quot;angular-in-memory-web-api&quot;:&quot;^0.8.0&quot;,&quot;core-js&quot;:&quot;^2.5.4&quot;,&quot;rxjs&quot;:&quot;^6.5.1&quot;,&quot;tslib&quot;:&quot;^1.9.0&quot;,&quot;web-animations-js&quot;:&quot;^2.3.1&quot;,&quot;zone.js&quot;:&quot;~0.9.1&quot;,&quot;jasmine-core&quot;:&quot;~2.99.1&quot;,&quot;jasmine-marbles&quot;:&quot;^0.5.0&quot;}"></form>
+"><input type="hidden" name="tags[0]" value="angular"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="cookbook"><input type="hidden" name="description" value="Angular Example - Dependency Injection"><input type="hidden" name="dependencies" value="{&quot;@angular/animations&quot;:&quot;^8.0.0&quot;,&quot;@angular/common&quot;:&quot;^8.0.0&quot;,&quot;@angular/compiler&quot;:&quot;^8.0.0&quot;,&quot;@angular/core&quot;:&quot;^8.0.0&quot;,&quot;@angular/forms&quot;:&quot;^8.0.0&quot;,&quot;@angular/platform-browser&quot;:&quot;^8.0.0&quot;,&quot;@angular/platform-browser-dynamic&quot;:&quot;^8.0.0&quot;,&quot;@angular/router&quot;:&quot;^8.0.0&quot;,&quot;angular-in-memory-web-api&quot;:&quot;^0.8.0&quot;,&quot;core-js&quot;:&quot;^2.5.4&quot;,&quot;rxjs&quot;:&quot;^6.5.1&quot;,&quot;tslib&quot;:&quot;^1.10.0&quot;,&quot;web-animations-js&quot;:&quot;^2.3.1&quot;,&quot;zone.js&quot;:&quot;~0.10.2&quot;,&quot;jasmine-core&quot;:&quot;~2.99.1&quot;,&quot;jasmine-marbles&quot;:&quot;^0.6.0&quot;}"></form>
     <script>
       var embedded = 'ctl=1';
       var isEmbedded = window.location.search.indexOf(embedded) > -1;
