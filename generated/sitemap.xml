@@ -325,19 +325,19 @@
     <loc>https://angular.io/guide/workspace-config</loc>
   </url>
   <url>
-    <loc>https://angular.io/start/data</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/start/deployment</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/start/forms</loc>
-  </url>
-  <url>
     <loc>https://angular.io/start</loc>
   </url>
   <url>
-    <loc>https://angular.io/start/routing</loc>
+    <loc>https://angular.io/start/start-data</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/start/start-deployment</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/start/start-forms</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/start/start-routing</loc>
   </url>
   <url>
     <loc>https://angular.io/tutorial</loc>
