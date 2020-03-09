@@ -296,14 +296,14 @@ can be found in the LICENSE file at http://angular.io/license
   <!-- ERROR: There is no `colspan` property to set!
     <tr><td colspan=&quot;{{1 + 1}}&quot;>Three-Four</td></tr>
   -->
-  <!-- Notice the colSpan property is camel case -->
+  <!-- colSpan 프로퍼티는 캐멀 케이스입니다. -->
   <tr><td [colSpan]=&quot;1 + 1&quot;>Three-Four</td></tr>
 
   <tr><td>Five</td><td>Six</td></tr>
 </table>
 
 <div>
-  <!-- create and set an aria attribute for assistive technology -->
+  <!-- 웹 접근성 향상을 위해 ARIA 어트리뷰트를 지정할 수 있습니다. -->
   <button [attr.aria-label]=&quot;actionName&quot;>{{actionName}} with Aria</button>
 </div>
 
@@ -311,28 +311,28 @@ can be found in the LICENSE file at http://angular.io/license
 
 <h2>Styling precedence</h2>
 
-<h3>Basic specificity</h3>
+<h3>기본 순서</h3>
 
-<!-- The `class.special` binding will override any value for the `special` class in `classExpr`.  -->
+<!-- `class.special`이 `class`보다 우선순위가 높습니다.  -->
 <div [class.special]=&quot;isSpecial&quot; [class]=&quot;classExpr&quot;>Some text.</div>
 
-<!-- The `style.color` binding will override any value for the `color` property in `styleExpr`.  -->
+<!-- `style.color`가 `style`보다 우선순위가 높습니다.  -->
 <div [style.color]=&quot;color&quot; [style]=&quot;styleExpr&quot;>Some text.</div>
 
-<h3>Source specificity</h3>
+<h3>소스별 우선순위</h3>
 
-<!-- The `class.special` template binding will override any host binding to the `special` class set by `dirWithClassBinding` or `comp-with-host-binding`.-->
+<!-- `dirWithClassBinding`이나 `comp-with-host-binding`보다 `class.special` 템플릿 바인딩의 우선순위가 더 높습니다. -->
 <comp-with-host-binding [class.special]=&quot;isSpecial&quot; dirWithClassBinding>Some text.</comp-with-host-binding>
 
-<!-- The `style.color` template binding will override any host binding to the `color` property set by `dirWithStyleBinding` or `comp-with-host-binding`. -->
+<!-- `dirWithStyleBinding`이나 `comp-with-host-binding`보다 `style.color` 템플릿 바인딩의 우선순위가 더 높습니다. -->
 <comp-with-host-binding [style.color]=&quot;color&quot; dirWithStyleBinding>Some text.</comp-with-host-binding>
 
-<h3>Dynamic vs static</h3>
+<h3>동적 vs 정적</h3>
 
-<!-- If `classExpr` has a value for the `special` class, this value will override the `class=&quot;special&quot;` below -->
+<!-- `classExpr`이 동적으로 처리되기 때문에 `class`보다 우선순위가 높습니다. -->
 <div class=&quot;special&quot; [class]=&quot;classExpr&quot;>Some text.</div>
 
-<!-- If `styleExpr` has a value for the `color` property, this value will override the `style=&quot;color: blue&quot;` below -->
+<!-- `styleExpr`이 동적으로 처리되기 때문에 `style`보다 우선순위가 높습니다. -->
 <div style=&quot;color: blue&quot; [style]=&quot;styleExpr&quot;>Some text.</div>
 
 
