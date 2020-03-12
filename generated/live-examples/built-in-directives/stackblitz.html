@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
 
   currentClasses: {};
   setCurrentClasses() {
-    // CSS classes: added/removed per current state of component properties
+    // CSS 클래스는 컴포넌트 프로퍼티 값에 따라 추가되거나 제거됩니다.
     this.currentClasses =  {
       'saveable': this.canSave,
       'modified': !this.isUnchanged,
@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
 
   currentStyles: {};
   setCurrentStyles() {
-    // CSS styles: set per current state of component properties
+    // CSS 스타일은 컴포넌트 프로퍼티 값에 따라 지정됩니다.
     this.currentStyles = {
       'font-style':  this.canSave      ? 'italic' : 'normal',
       'font-weight': !this.isUnchanged ? 'bold'   : 'normal',
@@ -116,7 +116,7 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/app.module.ts]" value="import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // <--- JavaScript import from Angular
+import { FormsModule } from '@angular/forms'; // <--- FormsModule 패키지 로드
 
 
 import { AppComponent } from './app.component';
@@ -133,7 +133,7 @@ import { ItemSwitchComponents } from './item-switch.component';
 
   imports: [
     BrowserModule,
-    FormsModule // <--- import into the NgModule
+    FormsModule // <--- NgModule에 로드
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -597,7 +597,7 @@ can be found in the LICENSE file at http://angular.io/license
                   {{ isUnchanged ? &quot;unchanged&quot; : &quot;modified&quot; }} and
                   {{ isSpecial ? &quot;&quot;: &quot;not&quot;}} special after clicking &quot;Refresh&quot;.</div>
 <br><br>
-<!-- toggle the &quot;special&quot; class on/off with a property -->
+<!-- &quot;special&quot; 클래스는 프로퍼티 바인딩으로 켜고 끌 수 있습니다. -->
 <div [ngClass]=&quot;isSpecial ? 'special' : ''&quot;>This div is special</div>
 <div class=&quot;helpful study course&quot;>Helpful study course</div>
 <div [ngClass]=&quot;{'helpful':false, 'study':true, 'course':true}&quot;>Study course</div>
@@ -652,7 +652,7 @@ can be found in the LICENSE file at http://angular.io/license
 <hr>
 
 <h4>Show/hide vs. NgIf</h4>
-<!-- isSpecial is true -->
+<!-- isSpecial이 true일 때 -->
 <div [class.hidden]=&quot;!isSpecial&quot;>Show with class</div>
 <div [class.hidden]=&quot;isSpecial&quot;>Hide with class</div>
 
