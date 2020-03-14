@@ -261,10 +261,10 @@ can be found in the LICENSE file at http://angular.io/license
 
 <h2 id=&quot;pipes&quot;>Pipes</h2>
 <p>Title through uppercase pipe: {{title | uppercase}}</p>
-<!-- convert title to uppercase, then to lowercase -->
+<!-- title 을 대문자로 변경한 후에 소문자로 변경합니다. -->
 <p>Title through a pipe chain: {{title | uppercase | lowercase}}</p>
 
-<!-- pipe with configuration argument => &quot;February 25, 1980&quot; -->
+<!-- 파이프에 인자 사용하기 => &quot;February 25, 1980&quot; -->
 <p>Manufacture date with date format pipe: {{item.manufactureDate | date:'longDate'}}</p>
 <p>Manufacture date with uppercase pipe: {{(item.manufactureDate | date:'longDate') | uppercase}}</p>
 <p>Item json pipe: {{item | json}}</p>
@@ -305,7 +305,7 @@ can be found in the LICENSE file at http://angular.io/license
 
 <div>
   <h3>Using safe navigation operator (<code>?</code>)</h3>
-  <!-- No item, no problem! -->
+  <!-- item 값이 없어도 에러가 발생하지 않습니다. -->
   <p>The null item's name is: {{nullItem?.name}}</p>
 </div>
 
@@ -314,7 +314,7 @@ can be found in the LICENSE file at http://angular.io/license
 <hr />
 <h2>Non-null assertion operator (<code>!</code>)</h2>
 <div>
-  <!--No color, no error -->
+  <!-- color 값이 없어도 에러가 발생하지 않습니다. -->
   <p *ngIf=&quot;item&quot;>The item's color is: {{item!.color}}</p>
 
 
