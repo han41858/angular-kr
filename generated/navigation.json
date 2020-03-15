@@ -256,7 +256,7 @@
             {
               "url": "guide/user-input",
               "!title": "User Input",
-              "title": "사용자 동작",
+              "title": "사용자 입력",
               "!tooltip": "User input triggers DOM events. Angular listens to those events with event bindings that funnel updated values back into your app's components and models.",
               "tooltip": "사용자가 애플리케이션을 실행할 때 DOM 이벤트가 발생합니다. Angular는 이 이벤트를 사용해서 애플리케이션 컴포넌트와 모델을 갱신합니다."
             },
@@ -1266,12 +1266,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.171935b425",
+    "build": "sha.188d472255",
     "version": "9.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "9.1.0-local+sha.171935b425",
+    "full": "9.1.0-local+sha.188d472255",
     "branch": "master",
-    "commitSHA": "171935b4258b57ace7d57ae144b42825a9c4991d"
+    "commitSHA": "188d47225539474b7534e6d1e44bbdb49dc554de"
   }
 }
