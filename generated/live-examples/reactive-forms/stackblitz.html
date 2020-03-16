@@ -475,13 +475,8 @@ can be found in the LICENSE file at http://angular.io/license
   <div formArrayName=&quot;aliases&quot;>
     <h3>Aliases</h3> <button (click)=&quot;addAlias()&quot;>Add Alias</button>
 
-<<<<<<< HEAD
-    <div *ngFor=&quot;let address of aliases.controls; let i=index&quot;>
-      <!-- alias 폼 배열이 반복되는 부분 -->
-=======
     <div *ngFor=&quot;let alias of aliases.controls; let i=index&quot;>
-      <!-- The repeated alias template -->
->>>>>>> ae0253f34adad0e37d2a5e6596a08aa049ba3072
+      <!-- alias 폼 배열이 반복되는 부분 -->
       <label>
         Alias:
         <input type=&quot;text&quot; [formControlName]=&quot;i&quot;>
