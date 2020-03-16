@@ -118,17 +118,14 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/unless.directive.ts]" value="import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 /**
- * 평가 조건이 true가 아니라면 DOM에 템플릿을 추가합니다.
- *
- * If the expression assigned to `appUnless` evaluates to a truthy value
- * then the templated elements are removed removed from the DOM,
- * the templated elements are (re)inserted into the DOM.
+ * 평가 결과가 참으로 평가되면 DOM에서 템플릿을 제거합니다.
+ * 평가 결과가 거짓으로 평가되면 DOM에 템플릿을 추가합니다.
  *
  * <div *appUnless=&quot;errorCount&quot; class=&quot;success&quot;>
  *   Congrats! Everything is great!
  * </div>
  *
- * ### Syntax
+ * ### 사용법
  *
  * - `<div *appUnless=&quot;condition&quot;>...</div>`
  * - `<ng-template [appUnless]=&quot;condition&quot;><div>...</div></ng-template>`
