@@ -118,11 +118,11 @@ import { FlowerService } from '../flower.service';
   selector: 'app-host',
   templateUrl: './host.component.html',
   styleUrls: ['./host.component.css'],
-  //  provide the service
+  //  서비스 프로바이더를 등록합니다.
   providers: [{ provide: FlowerService, useValue: { emoji: '🌼' } }]
 })
 export class HostComponent {
-  // use @Host() in the constructor when injecting the service
+  // 생성자에 @Host()를 사용했습니다.
   constructor(@Host() @Optional() public flower?: FlowerService) { }
 
 }
@@ -241,11 +241,11 @@ import { LeafService } from '../leaf.service';
   selector: 'app-skipself',
   templateUrl: './skipself.component.html',
   styleUrls: ['./skipself.component.css'],
-  // Angular would ignore this LeafService instance
+  // 이 계층에 선언된 LeafService 인스턴스는 무시됩니다.
   providers: [{ provide: LeafService, useValue: { emoji: '🍁' } }]
 })
 export class SkipselfComponent {
-  // Use @SkipSelf() in the constructor
+  // 생성자에 @SkipSelf()를 사용했습니다.
   constructor(@SkipSelf() public leaf: LeafService) { }
 }
 

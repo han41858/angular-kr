@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1584663244164,
+  "timestamp": 1584716779880,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -1921,7 +1921,7 @@
     "/generated/docs/api/upgrade/static/testing.json": "586454ff0bc7d36fe7022e67e2664af51f02219d",
     "/generated/docs/api/upgrade/static/testing/createAngularJSTestingModule.json": "75c96495ab641fafdb3352daa70a829b1383f4c3",
     "/generated/docs/api/upgrade/static/testing/createAngularTestingModule.json": "e6abafd4829906163a36ffde8283768575c65f7f",
-    "/generated/docs/app/search-data.json": "bbc84671a930a682adc73451a25412be075e3008",
+    "/generated/docs/app/search-data.json": "ad7cc5841a83a990baad3633100d2d534b60a2c1",
     "/generated/docs/cli.json": "e9eda9ca44baee2877433423c57a3e052126ce0a",
     "/generated/docs/cli/add.json": "adcdf5dc8a8bb35ea589ed13d9f81a7660b9194c",
     "/generated/docs/cli/analytics.json": "28abe209e211e1f350c7816fd6e12c75ac79c4d8",
@@ -1989,7 +1989,7 @@
     "/generated/docs/guide/forms.json": "87520dfc58d2ec80614cc897da5235078d83aa69",
     "/generated/docs/guide/frequent-ngmodules.json": "b207be2edb5786d0234081b186ecad36541dab48",
     "/generated/docs/guide/glossary.json": "3d6ce58b1b481070d06b48219a8970420a2e79e7",
-    "/generated/docs/guide/hierarchical-dependency-injection.json": "b6449eb4cda4adf4cc0e88d5aa9fbf5f480fe48a",
+    "/generated/docs/guide/hierarchical-dependency-injection.json": "e8c9d148944393270325a8f953a78cad502578b1",
     "/generated/docs/guide/http.json": "5318dea4dbc5a97ea52da081fab02e49022a9f89",
     "/generated/docs/guide/i18n.json": "8d3293818679248618c97201a865038938dcbaa2",
     "/generated/docs/guide/ivy-compatibility-examples.json": "d5746458a6fe1ff0c8653d385ede7683ea06fa73",
@@ -2506,7 +2506,7 @@
     "/generated/images/marketing/home/ng-conf.png": "20df84b06a79b624717b6a800ce65a144859dd90",
     "/generated/images/marketing/home/responsive-framework.svg": "fb507a225cc081304b8af10adeaed73e87ad5ba6",
     "/generated/images/marketing/home/speed-performance.svg": "9e62d7a089dc460edb41da99d3e8edf912dcf4ba",
-    "/generated/navigation.json": "4a02d4234b03ea1d23e53608701412cea2d1290b",
+    "/generated/navigation.json": "dc904e4e36f125aa376ee51f85944e939fb06dc8",
     "/generated/resources.json": "a05a10e024a9aae11970987b76150fa0df30cdf4",
     "/index.html": "c4e534e41949315b55736782905c73f83ed1c39d",
     "/live-example-live-example-module-es2015.23e7c2bc7422a23d5e39.js": "2a97713e84db7088eac1c7ac59dbc4b67d7d694e",
