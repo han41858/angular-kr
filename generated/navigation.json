@@ -380,7 +380,7 @@
             {
               "url": "guide/observables-in-angular",
               "!title": "Observables in Angular",
-              "title": "Angular에서 옵저버블 활용하기",
+              "title": "Angular가 제공하는 옵저버블",
               "tooltip": ""
             },
             {
@@ -1266,12 +1266,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.2b25814c95",
+    "build": "sha.e27772e4d0",
     "version": "9.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "9.1.0-local+sha.2b25814c95",
+    "full": "9.1.0-local+sha.e27772e4d0",
     "branch": "master",
-    "commitSHA": "2b25814c95eb2f7aa805caa7558969528d968851"
+    "commitSHA": "e27772e4d00c65d50dd626cf842486a779a07d7c"
   }
 }
