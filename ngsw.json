@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1585236004818,
+  "timestamp": 1585321707078,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -1990,7 +1990,7 @@
     "/generated/docs/guide/frequent-ngmodules.json": "b207be2edb5786d0234081b186ecad36541dab48",
     "/generated/docs/guide/glossary.json": "3d6ce58b1b481070d06b48219a8970420a2e79e7",
     "/generated/docs/guide/hierarchical-dependency-injection.json": "c45c25b11557f4179c7c41a2193bc2fa92defe2d",
-    "/generated/docs/guide/http.json": "6f67506fe608ccce2193c0e48d80d3f7da907e2a",
+    "/generated/docs/guide/http.json": "13bd7c68f7f17731fb6c0e23b2e468ede5938a4e",
     "/generated/docs/guide/i18n.json": "8d3293818679248618c97201a865038938dcbaa2",
     "/generated/docs/guide/ivy-compatibility-examples.json": "d5746458a6fe1ff0c8653d385ede7683ea06fa73",
     "/generated/docs/guide/ivy-compatibility.json": "101936baab7acc0f19e20dbde64bb514800c26c8",
@@ -2506,7 +2506,7 @@
     "/generated/images/marketing/home/ng-conf.png": "20df84b06a79b624717b6a800ce65a144859dd90",
     "/generated/images/marketing/home/responsive-framework.svg": "fb507a225cc081304b8af10adeaed73e87ad5ba6",
     "/generated/images/marketing/home/speed-performance.svg": "9e62d7a089dc460edb41da99d3e8edf912dcf4ba",
-    "/generated/navigation.json": "9163b1d260181091199ac3140c8fe62a506bc0ab",
+    "/generated/navigation.json": "83c6008bff965d1c7c86166647f2ee9b7e2d2e7b",
     "/generated/resources.json": "a05a10e024a9aae11970987b76150fa0df30cdf4",
     "/index.html": "c4e534e41949315b55736782905c73f83ed1c39d",
     "/live-example-live-example-module-es2015.23e7c2bc7422a23d5e39.js": "2a97713e84db7088eac1c7ac59dbc4b67d7d694e",
