@@ -586,7 +586,7 @@
             {
               "url": "guide/route-animations",
               "!title": "Route Transition Animations",
-              "title": "페이지 전환 애니메이션",
+              "title": "라우팅 애니메이션",
               "!tooltip": "Animate route transitions.",
               "tooltip": "페이지를 전환할 때도 애니메이션을 사용할 수 있습니다."
             }
@@ -1266,12 +1266,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.18dcec49d0",
+    "build": "sha.bc21930fb5",
     "version": "9.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "9.1.0-local+sha.18dcec49d0",
+    "full": "9.1.0-local+sha.bc21930fb5",
     "branch": "master",
-    "commitSHA": "18dcec49d08cfdd06317b6c4e6064f6907866922"
+    "commitSHA": "bc21930fb56ec6c2b2c51565017dcf5e3423e51a"
   }
 }
