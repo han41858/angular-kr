@@ -678,7 +678,7 @@
         },
         {
           "!title": "Upgrading from AngularJS",
-          "title": "업그레이드",
+          "title": "AngularJS 앱 업그레이드",
           "!tooltip": "Incrementally upgrade an AngularJS application to Angular.",
           "tooltip": "AngularJS 애플리케이션을 Angular로 업그레이드 하세요.",
           "children": [
@@ -691,7 +691,7 @@
             {
               "url": "guide/upgrade",
               "!title": "Upgrading Instructions",
-              "title": "AngularJS 앱 업그레이드하기",
+              "title": "업그레이드 방법",
               "!tooltip": "Incrementally upgrade an AngularJS application to Angular.",
               "tooltip": "AngularJS 애플리케이션을 Angular로 업그레이드 하세요."
             },
@@ -705,9 +705,9 @@
             {
               "url": "guide/ajs-quick-reference",
               "!title": "AngularJS-Angular Concepts",
-              "title": "AngularJS와 Angular 컨셉 비교",
+              "title": "컨셉 비교",
               "!tooltip": "Learn how AngularJS concepts and techniques map to Angular.",
-              "tooltip": "AngularJS에서 사용하는 컨셉과 테크닉을 Angular에 어떻게 적용할 수 있는지 확인해 보세요."
+              "tooltip": "AngularJS에 사용하던 컨셉과 테크닉을 Angular에서 어떻게 적용할 수 있는지 확인해 보세요."
             }
           ]
         },
@@ -1266,12 +1266,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.c23a972f76",
+    "build": "sha.61e8879483",
     "version": "9.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "9.1.0-local+sha.c23a972f76",
+    "full": "9.1.0-local+sha.61e8879483",
     "branch": "master",
-    "commitSHA": "c23a972f7610913b5a2bfa2ccdc0d1551477718f"
+    "commitSHA": "61e8879483efbc7d7cbc4e9a52b4b53d49674610"
   }
 }
