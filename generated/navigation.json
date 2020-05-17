@@ -727,9 +727,9 @@
             {
               "url": "guide/using-libraries",
               "!title": "Using Published Libraries",
-              "title": "공유된 라이브러리 사용하기",
+              "title": "배포된 라이브러리 활용하기",
               "!tooltip": "Integrate published libraries into an app.",
-              "tooltip": "공유된 라이브러리를 앱에 추가해 봅시다."
+              "tooltip": "배포된 라이브러리를 앱에 추가해 봅시다."
             },
             {
               "url": "guide/creating-libraries",
@@ -1266,12 +1266,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.2b40072036",
+    "build": "sha.eb34d132d6",
     "version": "9.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "9.1.0-local+sha.2b40072036",
+    "full": "9.1.0-local+sha.eb34d132d6",
     "branch": "master",
-    "commitSHA": "2b40072036b77653716589b7836cc841aa22e9ef"
+    "commitSHA": "eb34d132d6cf7db4683a87395c7add225241d2c6"
   }
 }
