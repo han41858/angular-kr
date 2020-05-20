@@ -756,7 +756,7 @@
             {
               "url": "guide/schematics-authoring",
               "!title": "Authoring Schematics",
-              "title": "스키매틱 정의하기",
+              "title": "스키매틱 만들기",
               "!tooltip": "Understand the structure of a schematic.",
               "tooltip": "스키매틱을 구성하는 요소에 대해 알아봅시다."
             },
@@ -1266,12 +1266,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.64ee81d942",
+    "build": "sha.1d06791d6c",
     "version": "9.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "9.1.0-local+sha.64ee81d942",
+    "full": "9.1.0-local+sha.1d06791d6c",
     "branch": "master",
-    "commitSHA": "64ee81d942dc6abe50003cdc25d84c72a1a3fdd8"
+    "commitSHA": "1d06791d6c09c964fbee19825a790cb134dd0075"
   }
 }
