@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1590937824612,
+  "timestamp": 1591024528675,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -1921,7 +1921,7 @@
     "/generated/docs/api/upgrade/static/testing.json": "586454ff0bc7d36fe7022e67e2664af51f02219d",
     "/generated/docs/api/upgrade/static/testing/createAngularJSTestingModule.json": "75c96495ab641fafdb3352daa70a829b1383f4c3",
     "/generated/docs/api/upgrade/static/testing/createAngularTestingModule.json": "e6abafd4829906163a36ffde8283768575c65f7f",
-    "/generated/docs/app/search-data.json": "ac4c7ca9a185cbfde14ebfad467c770a56911ac5",
+    "/generated/docs/app/search-data.json": "c850ffa1dabe00cbe089ea5fe5fc2c9a68a2cad9",
     "/generated/docs/cli.json": "e9eda9ca44baee2877433423c57a3e052126ce0a",
     "/generated/docs/cli/add.json": "adcdf5dc8a8bb35ea589ed13d9f81a7660b9194c",
     "/generated/docs/cli/analytics.json": "28abe209e211e1f350c7816fd6e12c75ac79c4d8",
@@ -2052,7 +2052,7 @@
     "/generated/docs/guide/user-input.json": "da085b752a2da8cb315f9bd4159ccb0e6b78d7f0",
     "/generated/docs/guide/using-libraries.json": "b359c2747e1088d1d5de22989ef437ea9e39d7fe",
     "/generated/docs/guide/visual-studio-2015.json": "d45c423355de8509ba01216c6fb2b524deeda604",
-    "/generated/docs/guide/web-worker.json": "590312b3b621f4e93aee6be353385c856475b0b9",
+    "/generated/docs/guide/web-worker.json": "2bd3e5d284baf7c62e4a4c4e388d59acb6f2a1d4",
     "/generated/docs/guide/workspace-config.json": "33acb1fd1274285be2611ab2b52768ad17b91706",
     "/generated/docs/index.json": "4efdbdf02595995d0ae00b27e2df91231eba4650",
     "/generated/docs/license.json": "472c2c7b7b2690be355cfd54eb8800e79e38b4c3",
@@ -2506,7 +2506,7 @@
     "/generated/images/marketing/home/ng-conf.png": "20df84b06a79b624717b6a800ce65a144859dd90",
     "/generated/images/marketing/home/responsive-framework.svg": "fb507a225cc081304b8af10adeaed73e87ad5ba6",
     "/generated/images/marketing/home/speed-performance.svg": "9e62d7a089dc460edb41da99d3e8edf912dcf4ba",
-    "/generated/navigation.json": "f357f0963e4b97a724add4333d3d243f815f2f4e",
+    "/generated/navigation.json": "01e17e4d012d3cc22bfd2b0fe296d7af7e67dfdc",
     "/generated/resources.json": "a05a10e024a9aae11970987b76150fa0df30cdf4",
     "/index.html": "c4e534e41949315b55736782905c73f83ed1c39d",
     "/live-example-live-example-module-es2015.23e7c2bc7422a23d5e39.js": "2a97713e84db7088eac1c7ac59dbc4b67d7d694e",
