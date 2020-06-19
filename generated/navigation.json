@@ -827,9 +827,9 @@
             {
               "url": "guide/template-typecheck",
               "!title": "Template Type-checking",
-              "title": "템플릿 타입 체크",
+              "title": "템플릿 타입 검사",
               "!tooltip": "Template type-checking in Angular.",
-              "tooltip": "Angular는 템플릿 타입 체크 기능을 제공합니다."
+              "tooltip": "Angular는 템플릿 타입 검사 기능을 제공합니다."
             }
           ]
         },
@@ -1266,12 +1266,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.93716f24aa",
+    "build": "sha.96e352a96b",
     "version": "9.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "9.1.0-local+sha.93716f24aa",
+    "full": "9.1.0-local+sha.96e352a96b",
     "branch": "master",
-    "commitSHA": "93716f24aa50d0a7a817d07f6e864a0acb41b958"
+    "commitSHA": "96e352a96b7bcbeb75918c140cd1b8d0a333dfce"
   }
 }
