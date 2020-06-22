@@ -843,7 +843,7 @@
         {
           "url": "guide/bazel",
           "!title": "Building with Bazel",
-          "title": "Bazel로 빌드하기",
+          "title": "Bazel 빌드하기",
           "!tooltip": "How to set up your environment to build and test with Bazel.",
           "tooltip": "Bazel을 사용한 빌드 환경을 어떻게 구성하는지, 이 환경에서 테스트는 어떻게 실행하는지 안내합니다."
         },
@@ -1266,12 +1266,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.96e352a96b",
+    "build": "sha.b54e696a95",
     "version": "9.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "9.1.0-local+sha.96e352a96b",
+    "full": "9.1.0-local+sha.b54e696a95",
     "branch": "master",
-    "commitSHA": "96e352a96b7bcbeb75918c140cd1b8d0a333dfce"
+    "commitSHA": "b54e696a95c23a65b663fda19b1d21d074b4b774"
   }
 }
