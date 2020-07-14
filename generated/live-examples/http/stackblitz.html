@@ -1,5 +1,5 @@
 <html lang="en"><head></head><body>
-    <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1?file=src/app/app.component.ts" target="_self"><input type="hidden" name="files[src/app/app.component.ts]" value="import { Component } from '@angular/core';
+        <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1?file=src/app/app.component.ts" target="_self"><input type="hidden" name="files[src/app/app.component.ts]" value="import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -608,13 +608,13 @@ import { searchUrl } from '../package-search/package-search.service';
 
 
 /**
- * If request is cachable (e.g., package search) and
+ * If request is cacheable (e.g., package search) and
  * response is in cache return the cached response as observable.
  * If has 'x-refresh' header that is true,
  * then also re-run the package search, using response from next(),
  * returning an observable that emits the cached response first.
  *
- * If not in cache or not cachable,
+ * If not in cache or not cacheable,
  * pass request through to next()
  */
 @Injectable()
@@ -623,7 +623,7 @@ export class CachingInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     // 캐싱 대상이 아니면 그대로 진행합니다.
-    if (!isCachable(req)) { return next.handle(req); }
+    if (!isCacheable(req)) { return next.handle(req); }
 
     const cachedResponse = this.cache.get(req);
     // 커스텀 헤더가 설정되면 업데이트 방식으로 동작합니다.
@@ -640,11 +640,11 @@ export class CachingInterceptor implements HttpInterceptor {
 }
 
 
-/** Is this request cachable? */
-function isCachable(req: HttpRequest<any>) {
-  // Only GET requests are cachable
+/** Is this request cacheable? */
+function isCacheable(req: HttpRequest<any>) {
+  // Only GET requests are cacheable
   return req.method === 'GET' &amp;&amp;
-    // Only npm package search is cachable in this app
+    // Only npm package search is cacheable in this app
     -1 < req.url.indexOf(searchUrl);
 }
 
@@ -1339,7 +1339,7 @@ can be found in the LICENSE file at http://angular.io/license
  * will put import in the top of bundle, so user need to create a separate file
  * in this directory (for example: zone-flags.ts), and put the following flags
  * into that file, and then add the following code before importing zone.js.
- * import './zone-flags.ts';
+ * import './zone-flags';
  *
  * The flags allowed in zone-flags.ts are listed here.
  *
@@ -1697,7 +1697,6 @@ can be found in the LICENSE file at http://angular.io/license
   <meta charset=&quot;utf-8&quot;>
   <title>HttpClient Demo</title>
   <base href=&quot;/&quot;>
-
   <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
   <link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;favicon.ico&quot;>
 </head>
@@ -1763,6 +1762,11 @@ can be found in the LICENSE file at http://angular.io/license
                   &quot;type&quot;: &quot;initial&quot;,
                   &quot;maximumWarning&quot;: &quot;2mb&quot;,
                   &quot;maximumError&quot;: &quot;5mb&quot;
+                },
+                {
+                  &quot;type&quot;: &quot;anyComponentStyle&quot;,
+                  &quot;maximumWarning&quot;: &quot;6kb&quot;,
+                  &quot;maximumError&quot;: &quot;10kb&quot;
                 }
               ]
             }
@@ -1836,18 +1840,18 @@ can be found in the LICENSE file at http://angular.io/license
   &quot;heroesUrl&quot;: &quot;api/heroes&quot;,
   &quot;textfile&quot;: &quot;assets/textfile.txt&quot;
 }
-"><input type="hidden" name="tags[0]" value="angular"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="http"><input type="hidden" name="description" value="Angular Example - Http"><input type="hidden" name="dependencies" value="{&quot;@angular/animations&quot;:&quot;^8.0.0&quot;,&quot;@angular/common&quot;:&quot;^8.0.0&quot;,&quot;@angular/compiler&quot;:&quot;^8.0.0&quot;,&quot;@angular/core&quot;:&quot;^8.0.0&quot;,&quot;@angular/forms&quot;:&quot;^8.0.0&quot;,&quot;@angular/platform-browser&quot;:&quot;^8.0.0&quot;,&quot;@angular/platform-browser-dynamic&quot;:&quot;^8.0.0&quot;,&quot;@angular/router&quot;:&quot;^8.0.0&quot;,&quot;angular-in-memory-web-api&quot;:&quot;^0.8.0&quot;,&quot;core-js&quot;:&quot;^2.5.4&quot;,&quot;rxjs&quot;:&quot;^6.5.1&quot;,&quot;tslib&quot;:&quot;^1.10.0&quot;,&quot;web-animations-js&quot;:&quot;^2.3.1&quot;,&quot;zone.js&quot;:&quot;~0.10.2&quot;,&quot;jasmine-core&quot;:&quot;~2.99.1&quot;,&quot;jasmine-marbles&quot;:&quot;^0.6.0&quot;}"></form>
-    <script>
-      var embedded = 'ctl=1';
-      var isEmbedded = window.location.search.indexOf(embedded) > -1;
+"><input type="hidden" name="tags[0]" value="angular"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="http"><input type="hidden" name="description" value="Angular Example - Http"><input type="hidden" name="dependencies" value="{&quot;@angular/animations&quot;:&quot;~9.1.4&quot;,&quot;@angular/common&quot;:&quot;~9.1.4&quot;,&quot;@angular/compiler&quot;:&quot;~9.1.4&quot;,&quot;@angular/core&quot;:&quot;~9.1.4&quot;,&quot;@angular/forms&quot;:&quot;~9.1.4&quot;,&quot;@angular/platform-browser&quot;:&quot;~9.1.4&quot;,&quot;@angular/platform-browser-dynamic&quot;:&quot;~9.1.4&quot;,&quot;@angular/router&quot;:&quot;~9.1.4&quot;,&quot;angular-in-memory-web-api&quot;:&quot;~0.11.0&quot;,&quot;rxjs&quot;:&quot;~6.5.4&quot;,&quot;tslib&quot;:&quot;^1.10.0&quot;,&quot;zone.js&quot;:&quot;~0.10.3&quot;,&quot;jasmine-core&quot;:&quot;~3.5.0&quot;,&quot;jasmine-marbles&quot;:&quot;~0.6.0&quot;}"></form>
+        <script>
+          var embedded = 'ctl=1';
+          var isEmbedded = window.location.search.indexOf(embedded) > -1;
 
-      if (isEmbedded) {
-        var form = document.getElementById('mainForm');
-        var action = form.action;
-        var actionHasParams = action.indexOf('?') > -1;
-        var symbol = actionHasParams ? '&' : '?'
-        form.action = form.action + symbol + embedded;
-      }
-      document.getElementById("mainForm").submit();
-    </script>
-    </body></html>
+          if (isEmbedded) {
+            var form = document.getElementById('mainForm');
+            var action = form.action;
+            var actionHasParams = action.indexOf('?') > -1;
+            var symbol = actionHasParams ? '&' : '?'
+            form.action = form.action + symbol + embedded;
+          }
+          document.getElementById("mainForm").submit();
+        </script>
+      </body></html>
