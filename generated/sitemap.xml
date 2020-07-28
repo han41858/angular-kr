@@ -37,7 +37,13 @@
     <loc>https://angular.io/guide/architecture</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/attribute-binding</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/attribute-directives</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/binding-syntax</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/bootstrapping</loc>
@@ -47,6 +53,9 @@
   </url>
   <url>
     <loc>https://angular.io/guide/build</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/built-in-directives</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/cheatsheet</loc>
@@ -106,6 +115,9 @@
     <loc>https://angular.io/guide/entry-components</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/event-binding</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/feature-modules</loc>
   </url>
   <url>
@@ -134,6 +146,12 @@
   </url>
   <url>
     <loc>https://angular.io/guide/i18n</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/inputs-outputs</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/interpolation</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/ivy-compatibility-examples</loc>
@@ -217,6 +235,9 @@
     <loc>https://angular.io/guide/practical-observable-usage</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/property-binding</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/providers</loc>
   </url>
   <url>
@@ -230,6 +251,9 @@
   </url>
   <url>
     <loc>https://angular.io/guide/route-animations</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/router-tutorial-toh</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/router-tutorial</loc>
@@ -292,16 +316,55 @@
     <loc>https://angular.io/guide/styleguide</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/svg-in-templates</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/template-expression-operators</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/template-reference-variables</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/template-statements</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/template-syntax</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/template-typecheck</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/test-debugging</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/testing-attribute-directives</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/testing-code-coverage</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/testing-components-basics</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/testing-components-scenarios</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/testing-pipes</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/testing-services</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/testing-utility-apis</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/testing</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/transition-and-triggers</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/two-way-binding</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/typescript-configuration</loc>
