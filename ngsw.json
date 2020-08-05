@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1596554251382,
+  "timestamp": 1596642625803,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -2579,8 +2579,8 @@
     "/generated/images/marketing/home/ng-conf.png": "20df84b06a79b624717b6a800ce65a144859dd90",
     "/generated/images/marketing/home/responsive-framework.svg": "fb507a225cc081304b8af10adeaed73e87ad5ba6",
     "/generated/images/marketing/home/speed-performance.svg": "9e62d7a089dc460edb41da99d3e8edf912dcf4ba",
-    "/generated/navigation.json": "393d1a23f0cb13f39d7ad71897605aba1aebca27",
-    "/generated/resources.json": "8788b2ac3ba7b622b454fa299db4acd0d5be4887",
+    "/generated/navigation.json": "98aee3b6bb32a43144cc4e49594658fa436005b2",
+    "/generated/resources.json": "4b7809f591d7863a4f962017ae0a5a1b3c283596",
     "/index.html": "ac452254b07f127c8a66a10d179d06c22c0981f2",
     "/live-example-live-example-module-es2015.1e24a40318ee95eba7fe.js": "6d629994e83202f09d4350e0feb08311c7f70176",
     "/live-example-live-example-module-es5.1e24a40318ee95eba7fe.js": "db37b25b4873b5adc705c31d9cfe6c7bb6f883ea",
