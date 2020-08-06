@@ -127,7 +127,8 @@
           "tooltip": "Angular에 자주 나오는 용어를 빠르게 찾아보세요."
         },
         {
-          "title": "Try it",
+          "//title": "Try it",
+          "title": "사용해보기",
           "tooltip": "Examine and work with a ready-made sample app, with no setup.",
           "children": [
             {
@@ -1414,12 +1415,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.f572908064",
+    "build": "sha.27e8130fd9",
     "version": "10.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "10.1.0-local+sha.f572908064",
+    "full": "10.1.0-local+sha.27e8130fd9",
     "branch": "master",
-    "commitSHA": "f572908064e0840ec7b27571cd3b15e40132992b"
+    "commitSHA": "27e8130fd950c3f09c65a033c24c7082da53a281"
   }
 }
