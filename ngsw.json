@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1598461225174,
+  "timestamp": 1598627140670,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -2142,8 +2142,8 @@
     "/generated/docs/tutorial/toh-pt2.json": "10c7f4d016057f389347a63a85841da3c186038f",
     "/generated/docs/tutorial/toh-pt3.json": "6aa26d04baf03e8ef3b77cd8a8837728775313bb",
     "/generated/docs/tutorial/toh-pt4.json": "421b77248eba224125a5e236f37aaf95e4454aea",
-    "/generated/docs/tutorial/toh-pt5.json": "833b149e65f36f4d54157a8a31a2fba38ba141fc",
-    "/generated/docs/tutorial/toh-pt6.json": "a4a434d3adda2683a01fc09ff9a090786cceba29",
+    "/generated/docs/tutorial/toh-pt5.json": "dbbf41ea5f8b5ca1cc3d04fb96865f9ee4a60581",
+    "/generated/docs/tutorial/toh-pt6.json": "eb1abe831685a753e0cb285743f559c18b2a19c2",
     "/generated/images/bios/CaerusKaru.jpg": "2a0c64a6b46d198a752aaf12fa046244b7af2b9c",
     "/generated/images/bios/JiaLiPassion.jpg": "47017649c2b62aa31a9f17d8856c9fcda0de4fa5",
     "/generated/images/bios/_no-one.jpg": "de366daa5f7c46e8565f0cee3f425df2c5792d81",
@@ -2579,7 +2579,7 @@
     "/generated/images/marketing/home/ng-conf.png": "20df84b06a79b624717b6a800ce65a144859dd90",
     "/generated/images/marketing/home/responsive-framework.svg": "fb507a225cc081304b8af10adeaed73e87ad5ba6",
     "/generated/images/marketing/home/speed-performance.svg": "9e62d7a089dc460edb41da99d3e8edf912dcf4ba",
-    "/generated/navigation.json": "86efb0760edccbd913ede631b0560e786a1eebfd",
+    "/generated/navigation.json": "24be43d6106104108b62e20210ea99069f083a03",
     "/generated/resources.json": "4b7809f591d7863a4f962017ae0a5a1b3c283596",
     "/index.html": "ac452254b07f127c8a66a10d179d06c22c0981f2",
     "/live-example-live-example-module-es2015.1e24a40318ee95eba7fe.js": "6d629994e83202f09d4350e0feb08311c7f70176",
