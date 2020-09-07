@@ -193,9 +193,6 @@
     <loc>https://angular.io/guide/migration-renderer</loc>
   </url>
   <url>
-    <loc>https://angular.io/guide/migration-solution-style-tsconfig</loc>
-  </url>
-  <url>
     <loc>https://angular.io/guide/migration-undecorated-classes</loc>
   </url>
   <url>
@@ -248,6 +245,9 @@
   </url>
   <url>
     <loc>https://angular.io/guide/reusable-animations</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/roadmap</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/route-animations</loc>
@@ -1468,9 +1468,6 @@
     <loc>https://angular.io/api/core/ChangeDetectorRef</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/core/CollectionChangeRecord</loc>
-  </url>
-  <url>
     <loc>https://angular.io/api/core/DefaultIterableDiffer</loc>
   </url>
   <url>
@@ -1574,6 +1571,9 @@
   </url>
   <url>
     <loc>https://angular.io/api/core/testing/withModule</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/core/testing/waitForAsync</loc>
   </url>
   <url>
     <loc>https://angular.io/api/core/testing/async</loc>
@@ -2134,6 +2134,9 @@
     <loc>https://angular.io/api/router/Resolve</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/router/BaseRouteReuseStrategy</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/router/DetachedRouteHandle</loc>
   </url>
   <url>
@@ -2255,6 +2258,9 @@
   </url>
   <url>
     <loc>https://angular.io/api/service-worker</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/service-worker/UnrecoverableStateEvent</loc>
   </url>
   <url>
     <loc>https://angular.io/api/service-worker/UpdateActivatedEvent</loc>

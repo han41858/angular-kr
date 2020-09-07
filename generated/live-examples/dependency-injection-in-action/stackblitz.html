@@ -1,6 +1,6 @@
 <html lang="en"><head></head><body>
         <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1?file=src/app/app.component.ts" target="_self"><input type="hidden" name="files[src/app/app-routing.module.ts]" value="import { NgModule } from '@angular/core';
-import { Routes, RouterModule }  from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [];
 
@@ -18,9 +18,9 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/app.component.ts]" value="import { Component } from '@angular/core';
 
-import { LoggerService }      from './logger.service';
+import { LoggerService } from './logger.service';
 import { UserContextService } from './user-context.service';
-import { UserService }        from './user.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -41,28 +41,28 @@ export class AppComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { BrowserModule }                from '@angular/platform-browser';
-import { FormsModule }                  from '@angular/forms';
-import { HttpClientModule }             from '@angular/common/http';
+*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-// import { AppRoutingModule }             from './app-routing.module';
+// import { AppRoutingModule } from './app-routing.module';
 import { LocationStrategy,
-         HashLocationStrategy }         from '@angular/common';
-import { NgModule }                     from '@angular/core';
+         HashLocationStrategy } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { HeroData }                     from './hero-data';
-import { InMemoryWebApiModule }         from 'angular-in-memory-web-api';
+import { HeroData } from './hero-data';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
-import { AppComponent }                 from './app.component';
-import { HeroBioComponent }             from './hero-bio.component';
+import { AppComponent } from './app.component';
+import { HeroBioComponent } from './hero-bio.component';
 import { HeroBiosComponent,
          HeroBiosAndContactsComponent } from './hero-bios.component';
-import { HeroOfTheMonthComponent }      from './hero-of-the-month.component';
-import { HeroContactComponent }         from './hero-contact.component';
+import { HeroOfTheMonthComponent } from './hero-of-the-month.component';
+import { HeroContactComponent } from './hero-contact.component';
 import { HeroesBaseComponent,
-         SortedHeroesComponent }        from './sorted-heroes.component';
-import { HighlightDirective }           from './highlight.directive';
+         SortedHeroesComponent } from './sorted-heroes.component';
+import { HighlightDirective } from './highlight.directive';
 import { ParentFinderComponent,
          AlexComponent,
          AliceComponent,
@@ -72,8 +72,8 @@ import { ParentFinderComponent,
          CathyComponent,
          BarryComponent,
          BethComponent,
-         BobComponent }                 from './parent-finder.component';
-import { StorageComponent }             from './storage.component';
+         BobComponent } from './parent-finder.component';
+import { StorageComponent } from './storage.component';
 
 const declarations = [
     AppComponent,
@@ -84,11 +84,11 @@ const declarations = [
     ParentFinderComponent,
 ];
 
-const a_components = [AliceComponent, AlexComponent ];
+const componentListA = [ AliceComponent, AlexComponent ];
 
-const b_components = [ BarryComponent, BethComponent, BobComponent ];
+const componentListB = [ BarryComponent, BethComponent, BobComponent ];
 
-const c_components = [
+const componentListC = [
   CarolComponent, ChrisComponent, CraigComponent,
   CathyComponent
 ];
@@ -103,9 +103,9 @@ const c_components = [
   ],
   declarations: [
     declarations,
-    a_components,
-    b_components,
-    c_components,
+    componentListA,
+    componentListB,
+    componentListC,
     StorageComponent,
   ],
   bootstrap: [ AppComponent ],
@@ -121,7 +121,7 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/date-logger.service.ts]" value="/* tslint:disable:one-line*/
-import { Injectable }    from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import { LoggerService } from './logger.service';
 
@@ -144,7 +144,7 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/hero-bio.component.ts]" value="import { Component, Input, OnInit } from '@angular/core';
 
-import { HeroCacheService }         from './hero-cache.service';
+import { HeroCacheService } from './hero-cache.service';
 
 @Component({
   selector: 'app-hero-bio',
@@ -170,10 +170,10 @@ export class HeroBioComponent implements OnInit  {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/hero-bios.component.ts]" value="import { Component }             from '@angular/core';
+*/"><input type="hidden" name="files[src/app/hero-bios.component.ts]" value="import { Component } from '@angular/core';
 
-import { HeroService }          from './hero.service';
-import { LoggerService }        from './logger.service';
+import { HeroService } from './hero.service';
+import { LoggerService } from './logger.service';
 
 //////// HeroBiosComponent ////
 @Component({
@@ -210,9 +210,9 @@ export class HeroBiosAndContactsComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/hero-cache.service.ts]" value="import { Injectable }  from '@angular/core';
+*/"><input type="hidden" name="files[src/app/hero-cache.service.ts]" value="import { Injectable } from '@angular/core';
 
-import { Hero }        from './hero';
+import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
 @Injectable()
@@ -236,7 +236,7 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/hero-contact.component.ts]" value="import { Component, Host, Optional } from '@angular/core';
 
 import { HeroCacheService } from './hero-cache.service';
-import { LoggerService }    from './logger.service';
+import { LoggerService } from './logger.service';
 
 @Component({
   selector: 'app-hero-contact',
@@ -275,7 +275,7 @@ can be found in the LICENSE file at http://angular.io/license
 
 export class HeroData {
   createDb() {
-    let heroes = [
+    const heroes = [
       new Hero(1, 'Windstorm'),
       new Hero(2, 'Bombasto'),
       new Hero(3, 'Magneta'),
@@ -298,12 +298,12 @@ export const TITLE = new InjectionToken<string>('title');
 import { Component, Inject } from '@angular/core';
 
 import { DateLoggerService } from './date-logger.service';
-import { Hero }              from './hero';
-import { HeroService }       from './hero.service';
-import { LoggerService }     from './logger.service';
-import { MinimalLogger }     from './minimal-logger.service';
+import { Hero } from './hero';
+import { HeroService } from './hero.service';
+import { LoggerService } from './logger.service';
+import { MinimalLogger } from './minimal-logger.service';
 import { RUNNERS_UP,
-         runnersUpFactory }  from './runners-up';
+         runnersUpFactory } from './runners-up';
 
 const someHero = new Hero(42, 'Magma', 'Had a great month!', '555-555-5555');
 
@@ -339,7 +339,7 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/hero.service.ts]" value="import { Injectable } from '@angular/core';
-import { Hero }       from './hero';
+import { Hero } from './hero';
 
 @Injectable({
   providedIn: 'root'
@@ -461,8 +461,7 @@ export const _ = 0;
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/parent-finder.component.ts]" value="/* tslint:disable:no-unused-variable component-selector-name one-line check-open-brace */
-/* tslint:disable:*/
+*/"><input type="hidden" name="files[src/app/parent-finder.component.ts]" value="// tslint:disable: component-selector space-before-function-paren
 import { Component, forwardRef, Optional, SkipSelf } from '@angular/core';
 
 // A component base class (see AlexComponent)
@@ -640,7 +639,7 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/runners-up.ts]" value="import { InjectionToken } from '@angular/core';
 
-import { Hero }        from './hero';
+import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
 export const RUNNERS_UP = new InjectionToken<string>('RunnersUp');
@@ -655,7 +654,7 @@ export function runnersUpFactory(take: number) {
           .slice(0, Math.max(0, take))
           .join(', ');
   };
-};
+}
 
 
 /*
@@ -664,8 +663,8 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/sorted-heroes.component.ts]" value="import { Component, OnInit } from '@angular/core';
 
-import { Hero }              from './hero';
-import { HeroService }       from './hero.service';
+import { Hero } from './hero';
+import { HeroService } from './hero.service';
 
 /////// HeroesBaseComponent /////
 @Component({
@@ -790,10 +789,10 @@ export class BrowserStorageService {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/user-context.service.ts]" value="import { Injectable }    from '@angular/core';
+*/"><input type="hidden" name="files[src/app/user-context.service.ts]" value="import { Injectable } from '@angular/core';
 
 import { LoggerService } from './logger.service';
-import { UserService }   from './user.service';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -808,7 +807,7 @@ export class UserContextService {
   }
 
   loadUser(userId: number) {
-    let user = this.userService.getUserById(userId);
+    const user = this.userService.getUserById(userId);
     this.name = user.name;
     this.role = user.role;
 

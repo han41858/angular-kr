@@ -1,7 +1,7 @@
 <html lang="en"><head></head><body>
         <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1?file=src/app/app.component.html" target="_self"><input type="hidden" name="files[src/app/after-content.component.ts]" value="import { AfterContentChecked, AfterContentInit, Component, ContentChild } from '@angular/core';
 
-import { LoggerService }  from './logger.service';
+import { LoggerService } from './logger.service';
 
 //////////////////
 @Component({
@@ -59,8 +59,8 @@ export class AfterContentComponent implements AfterContentChecked, AfterContentI
   }
 
   private logIt(method: string) {
-    let child = this.contentChild;
-    let message = `${method}: ${child ? child.hero : 'no'} child content`;
+    const child = this.contentChild;
+    const message = `${method}: ${child ? child.hero : 'no'} child content`;
     this.logger.log(message);
   }
   // ...
@@ -108,7 +108,7 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/after-view.component.ts]" value="import { AfterViewChecked, AfterViewInit, Component, ViewChild } from '@angular/core';
 
-import { LoggerService }  from './logger.service';
+import { LoggerService } from './logger.service';
 
 //////////////////
 @Component({
@@ -133,6 +133,7 @@ export class ChildViewComponent {
   `
 })
 export class AfterViewComponent implements  AfterViewChecked, AfterViewInit {
+  comment = '';
   private prevHero = '';
 
   // `ChildViewComponent` 타입의 뷰 자식 컴포넌트를 참조합니다.
@@ -159,11 +160,9 @@ export class AfterViewComponent implements  AfterViewChecked, AfterViewInit {
     }
   }
 
-  comment = '';
-
   // 동작을 확인하기 위해 `comment` 값을 변경해 봅니다.
   private doSomething() {
-    let c = this.viewChild.hero.length > 10 ? `That's a long name` : '';
+    const c = this.viewChild.hero.length > 10 ? `That's a long name` : '';
     if (c !== this.comment) {
       // 컴포넌트의 뷰는 방금 검사를 마쳤기 때문에 한 싸이클 뒤에 실행합니다.
       this.logger.tick_then(() => this.comment = c);
@@ -171,8 +170,8 @@ export class AfterViewComponent implements  AfterViewChecked, AfterViewInit {
   }
 
   private logIt(method: string) {
-    let child = this.viewChild;
-    let message = `${method}: ${child ? child.hero : 'no'} child view`;
+    const child = this.viewChild;
+    const message = `${method}: ${child ? child.hero : 'no'} child view`;
     this.logger.log(message);
   }
   // ...
@@ -303,7 +302,7 @@ can be found in the LICENSE file at http://angular.io/license
   OnChanges, SimpleChanges,
 } from '@angular/core';
 
-import { LoggerService }  from './logger.service';
+import { LoggerService } from './logger.service';
 
 @Component({
   selector: 'app-counter',
@@ -312,7 +311,7 @@ import { LoggerService }  from './logger.service';
     Counter = {{counter}}
 
     <h5>-- Counter Change Log --</h5>
-    <div *ngFor=&quot;let chg of changeLog&quot; mySpy>{{chg}}</div>
+    <div *ngFor=&quot;let chg of changeLog&quot; appSpy>{{chg}}</div>
   </div>
   `,
   styles: ['.counter {background: LightYellow; padding: 8px; margin-top: 8px}']
@@ -330,9 +329,9 @@ export class MyCounterComponent implements OnChanges {
     }
 
     // A change to `counter` is the only change we care about
-    let chng = changes['counter'];
-    let cur = chng.currentValue;
-    let prev = JSON.stringify(chng.previousValue); // first time is {}; after is integer
+    const chng = changes.counter;
+    const cur = chng.currentValue;
+    const prev = JSON.stringify(chng.previousValue); // first time is {}; after is integer
     this.changeLog.push(`counter: currentValue = ${cur}, previousValue = ${prev}`);
   }
 }
@@ -436,8 +435,8 @@ export class DoCheckComponent implements DoCheck {
         this.noChangeCount = 0;
     } else {
         // 컴포넌트의 내용이 변경되지 않았으면 함수가 몇번 실행되었는지 로그를 출력합니다.
-        let count = this.noChangeCount += 1;
-        let noChangeMsg = `DoCheck called ${count}x when no change to hero or power`;
+        const count = this.noChangeCount += 1;
+        const noChangeMsg = `DoCheck called ${count}x when no change to hero or power`;
         if (count === 1) {
           // &quot;no change&quot; 메시지를 추가합니다.
           this.changeLog.push(noChangeMsg);
@@ -545,10 +544,10 @@ export class OnChangesComponent implements OnChanges {
   changeLog: string[] = [];
 
   ngOnChanges(changes: SimpleChanges) {
-    for (let propName in changes) {
-      let chng = changes[propName];
-      let cur  = JSON.stringify(chng.currentValue);
-      let prev = JSON.stringify(chng.previousValue);
+    for (const propName in changes) {
+      const chng = changes[propName];
+      const cur  = JSON.stringify(chng.currentValue);
+      const prev = JSON.stringify(chng.previousValue);
       this.changeLog.push(`${propName}: currentValue = ${cur}, previousValue = ${prev}`);
     }
   }
@@ -644,7 +643,8 @@ export class PeekABooParentComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/peek-a-boo.component.ts]" value="import {
+*/"><input type="hidden" name="files[src/app/peek-a-boo.component.ts]" value="// tslint:disable: no-conflicting-lifecycle
+import {
   AfterContentChecked,
   AfterContentInit,
   AfterViewChecked,
@@ -657,7 +657,7 @@ can be found in the LICENSE file at http://angular.io/license
   SimpleChanges
 } from '@angular/core';
 import { Component, Input } from '@angular/core';
-import { LoggerService }    from './logger.service';
+import { LoggerService } from './logger.service';
 
 let nextId = 1;
 
@@ -692,16 +692,16 @@ export class PeekABooComponent extends PeekABooDirective implements
   constructor(logger: LoggerService) {
     super(logger);
 
-    let is = this.name ? 'is' : 'is not';
+    const is = this.name ? 'is' : 'is not';
     this.logIt(`name ${is} known at construction`);
   }
 
   // only called for/if there is an @input variable set by parent.
   ngOnChanges(changes: SimpleChanges) {
-    let changesMsgs: string[] = [];
-    for (let propName in changes) {
+    const changesMsgs: string[] = [];
+    for (const propName in changes) {
       if (propName === 'name') {
-        let name = changes['name'].currentValue;
+        const name = changes.name.currentValue;
         changesMsgs.push(`name ${this.verb} to &quot;${name}&quot;`);
       } else {
         changesMsgs.push(propName + ' ' + this.verb);
@@ -737,7 +737,7 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/spy.component.ts]" value="import { Component } from '@angular/core';
 
-import { LoggerService }  from './logger.service';
+import { LoggerService } from './logger.service';
 
 @Component({
   selector: 'spy-parent',
@@ -785,8 +785,8 @@ import { LoggerService } from './logger.service';
 let nextId = 1;
 
 // 엘리먼트에 스파이 디렉티브를 자유롭게 적용합니다.
-// 사용방법: <div mySpy>...</div>
-@Directive({selector: '[mySpy]'})
+// 사용방법: <div appSpy>...</div>
+@Directive({selector: '[appSpy]'})
 export class SpyDirective implements OnInit, OnDestroy {
 
   constructor(private logger: LoggerService) { }
@@ -1098,7 +1098,7 @@ can be found in the LICENSE file at http://angular.io/license
   <button (click)=&quot;reset()&quot;>Reset Heroes</button>
 
   <p></p>
-  <div *ngFor=&quot;let hero of heroes&quot; mySpy class=&quot;heroes&quot;>
+  <div *ngFor=&quot;let hero of heroes&quot; appSpy class=&quot;heroes&quot;>
     {{hero}}
   </div>
   <h4>-- Spy Lifecycle Hook Log --</h4>

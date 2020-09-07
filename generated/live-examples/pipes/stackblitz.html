@@ -84,7 +84,7 @@ export class ExponentialStrengthPipe implements PipeTransform {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/fetch-json.pipe.ts]" value="import { HttpClient }          from '@angular/common/http';
+*/"><input type="hidden" name="files[src/app/fetch-json.pipe.ts]" value="import { HttpClient } from '@angular/common/http';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -113,9 +113,9 @@ export class FetchJsonPipe implements PipeTransform {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/flying-heroes.component.ts]" value="import { Component }              from '@angular/core';
+*/"><input type="hidden" name="files[src/app/flying-heroes.component.ts]" value="import { Component } from '@angular/core';
 
-import { HEROES }                 from './heroes';
+import { HEROES } from './heroes';
 
 @Component({
   selector: 'app-flying-heroes',
@@ -133,7 +133,7 @@ export class FlyingHeroesComponent {
   addHero(name: string) {
     name = name.trim();
     if (!name) { return; }
-    let hero = {name, canFly: this.canFly};
+    const hero = {name, canFly: this.canFly};
     if (this.mutate) {
     // Pure pipe won't update display because heroes array reference is unchanged
     // Impure pipe will display

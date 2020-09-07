@@ -23,7 +23,7 @@ import { HttpErrorHandler, HandleError } from '../http-error-handler.service';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
-    'Authorization': 'my-auth-token'
+    Authorization: 'my-auth-token'
   })
 };
 
@@ -39,7 +39,7 @@ export class HeroesService {
   }
 
   /** GET heroes from the server */
-  getHeroes (): Observable<Hero[]> {
+  getHeroes(): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl)
       .pipe(
         catchError(this.handleError('getHeroes', []))
@@ -63,7 +63,7 @@ export class HeroesService {
   //////// Save methods //////////
 
   /** POST: DB에 새로운 히어로를 추가합니다. */
-  addHero (hero: Hero): Observable<Hero> {
+  addHero(hero: Hero): Observable<Hero> {
     return this.http.post<Hero>(this.heroesUrl, hero, httpOptions)
       .pipe(
         catchError(this.handleError('addHero', hero))
@@ -71,7 +71,7 @@ export class HeroesService {
   }
 
   /** DELETE: DB에서 히어로를 삭제합니다. */
-  deleteHero (id: number): Observable<{}> {
+  deleteHero(id: number): Observable<{}> {
     const url = `${this.heroesUrl}/${id}`; // DELETE api/heroes/42
     return this.http.delete(url, httpOptions)
       .pipe(
@@ -80,7 +80,7 @@ export class HeroesService {
   }
 
   /** PUT: DB 데이터를 수정합니다. HTTP 요청이 성공하면 새로운 히어로 데이터를 반환합니다. */
-  updateHero (hero: Hero): Observable<Hero> {
+  updateHero(hero: Hero): Observable<Hero> {
     httpOptions.headers =
       httpOptions.headers.set('Authorization', 'my-new-auth-token');
 
@@ -275,8 +275,10 @@ export class HttpErrorHandler {
   constructor(private messageService: MessageService) { }
 
   /** Create curried handleError function that already knows the service name */
-  createHandleError = (serviceName = '') => <T>
-    (operation = 'operation', result = {} as T) => this.handleError(serviceName, operation, result);
+  createHandleError = (serviceName = '') => {
+    return <T>(operation = 'operation', result = {} as T) =>
+      this.handleError(serviceName, operation, result);
+  }
 
   /**
    * Returns a function that handles Http operation failures.
@@ -285,7 +287,7 @@ export class HttpErrorHandler {
    * @param operation - name of the operation that failed
    * @param result - optional value to return as the observable result
    */
-  handleError<T> (serviceName = '', operation = 'operation', result = {} as T) {
+  handleError<T>(serviceName = '', operation = 'operation', result = {} as T) {
 
     return (error: HttpErrorResponse): Observable<T> => {
       // TODO: send the error to remote logging infrastructure
@@ -332,7 +334,7 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/testing/global-jasmine.ts]" value="import jasmineRequire from 'jasmine-core/lib/jasmine-core/jasmine.js';
 
-window['jasmineRequire'] = jasmineRequire;
+(window as any).jasmineRequire = jasmineRequire;
 
 
 /*
@@ -402,7 +404,7 @@ describe('HttpClient testing', () => {
 
     // Make an HTTP GET request with specific header
     httpClient.get<Data>(testUrl, {
-        headers: new HttpHeaders({'Authorization': 'my-auth-token'})
+        headers: new HttpHeaders({Authorization: 'my-auth-token'})
       })
       .subscribe(data =>
         expect(data).toEqual(testData)
@@ -411,13 +413,13 @@ describe('HttpClient testing', () => {
       // Find request with a predicate function.
     // 헤더에 인증 토큰이 있는지 검사합니다.
     const req = httpTestingController.expectOne(
-      req => req.headers.has('Authorization')
+      request => request.headers.has('Authorization')
     );
     req.flush(testData);
   });
 
   it('can test multiple requests', () => {
-    let testData: Data[] = [
+    const testData: Data[] = [
       { name: 'bob' }, { name: 'carol' },
       { name: 'ted' }, { name: 'alice' }
     ];
@@ -616,13 +618,13 @@ import './testing/http-client.spec.ts';
 bootstrap();
 
 //
-function bootstrap () {
-  if (window['jasmineRef']) {
+function bootstrap() {
+  if ((window as any).jasmineRef) {
     location.reload();
     return;
   } else {
     window.onload(undefined);
-    window['jasmineRef'] = jasmine.getEnv();
+    (window as any).jasmineRef = jasmine.getEnv();
   }
 
   // First, initialize the Angular testing environment.

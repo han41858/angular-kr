@@ -13,7 +13,7 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/app.module.ts]" value="import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AstronautComponent } from './astronaut.component';
@@ -29,7 +29,7 @@ import { VersionParentComponent } from './version-parent.component';
 import { VoterComponent } from './voter.component';
 import { VoteTakerComponent } from './votetaker.component';
 
-let directives: any[] = [
+const directives: any[] = [
     AppComponent,
     AstronautComponent,
     CountdownTimerComponent,
@@ -44,7 +44,7 @@ let directives: any[] = [
     VoteTakerComponent
   ];
 
-let schemas: any[] = [];
+const schemas: any[] = [];
 
 // Include Countdown examples
 // unless in e2e tests which they break.
@@ -63,7 +63,7 @@ if (!/e2e/.test(location.search)) {
   ],
   declarations: directives,
   bootstrap: [ AppComponent ],
-  schemas: schemas
+  schemas
 })
 export class AppModule { }
 
@@ -75,7 +75,7 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/astronaut.component.ts]" value="import { Component, Input, OnDestroy } from '@angular/core';
 
 import { MissionService } from './mission.service';
-import { Subscription }   from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-astronaut',
@@ -123,8 +123,8 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/countdown-parent.component.ts]" value="import { AfterViewInit, ViewChild } from '@angular/core';
-import { Component }                from '@angular/core';
-import { CountdownTimerComponent }  from './countdown-timer.component';
+import { Component } from '@angular/core';
+import { CountdownTimerComponent } from './countdown-timer.component';
 
 
 //// Local variable, #timer, version
@@ -231,7 +231,7 @@ import { Hero } from './hero';
 })
 export class HeroChildComponent {
   @Input() hero: Hero;
-  @Input('master') masterName: string;
+  @Input('master') masterName: string; // tslint:disable-line: no-input-rename
 }
 
 
@@ -279,7 +279,7 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/mission.service.ts]" value="import { Injectable } from '@angular/core';
-import { Subject }    from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class MissionService {
@@ -307,9 +307,9 @@ export class MissionService {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/missioncontrol.component.ts]" value="import { Component }          from '@angular/core';
+*/"><input type="hidden" name="files[src/app/missioncontrol.component.ts]" value="import { Component } from '@angular/core';
 
-import { MissionService }     from './mission.service';
+import { MissionService } from './mission.service';
 
 @Component({
   selector: 'app-mission-control',
@@ -342,7 +342,7 @@ export class MissionControlComponent {
   }
 
   announce() {
-    let mission = this.missions[this.nextMission++];
+    const mission = this.missions[this.nextMission++];
     this.missionService.announceMission(mission);
     this.history.push(`Mission &quot;${mission}&quot; announced`);
     if (this.nextMission >= this.missions.length) { this.nextMission = 0; }
@@ -354,21 +354,20 @@ export class MissionControlComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/name-child.component.ts]" value="import { Component, Input } from '@angular/core';
+*/"><input type="hidden" name="files[src/app/name-child.component.ts]" value="// tslint:disable: variable-name
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-name-child',
   template: '<h3>&quot;{{name}}&quot;</h3>'
 })
 export class NameChildComponent {
-  private _name = '';
-
   @Input()
+  get name(): string { return this._name; }
   set name(name: string) {
     this._name = (name &amp;&amp; name.trim()) || '<no name set>';
   }
-
-  get name(): string { return this._name; }
+  private _name = '';
 }
 
 
@@ -414,14 +413,14 @@ export class VersionChildComponent implements OnChanges {
   changeLog: string[] = [];
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
-    let log: string[] = [];
-    for (let propName in changes) {
-      let changedProp = changes[propName];
-      let to = JSON.stringify(changedProp.currentValue);
+    const log: string[] = [];
+    for (const propName in changes) {
+      const changedProp = changes[propName];
+      const to = JSON.stringify(changedProp.currentValue);
       if (changedProp.isFirstChange()) {
         log.push(`Initial value of ${propName} set to ${to}`);
       } else {
-        let from = JSON.stringify(changedProp.previousValue);
+        const from = JSON.stringify(changedProp.previousValue);
         log.push(`${propName} changed from ${from} to ${to}`);
       }
     }
@@ -490,7 +489,7 @@ export class VoterComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/votetaker.component.ts]" value="import { Component }      from '@angular/core';
+*/"><input type="hidden" name="files[src/app/votetaker.component.ts]" value="import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-vote-taker',

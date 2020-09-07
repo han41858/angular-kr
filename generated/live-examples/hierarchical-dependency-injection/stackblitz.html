@@ -26,14 +26,14 @@ export class AppComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { NgModule }      from '@angular/core';
+*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
-import { AppComponent }           from './app.component';
+import { AppComponent } from './app.component';
 import { HeroTaxReturnComponent } from './hero-tax-return.component';
-import { HeroesListComponent }    from './heroes-list.component';
-import { VillainsListComponent }  from './villains-list.component';
+import { HeroesListComponent } from './heroes-list.component';
+import { VillainsListComponent } from './villains-list.component';
 
 import { carComponents } from './car.components';
 
@@ -252,8 +252,9 @@ export class CarService3 extends CarService2 {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/hero-tax-return.component.ts]" value="import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { HeroTaxReturn }        from './hero';
+*/"><input type="hidden" name="files[src/app/hero-tax-return.component.ts]" value="// tslint:disable: no-output-native
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { HeroTaxReturn } from './hero';
 import { HeroTaxReturnService } from './hero-tax-return.service';
 
 @Component({
@@ -272,7 +273,7 @@ export class HeroTaxReturnComponent {
   }
 
   @Input()
-  set taxReturn (htr: HeroTaxReturn) {
+  set taxReturn(htr: HeroTaxReturn) {
     this.heroTaxReturnService.taxReturn = htr;
   }
 
@@ -281,9 +282,9 @@ export class HeroTaxReturnComponent {
   onCanceled()  {
     this.flashMessage('Canceled');
     this.heroTaxReturnService.restoreTaxReturn();
-  };
+  }
 
-  onClose()  { this.close.emit(); };
+  onClose() { this.close.emit(); }
 
   onSaved() {
     this.flashMessage('Saved');
@@ -301,7 +302,7 @@ export class HeroTaxReturnComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/hero-tax-return.service.ts]" value="import { Injectable }    from '@angular/core';
+*/"><input type="hidden" name="files[src/app/hero-tax-return.service.ts]" value="import { Injectable } from '@angular/core';
 import { HeroTaxReturn } from './hero';
 import { HeroesService } from './heroes.service';
 
@@ -312,12 +313,12 @@ export class HeroTaxReturnService {
 
   constructor(private heroService: HeroesService) { }
 
-  set taxReturn (htr: HeroTaxReturn) {
+  set taxReturn(htr: HeroTaxReturn) {
     this.originalTaxReturn = htr;
     this.currentTaxReturn  = htr.clone();
   }
 
-  get taxReturn (): HeroTaxReturn {
+  get taxReturn(): HeroTaxReturn {
     return this.currentTaxReturn;
   }
 
@@ -338,9 +339,9 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/hero.ts]" value="
 export interface Hero {
-  id:   number;
+  id: number;
   name: string;
-  tid:  string; // tax id
+  tid: string; // tax id
 }
 
 //// HeroTaxReturn ////
@@ -372,11 +373,11 @@ export class HeroTaxReturn {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/heroes-list.component.ts]" value="import { Component }  from '@angular/core';
+*/"><input type="hidden" name="files[src/app/heroes-list.component.ts]" value="import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Hero, HeroTaxReturn } from './hero';
-import { HeroesService }       from './heroes.service';
+import { HeroesService } from './heroes.service';
 
 @Component({
   selector: 'app-heroes-list',
@@ -479,7 +480,7 @@ export class HeroesService {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/villains-list.component.ts]" value="import { Component }  from '@angular/core';
+*/"><input type="hidden" name="files[src/app/villains-list.component.ts]" value="import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Villain, VillainsService } from './villains.service';
@@ -504,7 +505,7 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/villains.service.ts]" value="import { Injectable } from '@angular/core';
 
-import { of }         from 'rxjs';
+import { of } from 'rxjs';
 
 export interface Villain { id: number; name: string; }
 

@@ -2,7 +2,7 @@
         <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1?file=src/app/app.component.ts" target="_self"><input type="hidden" name="files[src/app/ad-banner.component.ts]" value="import { Component, Input, OnInit, ViewChild, ComponentFactoryResolver, OnDestroy } from '@angular/core';
 
 import { AdDirective } from './ad.directive';
-import { AdItem }      from './ad-item';
+import { AdItem } from './ad-item';
 import { AdComponent } from './ad.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { AdComponent } from './ad.component';
   template: `
               <div class=&quot;ad-banner-example&quot;>
                 <h3>Advertisements</h3>
-                <ng-template ad-host></ng-template>
+                <ng-template adHost></ng-template>
               </div>
             `
 })
@@ -40,8 +40,8 @@ export class AdBannerComponent implements OnInit, OnDestroy {
     const viewContainerRef = this.adHost.viewContainerRef;
     viewContainerRef.clear();
 
-    const componentRef = viewContainerRef.createComponent(componentFactory);
-    (<AdComponent>componentRef.instance).data = adItem.data;
+    const componentRef = viewContainerRef.createComponent<AdComponent>(componentFactory);
+    componentRef.instance.data = adItem.data;
   }
 
   getAds() {
@@ -76,10 +76,11 @@ can be found in the LICENSE file at http://angular.io/license
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/ad.directive.ts]" value="import { Directive, ViewContainerRef } from '@angular/core';
+*/"><input type="hidden" name="files[src/app/ad.directive.ts]" value="// tslint:disable: directive-selector
+import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[ad-host]',
+  selector: '[adHost]',
 })
 export class AdDirective {
   constructor(public viewContainerRef: ViewContainerRef) { }
@@ -91,11 +92,11 @@ export class AdDirective {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/ad.service.ts]" value="import { Injectable }           from '@angular/core';
+*/"><input type="hidden" name="files[src/app/ad.service.ts]" value="import { Injectable } from '@angular/core';
 
-import { HeroJobAdComponent }   from './hero-job-ad.component';
+import { HeroJobAdComponent } from './hero-job-ad.component';
 import { HeroProfileComponent } from './hero-profile.component';
-import { AdItem }               from './ad-item';
+import { AdItem } from './ad-item';
 
 @Injectable()
 export class AdService {
@@ -121,8 +122,8 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/app.component.ts]" value="import { Component, OnInit } from '@angular/core';
 
-import { AdService }         from './ad.service';
-import { AdItem }            from './ad-item';
+import { AdService } from './ad.service';
+import { AdItem } from './ad-item';
 
 @Component({
   selector: 'app-root',
@@ -148,14 +149,14 @@ export class AppComponent implements OnInit {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { BrowserModule }        from '@angular/platform-browser';
-import { NgModule }             from '@angular/core';
-import { AppComponent }         from './app.component';
-import { HeroJobAdComponent }   from './hero-job-ad.component';
-import { AdBannerComponent }    from './ad-banner.component';
+*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { HeroJobAdComponent } from './hero-job-ad.component';
+import { AdBannerComponent } from './ad-banner.component';
 import { HeroProfileComponent } from './hero-profile.component';
-import { AdDirective }          from './ad.directive';
-import { AdService }            from './ad.service';
+import { AdDirective } from './ad.directive';
+import { AdService } from './ad.service';
 
 @NgModule({
   imports: [ BrowserModule ],
@@ -180,7 +181,7 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/hero-job-ad.component.ts]" value="import { Component, Input } from '@angular/core';
 
-import { AdComponent }      from './ad.component';
+import { AdComponent } from './ad.component';
 
 @Component({
   template: `
@@ -202,9 +203,9 @@ export class HeroJobAdComponent implements AdComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/hero-profile.component.ts]" value="import { Component, Input }  from '@angular/core';
+*/"><input type="hidden" name="files[src/app/hero-profile.component.ts]" value="import { Component, Input } from '@angular/core';
 
-import { AdComponent }       from './ad.component';
+import { AdComponent } from './ad.component';
 
 @Component({
   template: `

@@ -80,9 +80,9 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/app.module.ts]" value="import { NgModule } from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { APP_CONFIG, HERO_DI_CONFIG }    from './app.config';
+import { APP_CONFIG, HERO_DI_CONFIG } from './app.config';
 import { AppComponent } from './app.component';
 import { CarComponent } from './car/car.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -131,31 +131,32 @@ import { Car, Engine, Tires } from './car';
 ///////// example 1 ////////////
 export function simpleCar() {
   // 4 실린더 엔진과 기본 타이어를 사용하는 자동차 생성하기
-  let car = new Car(new Engine(), new Tires());
+  const car = new Car(new Engine(), new Tires());
   car.description = 'Simple';
   return car;
 }
 
 
 ///////// example 2 ////////////
-  class Engine2 {
-    constructor(public cylinders: number) { }
-  }
+class Engine2 {
+  constructor(public cylinders: number) { }
+}
+
 export function superCar() {
   // 12 실린더 엔진과 기본 타이어를 사용하는 슈퍼카 생성하기
-  let bigCylinders = 12;
-  let car = new Car(new Engine2(bigCylinders), new Tires());
+  const bigCylinders = 12;
+  const car = new Car(new Engine2(bigCylinders), new Tires());
   car.description = 'Super';
   return car;
 }
 
 /////////// example 3 //////////
-  class MockEngine extends Engine { cylinders = 8; }
-  class MockTires  extends Tires  { make = 'YokoGoodStone'; }
+class MockEngine extends Engine { cylinders = 8; }
+class MockTires  extends Tires  { make = 'YokoGoodStone'; }
 
 export function testCar() {
   // 8 실린더 엔진과 YokoGoodStone 메이커의 타이어를 사용하는 테스트카 생성하기
-  let car = new Car(new MockEngine(), new MockTires());
+  const car = new Car(new MockEngine(), new MockTires());
   car.description = 'Test';
   return car;
 }
@@ -170,7 +171,7 @@ can be found in the LICENSE file at http://angular.io/license
 // 안좋은 패턴!
 export class CarFactory {
   createCar() {
-    let car = new Car(this.createEngine(), this.createTires());
+    const car = new Car(this.createEngine(), this.createTires());
     car.description = 'Factory';
     return car;
   }
@@ -192,7 +193,7 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/car/car-injector.ts]" value="import { Injector } from '@angular/core';
 
 import { Car, Engine, Tires } from './car';
-import { Logger }             from '../logger.service';
+import { Logger } from '../logger.service';
 
 export function useInjector() {
   let injector: Injector;
@@ -211,13 +212,13 @@ export function useInjector() {
       { provide: Tires, deps: [] }
     ]
   });
-  let car = injector.get(Car);
+  const car = injector.get(Car);
   car.description = 'Injector';
 
   injector = Injector.create({
     providers: [{ provide: Logger, deps: [] }]
   });
-  let logger = injector.get(Logger);
+  const logger = injector.get(Logger);
   logger.log('Injector car.drive() said: ' + car.drive());
   return car;
 }
@@ -255,15 +256,15 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/car/car.component.ts]" value="import { Component } from '@angular/core';
 
-import { Car, Engine, Tires }  from './car';
-import { Car as CarNoDi }      from './car-no-di';
-import { CarFactory }          from './car-factory';
+import { Car, Engine, Tires } from './car';
+import { Car as CarNoDi } from './car-no-di';
+import { CarFactory } from './car-factory';
 
 import { testCar,
          simpleCar,
-         superCar }           from './car-creations';
+         superCar } from './car-creations';
 
-import { useInjector }        from './car-injector';
+import { useInjector } from './car-injector';
 
 
 @Component({
@@ -281,9 +282,9 @@ import { useInjector }        from './car-injector';
   providers: [Car, Engine, Tires]
 })
 export class CarComponent {
-  factoryCar  = (new CarFactory).createCar();
+  factoryCar  = (new CarFactory()).createCar();
   injectorCar = useInjector();
-  noDiCar     = new CarNoDi;
+  noDiCar     = new CarNoDi();
   simpleCar   = simpleCar();
   superCar    = superCar();
   testCar     = testCar();
@@ -326,8 +327,8 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/heroes/hero-list.component.ts]" value="/* tslint:disable:one-line */
-import { Component }   from '@angular/core';
-import { Hero }        from './hero';
+import { Component } from '@angular/core';
+import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
 @Component({
@@ -366,10 +367,10 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/heroes/hero.service.provider.ts]" value="/* tslint:disable:one-line */
 import { HeroService } from './hero.service';
-import { Logger }      from '../logger.service';
+import { Logger } from '../logger.service';
 import { UserService } from '../user.service';
 
-let heroServiceFactory = (logger: Logger, userService: UserService) => {
+const heroServiceFactory = (logger: Logger, userService: UserService) => {
   return new HeroService(logger, userService.user.isAuthorized);
 };
 
@@ -385,8 +386,8 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/heroes/hero.service.ts]" value="import { Injectable } from '@angular/core';
-import { HEROES }     from './mock-heroes';
-import { Logger }     from '../logger.service';
+import { HEROES } from './mock-heroes';
+import { Logger } from '../logger.service';
 import { UserService } from '../user.service';
 
 @Injectable({
@@ -401,7 +402,7 @@ export class HeroService {
     private isAuthorized: boolean) { }
 
   getHeroes() {
-    let auth = this.isAuthorized ? 'authorized ' : 'unauthorized';
+    const auth = this.isAuthorized ? 'authorized ' : 'unauthorized';
     this.logger.log(`Getting heroes for ${auth} user.`);
     return HEROES.filter(hero => this.isAuthorized || !hero.isSecret);
   }
@@ -445,7 +446,7 @@ export class HeroesTspComponent { }
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/heroes/heroes.component.ts]" value="import { Component }          from '@angular/core';
+*/"><input type="hidden" name="files[src/app/heroes/heroes.component.ts]" value="import { Component } from '@angular/core';
 import { heroServiceProvider } from './hero.service.provider';
 
 @Component({
@@ -485,11 +486,11 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/injector.component.ts]" value="import { Component, Injector, OnInit } from '@angular/core';
 
-import { Car, Engine, Tires }   from './car/car';
-import { Hero }                 from './heroes/hero';
-import { HeroService }          from './heroes/hero.service';
-import { heroServiceProvider }  from './heroes/hero.service.provider';
-import { Logger }               from './logger.service';
+import { Car, Engine, Tires } from './car/car';
+import { Hero } from './heroes/hero';
+import { HeroService } from './heroes/hero.service';
+import { heroServiceProvider } from './heroes/hero.service.provider';
+import { Logger } from './logger.service';
 
 @Component({
   selector: 'app-injectors',
@@ -516,7 +517,7 @@ export class InjectorComponent implements OnInit {
   }
 
   get rodent() {
-    let rousDontExist = `R.O.U.S.'s? I don't think they exist!`;
+    const rousDontExist = `R.O.U.S.'s? I don't think they exist!`;
     return this.injector.get(ROUS, rousDontExist);
   }
 }
@@ -571,7 +572,7 @@ const template = '{{log}}';
 
 @Component({
   selector: 'provider-1',
-  template: template,
+  template,
   providers: [Logger]
 })
 export class Provider1Component {
@@ -586,7 +587,7 @@ export class Provider1Component {
 
 @Component({
   selector: 'provider-3',
-  template: template,
+  template,
   providers:
     [{ provide: Logger, useClass: Logger }]
 })
@@ -603,7 +604,7 @@ export class BetterLogger extends Logger {}
 
 @Component({
   selector: 'provider-4',
-  template: template,
+  template,
   providers:
     [{ provide: Logger, useClass: BetterLogger }]
 })
@@ -622,14 +623,14 @@ export class EvenBetterLogger extends Logger {
   constructor(private userService: UserService) { super(); }
 
   log(message: string) {
-    let name = this.userService.user.name;
+    const name = this.userService.user.name;
     super.log(`Message to ${name}: ${message}`);
   }
 }
 
 @Component({
   selector: 'provider-5',
-  template: template,
+  template,
   providers:
     [ UserService,
       { provide: Logger, useClass: EvenBetterLogger }]
@@ -650,12 +651,12 @@ export class OldLogger {
   logs: string[] = [];
   log(message: string) {
     throw new Error('Should not call the old logger!');
-  };
+  }
 }
 
 @Component({
   selector: 'provider-6a',
-  template: template,
+  template,
   providers:
     [ NewLogger,
       // 별칭으로 지정한 것이 아닙니다! `NewLogger`의 인스턴스는 2개 생성됩니다.
@@ -676,7 +677,7 @@ export class Provider6aComponent {
 
 @Component({
   selector: 'provider-6b',
-  template: template,
+  template,
   providers:
     [ NewLogger,
       // OldLogger는 NewLogger를 가리키는 이름으로 지정됩니다.
@@ -705,7 +706,7 @@ export const SilentLogger = {
 
 @Component({
   selector: 'provider-7',
-  template: template,
+  template,
   providers:
     [{ provide: Logger, useValue: SilentLogger }]
 })
@@ -721,7 +722,7 @@ export class Provider7Component {
 
 @Component({
   selector: 'provider-8',
-  template: template,
+  template,
   providers: [heroServiceProvider, Logger, UserService]
 })
 export class Provider8Component {
@@ -735,7 +736,7 @@ export class Provider8Component {
 
 @Component({
   selector: 'provider-9',
-  template: template,
+  template,
   /*
    // 에러! 인터페이스는 프로바이더 토큰으로 사용할 수 없습니다.
    [{ provide: AppConfig, useValue: HERO_DI_CONFIG })]
@@ -760,18 +761,18 @@ export class Provider9Component implements OnInit {
 // Optional logger, can be null
 import { Optional } from '@angular/core';
 
-let some_message = 'Hello from the injected logger';
+const someMessage = 'Hello from the injected logger';
 
 @Component({
   selector: 'provider-10',
-  template: template,
+  template,
   providers: [{ provide: Logger, useValue: null }]
 })
 export class Provider10Component implements OnInit {
   log: string;
   constructor(@Optional() private logger?: Logger) {
     if (this.logger) {
-      this.logger.log(some_message);
+      this.logger.log(someMessage);
     }
   }
 
@@ -887,7 +888,7 @@ var testResults: {pass: string; message: string};
 
 function expect(actual: any) {
   return {
-    toEqual: function(expected: any){
+    toEqual: (expected: any) => {
       testResults = actual === expected ?
         {pass: 'passed', message: testName} :
         {pass: 'failed', message: `${testName}; expected ${actual} to equal ${expected}.`};
@@ -905,9 +906,9 @@ function it(label: string, test: () => void) {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/tree-shaking/app.module.ts]" value="import { NgModule }      from '@angular/core';
+*/"><input type="hidden" name="files[src/app/tree-shaking/app.module.ts]" value="import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule }  from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { ServiceModule } from './service-and-module';
 
 @NgModule({
@@ -966,8 +967,8 @@ export class User {
 }
 
 // TODO: get the user; don't 'new' it.
-let alice = new User('Alice', true);
-let bob = new User('Bob', false);
+const alice = new User('Alice', true);
+const bob = new User('Bob', false);
 
 @Injectable({
   providedIn: 'root'

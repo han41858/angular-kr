@@ -15,16 +15,16 @@ export class AppComponent { }
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { BrowserModule }       from '@angular/platform-browser';
-import { FormsModule }         from '@angular/forms';
-import { NgModule }     from '@angular/core';
+*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
-import { HeroListComponent }   from './hero-list.component';
-import { SalesTaxComponent }   from './sales-tax.component';
-import { HeroService }         from './hero.service';
-import { BackendService }      from './backend.service';
-import { Logger }              from './logger.service';
+import { HeroListComponent } from './hero-list.component';
+import { SalesTaxComponent } from './sales-tax.component';
+import { HeroService } from './hero.service';
+import { BackendService } from './backend.service';
+import { Logger } from './logger.service';
 
 @NgModule({
   imports: [
@@ -71,7 +71,7 @@ export class BackendService {
       // TODO: get from the database
       return Promise.resolve<Hero[]>(HEROES);
     }
-    let err = new Error('Cannot get object of this type');
+    const err = new Error('Cannot get object of this type');
     this.logger.error(err);
     throw err;
   }
@@ -99,10 +99,10 @@ export class HeroDetailComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/hero-list.component.ts]" value="import { Component, OnInit }   from '@angular/core';
+*/"><input type="hidden" name="files[src/app/hero-list.component.ts]" value="import { Component, OnInit } from '@angular/core';
 
-import { Hero }                from './hero';
-import { HeroService }         from './hero.service';
+import { Hero } from './hero';
+import { HeroService } from './hero.service';
 
 @Component({
   selector:    'app-hero-list',
@@ -205,7 +205,7 @@ export class AppComponent {
   }
 }
 
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   imports:      [ BrowserModule ],
@@ -225,10 +225,10 @@ platformBrowserDynamic().bootstrapModule(AppModule);
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/sales-tax.component.ts]" value="import { Component }       from '@angular/core';
+*/"><input type="hidden" name="files[src/app/sales-tax.component.ts]" value="import { Component } from '@angular/core';
 
 import { SalesTaxService } from './sales-tax.service';
-import { TaxRateService }  from './tax-rate.service';
+import { TaxRateService } from './tax-rate.service';
 
 @Component({
   selector:    'app-sales-tax',
@@ -265,7 +265,7 @@ export class SalesTaxService {
   constructor(private rateService: TaxRateService) { }
 
   getVAT(value: string | number) {
-    let amount = (typeof value === 'string') ?
+    const amount = (typeof value === 'string') ?
       parseFloat(value) : value;
     return (amount || 0) * this.rateService.getRate('VAT');
   }

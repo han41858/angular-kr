@@ -1,8 +1,8 @@
 <html lang="en"><head></head><body>
-        <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1?file=src/app/app-routing.module.ts" target="_self"><input type="hidden" name="files[src/app/admin/admin-dashboard/admin-dashboard.component.ts]" value="import { Component, OnInit }    from '@angular/core';
-import { ActivatedRoute }       from '@angular/router';
-import { Observable }           from 'rxjs';
-import { map }                  from 'rxjs/operators';
+        <form id="mainForm" method="post" action="https://run.stackblitz.com/api/angular/v1?file=src/app/app-routing.module.ts" target="_self"><input type="hidden" name="files[src/app/admin/admin-dashboard/admin-dashboard.component.ts]" value="import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { SelectivePreloadingStrategyService } from '../../selective-preloading-strategy.service';
 
@@ -41,15 +41,15 @@ export class AdminDashboardComponent implements OnInit {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/admin/admin-routing.module.ts]" value="import { NgModule }             from '@angular/core';
+*/"><input type="hidden" name="files[src/app/admin/admin-routing.module.ts]" value="import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AdminComponent }           from './admin/admin.component';
-import { AdminDashboardComponent }  from './admin-dashboard/admin-dashboard.component';
-import { ManageCrisesComponent }    from './manage-crises/manage-crises.component';
-import { ManageHeroesComponent }    from './manage-heroes/manage-heroes.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { ManageCrisesComponent } from './manage-crises/manage-crises.component';
+import { ManageHeroesComponent } from './manage-heroes/manage-heroes.component';
 
-import { AuthGuard }                from '../auth/auth.guard';
+import { AuthGuard } from '../auth/auth.guard';
 
 const adminRoutes: Routes = [
   {
@@ -85,15 +85,15 @@ export class AdminRoutingModule {}
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/admin/admin.module.ts]" value="import { NgModule }       from '@angular/core';
-import { CommonModule }   from '@angular/common';
+*/"><input type="hidden" name="files[src/app/admin/admin.module.ts]" value="import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { AdminComponent }           from './admin/admin.component';
-import { AdminDashboardComponent }  from './admin-dashboard/admin-dashboard.component';
-import { ManageCrisesComponent }    from './manage-crises/manage-crises.component';
-import { ManageHeroesComponent }    from './manage-heroes/manage-heroes.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { ManageCrisesComponent } from './manage-crises/manage-crises.component';
+import { ManageHeroesComponent } from './manage-heroes/manage-heroes.component';
 
-import { AdminRoutingModule }       from './admin-routing.module';
+import { AdminRoutingModule } from './admin-routing.module';
 
 @NgModule({
   imports: [
@@ -197,13 +197,13 @@ export const slideInAnimation =
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/app-routing.module.ts]" value="import { NgModule }             from '@angular/core';
+*/"><input type="hidden" name="files[src/app/app-routing.module.ts]" value="import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ComposeMessageComponent }  from './compose-message/compose-message.component';
-import { PageNotFoundComponent }    from './page-not-found/page-not-found.component';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-import { AuthGuard }                          from './auth/auth.guard';
+import { AuthGuard } from './auth/auth.guard';
 import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
 
 const appRoutes: Routes = [
@@ -259,7 +259,7 @@ import { slideInAnimation } from './animations';
 })
 export class AppComponent {
   getAnimationData(outlet: RouterOutlet) {
-    return outlet &amp;&amp; outlet.activatedRouteData &amp;&amp; outlet.activatedRouteData['animation'];
+    return outlet &amp;&amp; outlet.activatedRouteData &amp;&amp; outlet.activatedRouteData.animation;
   }
 }
 
@@ -268,20 +268,20 @@ export class AppComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { NgModule }       from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
-import { FormsModule }    from '@angular/forms';
+*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { Router } from '@angular/router';
 
-import { AppComponent }            from './app.component';
-import { PageNotFoundComponent }   from './page-not-found/page-not-found.component';
+import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
-import { AppRoutingModule }        from './app-routing.module';
-import { HeroesModule }            from './heroes/heroes.module';
-import { AuthModule }              from './auth/auth.module';
+import { AppRoutingModule } from './app-routing.module';
+import { HeroesModule } from './heroes/heroes.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   imports: [
@@ -314,11 +314,11 @@ export class AppModule {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/auth/auth-routing.module.ts]" value="import { NgModule }             from '@angular/core';
+*/"><input type="hidden" name="files[src/app/auth/auth-routing.module.ts]" value="import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard }            from './auth.guard';
-import { AuthService }          from './auth.service';
-import { LoginComponent }       from './login/login.component';
+import { AuthGuard } from './auth.guard';
+import { AuthService } from './auth.service';
+import { LoginComponent } from './login/login.component';
 
 const authRoutes: Routes = [
   { path: 'login', component: LoginComponent }
@@ -339,7 +339,7 @@ export class AuthRoutingModule {}
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/auth/auth.guard.ts]" value="import { Injectable }       from '@angular/core';
+*/"><input type="hidden" name="files[src/app/auth/auth.guard.ts]" value="import { Injectable } from '@angular/core';
 import {
   CanActivate, Router,
   ActivatedRouteSnapshot,
@@ -347,8 +347,8 @@ import {
   CanActivateChild,
   NavigationExtras,
   CanLoad, Route
-}                           from '@angular/router';
-import { AuthService }      from './auth.service';
+} from '@angular/router';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -357,7 +357,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
   constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    let url: string = state.url;
+    const url: string = state.url;
 
     return this.checkLogin(url);
   }
@@ -367,7 +367,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
   }
 
   canLoad(route: Route): boolean {
-    let url = `/${route.path}`;
+    const url = `/${route.path}`;
 
     return this.checkLogin(url);
   }
@@ -379,12 +379,12 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
     this.authService.redirectUrl = url;
 
     // Create a dummy session id
-    let sessionId = 123456789;
+    const sessionId = 123456789;
 
     // Set our navigation extras object
     // that contains our global query params and fragment
-    let navigationExtras: NavigationExtras = {
-      queryParams: { 'session_id': sessionId },
+    const navigationExtras: NavigationExtras = {
+      queryParams: { session_id: sessionId },
       fragment: 'anchor'
     };
 
@@ -399,11 +399,11 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/auth/auth.module.ts]" value="import { NgModule }       from '@angular/core';
-import { CommonModule }   from '@angular/common';
-import { FormsModule }    from '@angular/forms';
+*/"><input type="hidden" name="files[src/app/auth/auth.module.ts]" value="import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import { LoginComponent }    from './login/login.component';
+import { LoginComponent } from './login/login.component';
 import { AuthRoutingModule } from './auth-routing.module';
 
 @NgModule({
@@ -485,7 +485,7 @@ export class LoginComponent {
         const redirectUrl = '/admin';
 
         // 전역 쿼리 파라미터와 프래그먼트를 NavigationExtras 객체타입으로 전달합니다.
-        let navigationExtras: NavigationExtras = {
+        const navigationExtras: NavigationExtras = {
           queryParamsHandling: 'preserve',
           preserveFragment: true
         };
@@ -507,9 +507,9 @@ export class LoginComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/can-deactivate.guard.ts]" value="import { Injectable }    from '@angular/core';
+*/"><input type="hidden" name="files[src/app/can-deactivate.guard.ts]" value="import { Injectable } from '@angular/core';
 import { CanDeactivate } from '@angular/router';
-import { Observable }    from 'rxjs';
+import { Observable } from 'rxjs';
 
 export interface CanComponentDeactivate {
  canDeactivate: () => Observable<boolean> | Promise<boolean> | boolean;
@@ -530,7 +530,7 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/compose-message/compose-message.component.ts]" value="import { Component, HostBinding } from '@angular/core';
-import { Router }                 from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-compose-message',
@@ -583,16 +583,16 @@ export class CrisisCenterHomeComponent { }
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/crisis-center/crisis-center-routing.module.ts]" value="import { NgModule }             from '@angular/core';
+*/"><input type="hidden" name="files[src/app/crisis-center/crisis-center-routing.module.ts]" value="import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-home.component';
-import { CrisisListComponent }       from './crisis-list/crisis-list.component';
-import { CrisisCenterComponent }     from './crisis-center/crisis-center.component';
-import { CrisisDetailComponent }     from './crisis-detail/crisis-detail.component';
+import { CrisisListComponent } from './crisis-list/crisis-list.component';
+import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
+import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
 
-import { CanDeactivateGuard }             from '../can-deactivate.guard';
-import { CrisisDetailResolverService }    from './crisis-detail-resolver.service';
+import { CanDeactivateGuard } from '../can-deactivate.guard';
+import { CrisisDetailResolverService } from './crisis-detail-resolver.service';
 
 const crisisCenterRoutes: Routes = [
   {
@@ -636,14 +636,14 @@ export class CrisisCenterRoutingModule { }
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/crisis-center/crisis-center.module.ts]" value="import { NgModule }       from '@angular/core';
-import { FormsModule }    from '@angular/forms';
-import { CommonModule }   from '@angular/common';
+*/"><input type="hidden" name="files[src/app/crisis-center/crisis-center.module.ts]" value="import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-home.component';
-import { CrisisListComponent }       from './crisis-list/crisis-list.component';
-import { CrisisCenterComponent }     from './crisis-center/crisis-center.component';
-import { CrisisDetailComponent }     from './crisis-detail/crisis-detail.component';
+import { CrisisListComponent } from './crisis-list/crisis-list.component';
+import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
+import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
 
 import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
 
@@ -682,16 +682,16 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[src/app/crisis-center/crisis-detail-resolver.service.ts]" value="
-import { Injectable }             from '@angular/core';
+import { Injectable } from '@angular/core';
 import {
   Router, Resolve,
   RouterStateSnapshot,
   ActivatedRouteSnapshot
-}                                 from '@angular/router';
-import { Observable, of, EMPTY }  from 'rxjs';
-import { mergeMap, take }         from 'rxjs/operators';
+} from '@angular/router';
+import { Observable, of, EMPTY } from 'rxjs';
+import { mergeMap, take } from 'rxjs/operators';
 
-import { CrisisService }  from './crisis.service';
+import { CrisisService } from './crisis.service';
 import { Crisis } from './crisis';
 
 @Injectable({
@@ -701,7 +701,7 @@ export class CrisisDetailResolverService implements Resolve<Crisis> {
   constructor(private cs: CrisisService, private router: Router) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Crisis> | Observable<never> {
-    let id = route.paramMap.get('id');
+    const id = route.paramMap.get('id');
 
     return this.cs.getCrisis(id).pipe(
       take(1),
@@ -726,8 +726,8 @@ can be found in the LICENSE file at http://angular.io/license
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { Crisis }         from '../crisis';
-import { DialogService }  from '../../dialog.service';
+import { Crisis } from '../crisis';
+import { DialogService } from '../../dialog.service';
 
 @Component({
   selector: 'app-crisis-detail',
@@ -772,7 +772,7 @@ export class CrisisDetailComponent implements OnInit {
   }
 
   gotoCrises() {
-    let crisisId = this.crisis ? this.crisis.id : null;
+    const crisisId = this.crisis ? this.crisis.id : null;
     // Pass along the crisis id if available
     // so that the CrisisListComponent can select that crisis.
     // Add a totally useless `foo` parameter for kicks.
@@ -786,13 +786,13 @@ export class CrisisDetailComponent implements OnInit {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/crisis-center/crisis-list/crisis-list.component.ts]" value="import { Component, OnInit }  from '@angular/core';
-import { ActivatedRoute }     from '@angular/router';
+*/"><input type="hidden" name="files[src/app/crisis-center/crisis-list/crisis-list.component.ts]" value="import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import { CrisisService }  from '../crisis.service';
-import { Crisis }         from '../crisis';
-import { Observable }     from 'rxjs';
-import { switchMap }      from 'rxjs/operators';
+import { CrisisService } from '../crisis.service';
+import { Crisis } from '../crisis';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-crisis-list',
@@ -851,7 +851,7 @@ export class CrisisService {
   addCrisis(name: string) {
     name = name.trim();
     if (name) {
-      let crisis = { id: CrisisService.nextCrisisId++, name };
+      const crisis = { id: CrisisService.nextCrisisId++, name };
       CRISES.push(crisis);
       this.crises$.next(CRISES);
     }
@@ -880,7 +880,7 @@ export const CRISES: Crisis[] = [
   { id: 2, name: 'Sky Rains Great White Sharks' },
   { id: 3, name: 'Giant Asteroid Heading For Earth' },
   { id: 4, name: 'Procrastinators Meeting Delayed Again' },
-]
+];
 
 
 /*
@@ -908,7 +908,7 @@ export class DialogService {
     const confirmation = window.confirm(message || 'Is it OK?');
 
     return of(confirmation);
-  };
+  }
 }
 
 
@@ -921,7 +921,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { HeroService }  from '../hero.service';
+import { HeroService } from '../hero.service';
 import { Hero } from '../hero';
 
 @Component({
@@ -947,7 +947,7 @@ export class HeroDetailComponent implements OnInit {
   }
 
   gotoHeroes(hero: Hero) {
-    let heroId = hero ? hero.id : null;
+    const heroId = hero ? hero.id : null;
     // HeroList 컴포넌트에 하이라이트를 표시하기 위해 히어로의 id가 존재하면 전달합니다.
     // 'foo' 프로퍼티는 사용하지 않지만 이렇게 전달할 수도 있습니다.
     this.router.navigate(['/superheroes', { id: heroId, foo: 'foo' }]);
@@ -965,7 +965,7 @@ import { switchMap } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { HeroService }  from '../hero.service';
+import { HeroService } from '../hero.service';
 import { Hero } from '../hero';
 
 @Component({
@@ -1044,11 +1044,11 @@ can be found in the LICENSE file at http://angular.io/license
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/heroes/heroes-routing.module.ts]" value="import { NgModule }             from '@angular/core';
+*/"><input type="hidden" name="files[src/app/heroes/heroes-routing.module.ts]" value="import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HeroListComponent }    from './hero-list/hero-list.component';
-import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
+import { HeroListComponent } from './hero-list/hero-list.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 const heroesRoutes: Routes = [
   { path: 'heroes', redirectTo: '/superheroes' },
@@ -1072,12 +1072,12 @@ export class HeroesRoutingModule { }
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/heroes/heroes.module.ts]" value="import { NgModule }       from '@angular/core';
-import { CommonModule }   from '@angular/common';
-import { FormsModule }    from '@angular/forms';
+*/"><input type="hidden" name="files[src/app/heroes/heroes.module.ts]" value="import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import { HeroListComponent }    from './hero-list/hero-list.component';
-import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
+import { HeroListComponent } from './hero-list/hero-list.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 import { HeroesRoutingModule } from './heroes-routing.module';
 
@@ -1173,7 +1173,7 @@ export class SelectivePreloadingStrategyService implements PreloadingStrategy {
   preloadedModules: string[] = [];
 
   preload(route: Route, load: () => Observable<any>): Observable<any> {
-    if (route.data &amp;&amp; route.data['preload']) {
+    if (route.data &amp;&amp; route.data.preload) {
       // 사전로딩할 모듈의 라우팅 규칙을 배열에 추가합니다.
       this.preloadedModules.push(route.path);
 

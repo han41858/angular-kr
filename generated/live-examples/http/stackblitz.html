@@ -24,27 +24,27 @@ export class AppComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { NgModule }         from '@angular/core';
-import { BrowserModule }    from '@angular/platform-browser';
-import { FormsModule }      from '@angular/forms';
+*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientXsrfModule } from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService } from './in-memory-data.service';
 
 import { RequestCache, RequestCacheWithMap } from './request-cache.service';
 
-import { AppComponent }         from './app.component';
-import { AuthService }          from './auth.service';
-import { ConfigComponent }      from './config/config.component';
-import { DownloaderComponent }  from './downloader/downloader.component';
-import { HeroesComponent }      from './heroes/heroes.component';
-import { HttpErrorHandler }     from './http-error-handler.service';
-import { MessageService }       from './message.service';
-import { MessagesComponent }    from './messages/messages.component';
+import { AppComponent } from './app.component';
+import { AuthService } from './auth.service';
+import { ConfigComponent } from './config/config.component';
+import { DownloaderComponent } from './downloader/downloader.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HttpErrorHandler } from './http-error-handler.service';
+import { MessageService } from './message.service';
+import { MessagesComponent } from './messages/messages.component';
 import { PackageSearchComponent } from './package-search/package-search.component';
-import { UploaderComponent }    from './uploader/uploader.component';
+import { UploaderComponent } from './uploader/uploader.component';
 
 import { httpInterceptorProviders } from './http-interceptors/index';
 
@@ -144,8 +144,8 @@ export class ConfigComponent {
   showConfig_v1() {
     this.configService.getConfig_1()
       .subscribe((data: Config) => this.config = {
-          heroesUrl: data['heroesUrl'],
-          textfile:  data['textfile']
+          heroesUrl: data.heroesUrl,
+          textfile:  data.textfile
       });
   }
 
@@ -433,7 +433,7 @@ import { HttpErrorHandler, HandleError } from '../http-error-handler.service';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
-    'Authorization': 'my-auth-token'
+    Authorization: 'my-auth-token'
   })
 };
 
@@ -449,7 +449,7 @@ export class HeroesService {
   }
 
   /** GET heroes from the server */
-  getHeroes (): Observable<Hero[]> {
+  getHeroes(): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl)
       .pipe(
         catchError(this.handleError('getHeroes', []))
@@ -473,7 +473,7 @@ export class HeroesService {
   //////// Save methods //////////
 
   /** POST: DB에 새로운 히어로를 추가합니다. */
-  addHero (hero: Hero): Observable<Hero> {
+  addHero(hero: Hero): Observable<Hero> {
     return this.http.post<Hero>(this.heroesUrl, hero, httpOptions)
       .pipe(
         catchError(this.handleError('addHero', hero))
@@ -481,7 +481,7 @@ export class HeroesService {
   }
 
   /** DELETE: DB에서 히어로를 삭제합니다. */
-  deleteHero (id: number): Observable<{}> {
+  deleteHero(id: number): Observable<{}> {
     const url = `${this.heroesUrl}/${id}`; // DELETE api/heroes/42
     return this.http.delete(url, httpOptions)
       .pipe(
@@ -490,7 +490,7 @@ export class HeroesService {
   }
 
   /** PUT: DB 데이터를 수정합니다. HTTP 요청이 성공하면 새로운 히어로 데이터를 반환합니다. */
-  updateHero (hero: Hero): Observable<Hero> {
+  updateHero(hero: Hero): Observable<Hero> {
     httpOptions.headers =
       httpOptions.headers.set('Authorization', 'my-new-auth-token');
 
@@ -523,8 +523,10 @@ export class HttpErrorHandler {
   constructor(private messageService: MessageService) { }
 
   /** Create curried handleError function that already knows the service name */
-  createHandleError = (serviceName = '') => <T>
-    (operation = 'operation', result = {} as T) => this.handleError(serviceName, operation, result);
+  createHandleError = (serviceName = '') => {
+    return <T>(operation = 'operation', result = {} as T) =>
+      this.handleError(serviceName, operation, result);
+  }
 
   /**
    * Returns a function that handles Http operation failures.
@@ -533,7 +535,7 @@ export class HttpErrorHandler {
    * @param operation - name of the operation that failed
    * @param result - optional value to return as the observable result
    */
-  handleError<T> (serviceName = '', operation = 'operation', result = {} as T) {
+  handleError<T>(serviceName = '', operation = 'operation', result = {} as T) {
 
     return (error: HttpErrorResponse): Observable<T> => {
       // TODO: send the error to remote logging infrastructure
@@ -1027,7 +1029,7 @@ export class PackageSearchService {
     this.handleError = httpErrorHandler.createHandleError('HeroesService');
   }
 
-  search (packageName: string, refresh = false): Observable<NpmPackageInfo[]> {
+  search(packageName: string, refresh = false): Observable<NpmPackageInfo[]> {
     // clear if no pkg name
     if (!packageName.trim()) { return of([]); }
 
@@ -1066,7 +1068,7 @@ export interface RequestCacheEntry {
 
 export abstract class RequestCache {
   abstract get(req: HttpRequest<any>): HttpResponse<any> | undefined;
-  abstract put(req: HttpRequest<any>, response: HttpResponse<any>): void
+  abstract put(req: HttpRequest<any>, response: HttpResponse<any>): void;
 }
 
 const maxAge = 30000; // maximum cache age (ms)
@@ -1097,8 +1099,8 @@ export class RequestCacheWithMap implements RequestCache {
     const url = req.urlWithParams;
     this.messenger.add(`Caching response from &quot;${url}&quot;.`);
 
-    const entry = { url, response, lastRead: Date.now() };
-    this.cache.set(url, entry);
+    const newEntry = { url, response, lastRead: Date.now() };
+    this.cache.set(url, newEntry);
 
     // remove expired cache entries
     const expired = Date.now() - maxAge;

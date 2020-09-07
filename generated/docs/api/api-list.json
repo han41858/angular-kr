@@ -1541,14 +1541,6 @@
         "securityRisk": false
       },
       {
-        "name": "collectionchangerecord",
-        "title": "CollectionChangeRecord",
-        "path": "api/core/CollectionChangeRecord",
-        "docType": "interface",
-        "stability": "deprecated",
-        "securityRisk": false
-      },
-      {
         "name": "compiler",
         "title": "Compiler",
         "path": "api/core/Compiler",
@@ -2711,7 +2703,7 @@
         "title": "async",
         "path": "api/core/testing/async",
         "docType": "function",
-        "stability": "stable",
+        "stability": "deprecated",
         "securityRisk": false
       },
       {
@@ -2846,6 +2838,14 @@
         "name": "tick",
         "title": "tick",
         "path": "api/core/testing/tick",
+        "docType": "function",
+        "stability": "stable",
+        "securityRisk": false
+      },
+      {
+        "name": "waitforasync",
+        "title": "waitForAsync",
+        "path": "api/core/testing/waitForAsync",
         "docType": "function",
         "stability": "stable",
         "securityRisk": false
@@ -3951,6 +3951,14 @@
         "securityRisk": false
       },
       {
+        "name": "baseroutereusestrategy",
+        "title": "BaseRouteReuseStrategy",
+        "path": "api/router/BaseRouteReuseStrategy",
+        "docType": "class",
+        "stability": "stable",
+        "securityRisk": false
+      },
+      {
         "name": "canactivate",
         "title": "CanActivate",
         "path": "api/router/CanActivate",
@@ -4568,6 +4576,14 @@
         "title": "SwUpdate",
         "path": "api/service-worker/SwUpdate",
         "docType": "class",
+        "stability": "stable",
+        "securityRisk": false
+      },
+      {
+        "name": "unrecoverablestateevent",
+        "title": "UnrecoverableStateEvent",
+        "path": "api/service-worker/UnrecoverableStateEvent",
+        "docType": "interface",
         "stability": "stable",
         "securityRisk": false
       },

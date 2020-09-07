@@ -14,11 +14,11 @@ export class AppComponent { }
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { NgModule }      from '@angular/core';
+*/"><input type="hidden" name="files[src/app/app.module.ts]" value="import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent }           from './app.component';
+import { AppComponent } from './app.component';
 import { HeroFormTemplateComponent } from './template/hero-form-template.component';
 import { HeroFormReactiveComponent } from './reactive/hero-form-reactive.component';
 import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
@@ -69,16 +69,16 @@ export class HeroFormReactiveComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroForm = new FormGroup({
-      'name': new FormControl(this.hero.name, [
+      name: new FormControl(this.hero.name, [
         Validators.required,
         Validators.minLength(4),
         forbiddenNameValidator(/bob/i)
       ]),
-      'alterEgo': new FormControl(this.hero.alterEgo, {
+      alterEgo: new FormControl(this.hero.alterEgo, {
         asyncValidators: [this.alterEgoValidator.validate.bind(this.alterEgoValidator)],
         updateOn: 'blur'
       }),
-      'power': new FormControl(this.hero.power, Validators.required)
+      power: new FormControl(this.hero.power, Validators.required)
     });
   }
 
@@ -118,16 +118,16 @@ export class HeroFormReactiveComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroForm = new FormGroup({
-      'name': new FormControl(this.hero.name, [
+      name: new FormControl(this.hero.name, [
         Validators.required,
         Validators.minLength(4),
         forbiddenNameValidator(/bob/i) // <-- 커스텀 유효성 검사기의 인자는 이렇게 전달합니다.
       ]),
-      'alterEgo': new FormControl(this.hero.alterEgo, {
+      alterEgo: new FormControl(this.hero.alterEgo, {
         asyncValidators: [this.alterEgoValidator.validate.bind(this.alterEgoValidator)],
         updateOn: 'blur'
       }),
-      'power': new FormControl(this.hero.power, Validators.required)
+      power: new FormControl(this.hero.power, Validators.required)
     },  { validators: identityRevealedValidator }); // <-- FormGroup 레벨에 커스텀 유효성 검사기를 지정합니다.
   }
 
@@ -200,7 +200,7 @@ import { AbstractControl, NG_VALIDATORS, Validator, ValidatorFn, Validators } fr
 export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
   return (control: AbstractControl): {[key: string]: any} | null => {
     const forbidden = nameRe.test(control.value);
-    return forbidden ? {'forbiddenName': {value: control.value}} : null;
+    return forbidden ? {forbiddenName: {value: control.value}} : null;
   };
 }
 
@@ -251,7 +251,7 @@ export const identityRevealedValidator: ValidatorFn = (control: FormGroup): Vali
   const name = control.get('name');
   const alterEgo = control.get('alterEgo');
 
-  return name &amp;&amp; alterEgo &amp;&amp; name.value === alterEgo.value ? { 'identityRevealed': true } : null;
+  return name &amp;&amp; alterEgo &amp;&amp; name.value === alterEgo.value ? { identityRevealed: true } : null;
 };
 
 @Directive({
@@ -260,7 +260,7 @@ export const identityRevealedValidator: ValidatorFn = (control: FormGroup): Vali
 })
 export class IdentityRevealedValidatorDirective implements Validator {
   validate(control: AbstractControl): ValidationErrors {
-    return identityRevealedValidator(control)
+    return identityRevealedValidator(control);
   }
 }
 

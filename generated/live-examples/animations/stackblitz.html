@@ -119,7 +119,7 @@ export class AppComponent {
   public animationsDisabled = false;
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet &amp;&amp; outlet.activatedRouteData &amp;&amp; outlet.activatedRouteData['animation'];
+    return outlet &amp;&amp; outlet.activatedRouteData &amp;&amp; outlet.activatedRouteData.animation;
   }
 
 
@@ -462,7 +462,8 @@ export class HeroListGroupsComponent {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/hero-list-page.component.ts]" value="import { Component, HostBinding, OnInit } from '@angular/core';
+*/"><input type="hidden" name="files[src/app/hero-list-page.component.ts]" value="// tslint:disable: variable-name
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { trigger, transition, animate, style, query, stagger } from '@angular/animations';
 import { HEROES } from './mock-heroes';
 
@@ -505,11 +506,9 @@ export class HeroListPageComponent implements OnInit {
   @HostBinding('@pageAnimations')
   public animatePage = true;
 
-  _heroes = [];
   heroTotal = -1;
-  get heroes() {
-    return this._heroes;
-  }
+  get heroes() { return this._heroes; }
+  private _heroes = [];
 
   ngOnInit() {
     this._heroes = HEROES;
@@ -733,14 +732,14 @@ import { trigger, transition, state, animate, style, AnimationEvent } from '@ang
   styleUrls: ['open-close.component.css']
 })
 export class OpenCloseComponent {
+  @Input() logging = false;
   isOpen = true;
 
   toggle() {
     this.isOpen = !this.isOpen;
   }
 
-  @Input() logging = false;
-  onAnimationEvent ( event: AnimationEvent ) {
+  onAnimationEvent( event: AnimationEvent ) {
     if (!this.logging) {
       return;
     }
