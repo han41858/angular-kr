@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1600788610763,
+  "timestamp": 1600878815356,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -1970,7 +1970,7 @@
     "/generated/docs/api/upgrade/static/testing.json": "e86a811b675e02688b5658e12e92582142f3ae76",
     "/generated/docs/api/upgrade/static/testing/createAngularJSTestingModule.json": "9bf65888e43a7a959bf24863a111e13b088e8322",
     "/generated/docs/api/upgrade/static/testing/createAngularTestingModule.json": "61b8b6e2aac8e78fc84943a502144659a195b596",
-    "/generated/docs/app/search-data.json": "4bc00997fd153373803add669e048f52cbcf6810",
+    "/generated/docs/app/search-data.json": "44f75b3fa468ccf5642b00655c34b513a0a8a681",
     "/generated/docs/cli.json": "70a7b893a9e8b240200617fd5d06b6c4a655df40",
     "/generated/docs/cli/add.json": "0018aeb25f9251d5c646a965eb938b70a1635415",
     "/generated/docs/cli/analytics.json": "653abd426e924c8b8dbe5de5c1b820c0a1c7b2be",
@@ -2033,7 +2033,7 @@
     "/generated/docs/guide/dynamic-form.json": "920518e814e43ef528cb0fd7204c5d1e0add210c",
     "/generated/docs/guide/elements.json": "1bf1dfe6b2a5eb22ca0385d5b65f8b5f7cb819a8",
     "/generated/docs/guide/entry-components.json": "8e2ee85d0817310e8ca30f6fd7e66e1d38a0f091",
-    "/generated/docs/guide/event-binding.json": "ea5a81d6e5103513a3883129bb491e246f2e1453",
+    "/generated/docs/guide/event-binding.json": "84465f299f581bbf41ed76503e8d1a3ade9dacaa",
     "/generated/docs/guide/feature-modules.json": "8c24d9f8b2cffaa2a2b7b2b927a741b2eb19ae96",
     "/generated/docs/guide/file-structure.json": "fdf066e65de9fbd7d6d71a9fb870f1ee76ded945",
     "/generated/docs/guide/form-validation.json": "69a916eab5c15b21a0deea17d2191fb6c662b350",
@@ -2585,7 +2585,7 @@
     "/generated/images/marketing/home/ng-conf.png": "20df84b06a79b624717b6a800ce65a144859dd90",
     "/generated/images/marketing/home/responsive-framework.svg": "fb507a225cc081304b8af10adeaed73e87ad5ba6",
     "/generated/images/marketing/home/speed-performance.svg": "9e62d7a089dc460edb41da99d3e8edf912dcf4ba",
-    "/generated/navigation.json": "31dff13956c813503c8c881ac8840cbe4e881b6d",
+    "/generated/navigation.json": "d649f4b522f295d7e957d1e1e11426e7bac9dd23",
     "/generated/resources.json": "5c906b401df235ce6d1cfd0795a3518164025717",
     "/index.html": "b8e86f151a20e80e7df5c05de50393138f929f93",
     "/live-example-live-example-module-es2015.1e24a40318ee95eba7fe.js": "6d629994e83202f09d4350e0feb08311c7f70176",
