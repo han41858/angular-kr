@@ -407,7 +407,7 @@
         },
         {
           "url": "guide/http",
-          "title": "HTTP Client",
+          "title": "HTTP 클라이언트",
           "//tooltip": "Use HTTP to talk to a remote server.",
           "tooltip": "HTTP로 서버와 통신해보세요."
         },
@@ -1561,12 +1561,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.91a2bc1c22",
+    "build": "sha.181cb07af3",
     "version": "11.0.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "11.0.0-local+sha.91a2bc1c22",
+    "full": "11.0.0-local+sha.181cb07af3",
     "branch": "master",
-    "commitSHA": "91a2bc1c22f08a1d93b945721c933a2253abb18a"
+    "commitSHA": "181cb07af3cc40eb6baf63da3c52bd9df99a9e09"
   }
 }
