@@ -73,6 +73,9 @@
     <loc>https://angular.io/guide/component-interaction</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/component-overview</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/component-styles</loc>
   </url>
   <url>
@@ -97,9 +100,6 @@
     <loc>https://angular.io/guide/deprecations</loc>
   </url>
   <url>
-    <loc>https://angular.io/guide/displaying-data</loc>
-  </url>
-  <url>
     <loc>https://angular.io/guide/docs-style-guide</loc>
   </url>
   <url>
@@ -115,7 +115,13 @@
     <loc>https://angular.io/guide/entry-components</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/event-binding-concepts</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/event-binding</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/example-apps-list</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/feature-modules</loc>
@@ -232,6 +238,9 @@
     <loc>https://angular.io/guide/practical-observable-usage</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/property-binding-best-practices</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/property-binding</loc>
   </url>
   <url>
@@ -313,6 +322,9 @@
     <loc>https://angular.io/guide/structural-directives</loc>
   </url>
   <url>
+    <loc>https://angular.io/guide/style-precedence</loc>
+  </url>
+  <url>
     <loc>https://angular.io/guide/styleguide</loc>
   </url>
   <url>
@@ -373,7 +385,7 @@
     <loc>https://angular.io/guide/universal</loc>
   </url>
   <url>
-    <loc>https://angular.io/guide/updating-to-version-10</loc>
+    <loc>https://angular.io/guide/updating-to-version-11</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/updating</loc>
@@ -392,6 +404,9 @@
   </url>
   <url>
     <loc>https://angular.io/guide/using-libraries</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/guide/view-encapsulation</loc>
   </url>
   <url>
     <loc>https://angular.io/guide/visual-studio-2015</loc>
@@ -505,6 +520,9 @@
     <loc>https://angular.io/cli/e2e</loc>
   </url>
   <url>
+    <loc>https://angular.io/cli/extract-i18n</loc>
+  </url>
+  <url>
     <loc>https://angular.io/cli/generate</loc>
   </url>
   <url>
@@ -530,9 +548,6 @@
   </url>
   <url>
     <loc>https://angular.io/cli/version</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/cli/xi18n</loc>
   </url>
   <url>
     <loc>https://angular.io/cli</loc>
@@ -1957,66 +1972,6 @@
     <loc>https://angular.io/api/platform-server/testing/ServerTestingModule</loc>
   </url>
   <url>
-    <loc>https://angular.io/api/platform-webworker</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/bootstrapWorkerUi</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/ClientMessageBroker</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/ClientMessageBrokerFactory</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/FnArg</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/UiArguments</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/MessageBus</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/MessageBusSink</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/MessageBusSource</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/SerializerTypes</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/ReceivedMessage</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/ServiceMessageBroker</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/ServiceMessageBrokerFactory</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/WORKER_UI_LOCATION_PROVIDERS</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/WORKER_APP_LOCATION_PROVIDERS</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/platformWorkerApp</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/WorkerAppModule</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker/platformWorkerUi</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker-dynamic</loc>
-  </url>
-  <url>
-    <loc>https://angular.io/api/platform-webworker-dynamic/platformWorkerAppDynamic</loc>
-  </url>
-  <url>
     <loc>https://angular.io/api/router</loc>
   </url>
   <url>
@@ -2146,10 +2101,16 @@
     <loc>https://angular.io/api/router/Navigation</loc>
   </url>
   <url>
+    <loc>https://angular.io/api/router/NavigationBehaviorOptions</loc>
+  </url>
+  <url>
     <loc>https://angular.io/api/router/NavigationExtras</loc>
   </url>
   <url>
     <loc>https://angular.io/api/router/Router</loc>
+  </url>
+  <url>
+    <loc>https://angular.io/api/router/UrlCreationOptions</loc>
   </url>
   <url>
     <loc>https://angular.io/api/router/ROUTES</loc>
