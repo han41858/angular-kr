@@ -577,7 +577,7 @@
             {
               "url": "guide/testing-services",
               "//title": "Testing Services",
-              "title": "서비스 테스트",
+              "title": "서비스 테스트하기",
               "//tooltip": "How to test services.",
               "tooltip": "서비스를 테스트하는 방법에 대해 알아보세요."
             },
@@ -605,14 +605,14 @@
             {
               "url": "guide/testing-pipes",
               "//title": "Testing Pipes",
-              "title": "파이프 테스트",
+              "title": "파이프 테스트하기",
               "//tooltip": "Writing tests for pipes.",
               "tooltip": "파이프를 테스트하는 방법에 대해 알아보세요."
             },
             {
               "url": "guide/test-debugging",
               "//title": "Debugging Tests",
-              "title": "디버깅 테스트",
+              "title": "테스트 디버깅하기",
               "//tooltip": "How to debug tests.",
               "tooltip": "디버그 테스트는 어떻게 하는 것인지 확인해보세요."
             },
@@ -1546,12 +1546,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.c0e863b4cf",
+    "build": "sha.9631c31951",
     "version": "11.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "11.1.0-local+sha.c0e863b4cf",
+    "full": "11.1.0-local+sha.9631c31951",
     "branch": "master",
-    "commitSHA": "c0e863b4cf216c63441d30b9fae03623a65cebb0"
+    "commitSHA": "9631c31951f6c7774313933f5ef55702d6de7876"
   }
 }
