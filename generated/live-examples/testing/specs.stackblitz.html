@@ -1805,7 +1805,7 @@ describe('Angular async helper', () => {
          nestedTimer(callback);
          expect(callback).not.toHaveBeenCalled();
          tick(0);
-         // the nested timeout will also be triggered
+         // 중첩된 setTimeout도 함께 실행됩니다.
          expect(callback).toHaveBeenCalled();
        }));
 
@@ -4633,9 +4633,8 @@ describe('CanvasComponent', () => {
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[src/app/shared/canvas.component.ts]" value="// Import patch to make async `HTMLCanvasElement` methods (such as `.toBlob()`) Zone.js-aware.
-// Either import in `polyfills.ts` (if used in more than one places in the app) or in the component
-// file using `HTMLCanvasElement` (if it is only used in a single file).
+*/"><input type="hidden" name="files[src/app/shared/canvas.component.ts]" value="// 비동기 `HTMLCanvasElement` 메서드(ex. `.toBlob()`)를 지원하기 위해 패치를 로드합니다.
+// 이 패치는 `polyfills.ts` 파일이나 `HTMLCanvasElement` 파일에 적용하면 됩니다.
 import 'zone.js/dist/zone-patch-canvas';
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
