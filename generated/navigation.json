@@ -1222,9 +1222,9 @@
         },
         {
           "//title": "CLI Command Reference",
-          "title": "CLI 명령 참고",
+          "title": "Angular CLI",
           "//tooltip": "Angular CLI command reference.",
-          "tooltip": "Angular CLI 명령 참고",
+          "tooltip": "Angular CLI",
           "children": [
             {
               "//title": "Overview",
@@ -1546,12 +1546,12 @@
     "prerelease": [
       "local"
     ],
-    "build": "sha.34a94ec35d",
+    "build": "sha.b3b0930345",
     "version": "11.1.0-local",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "11.1.0-local+sha.34a94ec35d",
+    "full": "11.1.0-local+sha.b3b0930345",
     "branch": "master",
-    "commitSHA": "34a94ec35d6d248453c14e5531edb9c53193bd15"
+    "commitSHA": "b3b09303457c9bc3be53fe6cf82ed131d88fd27b"
   }
 }
